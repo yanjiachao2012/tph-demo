@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/css/base.css"/>
+<link rel="stylesheet" href="../../statics/css/newStyle.css"/>
+<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script>
+	function toggleTab(obj,obj0,obj1){
+		$(obj).addClass("active-item");
+		$(obj).siblings().removeClass("active-item");
+		$("#"+obj0).css("display","block");
+    $("#"+obj1).css("display","none");
+	}
+</script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user" style="display:none;">
+				<a href="" class="user-info">
+					<img src="../../statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-user">
+				<a href="" class="user-loginOut">登录</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+	
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="../../statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					 <li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="item-a">低碳活动</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳资讯</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动1</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</div>
+<!--头部结束-->
+<div class="wrap-main wrap-customer-main">
+	<div class="width960 customer-main">
+		  <div class="customer-left">
+		  	<div class="customer-left-title">
+			  	<div class="user-info">
+			  		<div class="wrap-pic">
+			  			<img class="pic" src="../../statics/image/pic126.png" />
+			  		</div>
+			  		<div class="user-info-right">
+			  			<h4>史女士</h4>
+			  			<span class="sex">性别：女</span>
+			  			<p class="user-carbon-number">400</p>
+			  			<span class="address">广东 深圳</span>
+			  		</div>
+			  	</div>
+			  	<div class="carbon-rank">
+			  		碳友排名：<span>4005</span>
+			  	</div>
+			  	<div class="carbon-expression">
+			  		<div class="expression-left">碳友印象：</div>
+			  		<div class="expression-right">
+			  			<span class="expression0">电脑高手</span>
+			  			<span class="expression1">宅男</span>
+			  			<span class="expression2">技术牛人</span>
+			  			<span class="expression0">阳光</span>
+			  		</div>
+			  	</div>
+			  	<div class="user-info-perfect">
+			  		<div class="info-perfect-title">
+			  			信息完整度：<span>80%</span>
+			  		</div>
+			  		<div class="perfect-bg">
+			  			<div class="info-perfected" style="width:50%"></div>
+			  		</div>
+			  		<a href="" class="go-perfect">去完善</a>
+			  	</div>
+		  	</div>
+		  	<div class="customer-left-list">
+		  		<h3 class="list-title">我的个人中心</h3>
+		  		<ul>
+		  			<li class="left-item"><a href="">我的碳币</a></li>
+		  			<li class="left-item"><a href="">我的钱包</a></li>
+		  			<li class="left-item"><a href="">我的活动</a></li>
+		  			<li class="left-item"><a href="">我的社区</a></li>
+		  			<li class="left-item"><a href="">我的景区</a></li>
+		  			<li class="left-item"><a href="">我的碳友</a></li>
+		  			<li class="left-item item-news"><a href=""><span class="tip">4</span>消息</a></li>
+		  		</ul>
+		  	</div>
+		  	<div class="customer-left-list">
+		  		<h3 class="list-title">个人信息管理</h3>
+		  		<ul>
+		  			<li class="left-item"><a href="">编辑个人资料</a></li>
+		  			<li class="left-item"><a href="">低碳行为绑定项</a></li>
+		  			<li class="left-item"><a href="">实名认证</a></li>
+		  		</ul>
+		  	</div>
+		  </div>
+		  <div class="customer-right">
+		  	<div class="customerTab">
+		  		<ul class="tab">
+						<li class="tab-item active-item" onclick="toggleTab(this,'remindOut','remindStart')">我的优惠券</li>
+						<li class="tab-item" onclick="toggleTab(this,'remindStart','remindOut')">我的会员卡</li>
+					</ul>
+		  	</div>
+		  	<div class="wrap-list-content ">
+		  		<div class="list-content myWallent-list-content" id="remindOut" >
+		  		  <div class="sort-parts myWallet-sort">
+		  				<span class="sort-item active-item">全部</span>
+		  				<span class="sort-item">进行中</span>
+		  				<span class="sort-item">已结束</span>
+		  			</div>
+			  		<ul class="list-content-ul">
+			  			<li class="content-item exchange-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item dai-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item ti-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item exchange-item exchange-out-item">
+			  				<i class="icon-out icon-out-time"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item exchange-item  exchange-out-item">
+			  			<i class="icon-out icon-out-used"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item exchange-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item exchange-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item exchange-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item exchange-item">
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h5>优惠券<span>1张</span></h5>
+			  						<p class="store-name">飞影电影国际城</p>
+			  						<div class="coupon-value">
+			  							<span class="value-carbon">2</span>+
+			  							<span class="value-money">￥85.00</span>
+			  						</div>
+			  						<p class="myWallet-time">营业时间:<span>09:00</span>-<span>23:00</span></p>
+			  						<p class="myWallet-time">兑换时间:<span>2016-09-08 11:11:11</span></p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期至:2016-10-10</span>
+			  					<span class="exchange-out">兑换码：<strong class="code">12341124</strong></span>
+			  				</div>
+			  			</li>
+			  		</ul>
+			  		<div class="click-more"><a href="" class="getMore">点击加载更多</a></div>
+			  		<div class="no-content" style="display:none;">
+			  			<div class="no-content-remind"><i class="no-content-icon"></i>你没有即将过期的优惠券</div>
+			  			<div class="no-content-link"><a href="" class="link-left">查看我的优惠券</a><a href="" class="link-right">兑换更多的优惠</a></div>
+			  		</div>
+		  		</div>
+		  		<div class="list-content myCard-list-content" id="remindStart" style="display:none;">
+		  			<ul class="list-content-ul">
+			  			<li class="content-item member-card-item silver-card-item">
+			  			  <i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">银卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item out-card-item">
+			  				<i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">金卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item">
+			  			  <i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">金卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item">
+			  			  <i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">金卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item silver-card-item out-card-item">
+			  			  <i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">银卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item out-card-item">
+			  				<i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">金卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item">
+			  			  <i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">金卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  			<li class="content-item member-card-item">
+			  			  <i class="icon-out"></i>
+			  				<div class="item-up">
+			  					<i class="coupon-type"></i>
+			  						<h6>优惠券</h6>
+			  						<p class="car-type">金卡<span>8.0<b>折</b></span></p>
+			  						<p class="car-No">
+			  							<span>卡号：12123134124</span>
+			  							<span class="car-data">发卡时间:2016-01-12</span>
+			  						</p>
+			  					<i class="coupon-round"></i>
+			  				</div>
+			  				<div class="item-down">
+			  					<span class="exchange-data">有效期:2016-10-10</span>
+			  				</div>
+			  			</li>
+			  		</ul>
+			  		<div class="click-more"><a href="" class="getMore">点击加载更多</a></div>
+		  			<div class="no-content" style="display:none;">
+			  			<div class="no-content-remind"><i class="no-content-icon"></i>您没有即将开始得活动喔~</div>
+			  			<div class="no-content-link"><a href="" class="link-left">查看我的活动</a><a href="" class="link-right">参与更多活动</a></div>
+			  		</div>
+		  		</div>
+		  		
+		  	</div>
+		  	
+		  </div>
+	</div>
+	
+</div>
+	</body>
+	</html>

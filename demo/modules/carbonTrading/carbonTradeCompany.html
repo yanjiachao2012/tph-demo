@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/css/base.css"/>
+<link rel="stylesheet" href="../../statics/css/newStyle.css"/>
+<script src="../../statics/js/config/config.js"></script>
+<script src="../../statics/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user">
+				<a href="" class="user-info">
+					<img src="statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					<li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳活动</a>
+					</li>
+					<li class="nav-item" attr-href="modules/carbonInfo/carbonInfoList.html">
+						<a class="item-a" href="">低碳资讯</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item" attr-href="modules/carbonTrading/carbonTradeCompany.html">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--头部结束-->
+	<div class="wrap-main">
+		<div class="big-banner">
+			<img src="../../statics/image/pic-12.png" class="pic" />
+		</div>
+		<div class="main carbonTrade-main">
+			<div class="wrapTab">
+				<div class="width960">
+					<ul class="tab">
+						<li class="tab-item active-item"><a href="">企业减排</a></li>
+						<li class="tab-item"><a href="">寻集碳币</a></li>
+					</ul>
+					<div class="doI">
+						<a href="javascript:openModal();">我要捐赠</a>
+					</div>
+				</div>
+			</div>
+			<div class="width960 carbonTrade-list">
+				<div class="wrap-sort">
+					<span class="sort">
+						<a href="javascript:" class="nowActive btnLeft">最新<i class="icon-tip"></i></a>
+						<a href="javascript:">关注度<i class="icon-tip"></i></a>
+					</span>
+				</div>
+				<div class="wrap-list">
+					<ul class="lists">
+						<li class="item">
+							<div class="item-right companyRight">
+								<img src="../../statics/image/pic-119.png">
+							</div>
+							<div class="item-left">
+								<h5>北京街都府社区低碳改造示范项目</h5>
+								<p class="item-details">广州市越秀区人民政府北京街道办事处计划捐赠225、7吨二氧化碳减碳量，用于碳普惠平台折算成碳币赠送给用户</p>
+								<div class="item-info">
+									<span class="item-time"><i class="icon-time"></i>1小时前</span><span class="item-watch"><i class="icon-watch"></i>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item-right companyRight">
+								<img src="../../statics/image/pic-119.png">
+							</div>
+							<div class="item-left">
+								<h5>北京街都府社区低碳改造示范项目</h5>
+								<p class="item-details">广州市越秀区人民政府北京街道办事处计划捐赠225、7吨二氧化碳减碳量，用于碳普惠平台折算成碳币赠送给用户</p>
+								<div class="item-info">
+									<span class="item-time"><i class="icon-time"></i>1小时前</span><span class="item-watch"><i class="icon-watch"></i>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item-right companyRight">
+								<img src="../../statics/image/pic-119.png">
+							</div>
+							<div class="item-left">
+								<h5>北京街都府社区低碳改造示范项目</h5>
+								<p class="item-details">广州市越秀区人民政府北京街道办事处计划捐赠225、7吨二氧化碳减碳量，用于碳普惠平台折算成碳币赠送给用户</p>
+								<div class="item-info">
+									<span class="item-time"><i class="icon-time"></i>1小时前</span><span class="item-watch"><i class="icon-watch"></i>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item-right companyRight">
+								<img src="../../statics/image/pic-119.png">
+							</div>
+							<div class="item-left">
+								<h5>北京街都府社区低碳改造示范项目</h5>
+								<p class="item-details">广州市越秀区人民政府北京街道办事处计划捐赠225、7吨二氧化碳减碳量，用于碳普惠平台折算成碳币赠送给用户</p>
+								<div class="item-info">
+									<span class="item-time"><i class="icon-time"></i>1小时前</span><span class="item-watch"><i class="icon-watch"></i>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item-right companyRight">
+								<img src="../../statics/image/pic-119.png">
+							</div>
+							<div class="item-left">
+								<h5>北京街都府社区低碳改造示范项目</h5>
+								<p class="item-details">广州市越秀区人民政府北京街道办事处计划捐赠225、7吨二氧化碳减碳量，用于碳普惠平台折算成碳币赠送给用户</p>
+								<div class="item-info">
+									<span class="item-time"><i class="icon-time"></i>1小时前</span><span class="item-watch"><i class="icon-watch"></i>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item-right companyRight">
+								<img src="../../statics/image/pic-119.png">
+							</div>
+							<div class="item-left">
+								<h5>北京街都府社区低碳改造示范项目</h5>
+								<p class="item-details">广州市越秀区人民政府北京街道办事处计划捐赠225、7吨二氧化碳减碳量，用于碳普惠平台折算成碳币赠送给用户</p>
+								<div class="item-info">
+									<span class="item-time"><i class="icon-time"></i>1小时前</span><span class="item-watch"><i class="icon-watch"></i>2000</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="list-page">
+						<span class="pageLeft1"></span>
+						<span class="pageLeft"></span>
+						<ul>
+							<li class="page-item">1</li>
+							<li class="page-item">2</li>
+							<li class="page-item">3</li>
+							<li class="page-item">4</li>
+							<li class="page-item">5</li>
+						</ul>
+						<span class="pageRight"></span>
+						<span class="pageRight1"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="wrap-myModal" id="myModal">
+	  <div class="myModal">
+			<div class="myModal-title">
+				我要捐赠项目
+				<i class="icon-close" onclick="closeModal();"></i>
+			</div>
+			<div class="myModal-main">
+				<ul>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							碳友昵称：
+						</label>
+						<div class="input-right">
+							<input type="text" id='userName' placeholder="" class="input1 modalInput"></div>
+					</li>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							捐赠企业：
+						</label>
+						<div class="input-right">
+							<input type="text" id="userCompany" placeholder="" class="input2 modalInput"></div>
+					</li>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							项目名称：
+						</label>
+						<div class="input-right">
+							<input type="text" id="projectName" placeholder="" class="input2 modalInput"></div>
+					</li>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							所在城市：
+						</label>
+						<div class="input-right">
+							<input type="text" id="userCity" placeholder="输入企业所在城市" class="input2 modalInput"></div>
+					</li>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							联系人：
+						</label>
+						<div class="input-right">
+							<input type="text" id="userContact" placeholder="" class="input1 modalInput"></div>
+					</li>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							联系方式：
+						</label>
+						<div class="input-right">
+							<input type="text" id="userTel" placeholder="电话/邮箱" class="input2 modalInput"></div>
+					</li>
+					<li class="input-item">
+						<label>
+							<span>*</span>
+							项目简介：
+						</label>
+						<div class="input-right">
+							<textarea id="projectIntro" placeholder="请输入项目简介" class="modalTextarea"></textarea>
+						</div>
+					</li>
+				</ul>
+				<div class="word-tip">
+					还可以输入
+					<span class="word">500</span>
+					字
+				</div>
+				<div class="myModal-foot">
+					<a href="javascript:" id="applyBtn" class="btn apply-btn">提交申请</a>
+					<a href="javascript:closeModal();" class="btn">取消</a>
+				</div>
+			</div> 
+	  </div>
+	</div>
+	</div>
+    <script>
+		function openModal(){
+            $("#myModal").fadeIn();      
+		}
+		function closeModal(){
+            $("#myModal").fadeOut();
+		}
+	</script>
+</body>
+</html>

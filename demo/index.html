@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="statics/css/base.css"/>
+<link rel="stylesheet" href="statics/css/newStyle.css"/>
+	<script src="statics/js/jquery-1.7.2.min.js"></script>
+	<script src="statics/js/config/config.js"></script>
+	<script>
+			$(function(){
+
+		navSub();
+		})
+	</script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user">
+				<a href="" class="user-info">
+					<img src="statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav" attr-status="up">
+					<li class="nav-item" attr-href="index.html">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳活动</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳资讯</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html?id=1">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html?id=1">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html?id=3">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html?id=1">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html?id=2">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html?id=3">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html?id=4">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--头部结束-->
+<div class="wrap-main">
+<!--轮播图开始-->
+<div class="wrap-banner" id="wrap-banner">
+    <ul class="banner-lists banner" id=banner>
+        <li class="item active">
+            <img src="statics/image/2.png" alt=""/>
+        </li>
+        <li class="item">
+            <img src="statics/image/4.png" alt=""/>
+        </li>
+        <li class="item">
+            <img src="statics/image/5.png" alt=""/>
+        </li>
+        <li class="item">
+            <img src="statics/image/6.png" alt=""/>
+        </li>
+    </ul>
+    <div class="pic-dimmer">
+    	<img src="statics/image/icon-banner-dimmer.png">
+    	<div class="wrap-details">
+    		<h1>低碳权益&nbsp;&nbsp;惠及你我</h1>
+    		<p class="details">为亲人和朋友，为现在和将来，加入我们，共创低碳社会</p>
+    		<a href="modules/aboutUs/aboutUs.html" class="link-us">快速了解我们</a>
+    	</div>
+    	
+    </div>
+</div>
+<!--轮播图结束-->
+<!---->
+<div class="main main1">
+		<ul class="main-list width960">
+		<li class="item">
+			<div class="wrap-item-header">
+				<span class="item-icon icon-get-carbon"></span>
+				<div class="item-header">
+					<h3>完善信息</h3>
+					<span class="header-details">IMPROVE INFORMATION</span>
+				</div>
+			</div>
+			<div class="item-details">
+				绑定相关卡片/身份信息
+			</div>
+			<a href="#" class="item-link">获取碳币</a>
+		</li>
+		<li class="item">
+			<div class="wrap-item-header">
+				<span class="item-icon icon-exchange"></span>
+				<div class="item-header">
+					<h3>优惠兑换</h3>
+					<span class="header-details">REDEEM</span>
+				</div>
+			</div>
+			<div class="item-details">
+				获取消费优惠信息
+			</div>
+			<a href="#" class="item-link">使用碳币</a>
+		</li>
+		<li class="item">
+			<div class="wrap-item-header">
+				<span class="item-icon icon-send"></span>
+				<div class="item-header">
+					<h3>碳币互赠</h3>
+					<span class="header-details">CARBON COIN EACH OTHER</span>
+				</div>
+			</div>
+			<div class="item-details">
+				碳友之间赠送碳币
+			</div>
+			<a href="#" class="item-link">互赠碳币</a>
+		</li>
+		<li class="item no-margin">
+			<div class="wrap-item-header">
+				<span class="item-icon icon-know"></span>
+				<div class="item-header">
+					<h3>碳普惠制</h3>
+					<span class="header-details">PRATT WHITNEY MECHANISM</span>
+				</div>
+			</div>
+			<div class="item-details">
+				清晰展示运作机制
+			</div>
+			<a href="/" class="item-link">了解普惠</a>
+		</li>
+	</ul>
+</div>
+<!---->
+	<div class="main main2">
+				<ul class="main-list width960" id="carbonStatistics">
+			<li class="item text-left">
+				<div class="item-icon">
+					<img src="statics/image/icon-co2.png" class="icon-co2"/>	
+				</div>
+				<div class="item-right">
+					<h4> <strong>500</strong>
+						<span>万吨</span>
+					</h4>
+					<p>累计减碳量</p>
+				</div>
+			</li>
+			<li class="item text-left">
+				<div class="item-icon">
+					<img src="statics/image/icon-member.png" class="icon-member"/>	
+				</div>
+				<div class="item-right">
+					<h4> <strong>1000</strong>
+						<span>人</span>
+					</h4>
+					<p>累计会员</p>
+				</div>
+			</li>
+			<li class="item text-left">
+				<div class="item-icon">
+					<img src="statics/image/icon-company.png" class="icon-company"></div>
+				<div class="item-right">
+					<h4>
+						<strong>1000</strong>
+						<span>家</span>
+					</h4>
+					<p>合作企业</p>
+				</div>
+
+			</li>
+			<li class="item text-left no-margin">
+				<div class="item-icon">
+					<img src="statics/image/icon-platform.png" class="icon-platform"></div>
+				<div class="item-right">
+					<h4>
+						<strong>20</strong>
+						<span>个</span>
+					</h4>
+					<p>减碳项目</p>
+				</div>
+
+			</li>
+		</ul>
+	</div>
+<!--结束-->
+<!--低碳联盟开始-->
+	<div class="main main3">
+		<div class="width960">
+			<div class="low-carbon-title">
+				<h2>低碳联盟</h2>
+				<p>联合众多商家，未您提供最优产品和优惠</p>
+				<a  href="" class="more">更多</a>
+			</div>
+			<div class="wrap-union-list">
+				<div class="union-btn">
+					<span class="wrap-btn">
+						<a href="javascript:" id="turnLeft" class="turn-left-active turn-btn"></a>
+						<a href="javascript:" id="turnRight" class="turn-right-active turn-btn"></a>
+					</span>
+				</div>
+				<div class="union-list">
+					<ul id="unionUl">
+						
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic7.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic7.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+						<li class="union-item">
+							<div class="wrap-pic">
+								<img class="pic" src="statics/image/pic4.png" />
+							</div>
+							<div class="item-details">
+								<h5>深圳市立冰空调有限公司</h5>
+								<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级高新科技技······</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--低碳联盟结束-->
+<!--我们的责任开始-->
+	<div class="main main4">
+		<div class="width960">
+			<h2>我们的责任</h2>
+			<ul class="main-list">
+				<li class="item">
+					<div class="item-pic">
+						<img src="statics/image/icon-round1.png" alt=""/>
+					</div>
+					<h5>创新碳金融</h5>
+					<div class="item-details">
+						<p>开发公众减碳量进入碳市场</p>
+						<p>活跃碳交易惠及市民大众</p>
+						<p>探索碳金融创新路径</p>
+					</div>
+				</li>
+				<li class="item">
+					<div class="item-pic">
+						<img src="statics/image/icon-round2.png" alt=""/>
+					</div>
+					<h5>创新碳金融</h5>
+					<div class="item-details">
+						<p>促进绿色消费意识觉醒</p>
+						<p>衔接商家与消费人群</p>
+						<p>塑造低碳互动联新业态</p>
+					</div>
+				</li>
+				<li class="item">
+					<div class="item-pic">
+						<img src="statics/image/icon-round4.png" alt=""/>
+					</div>
+					<h5>支持低碳品牌</h5>
+					<div class="item-details">
+						<p>多项内容支持低碳品牌</p>
+						<p>提升企业市场认知度</p>
+					</div>
+				</li>
+				<li class="item no-margin">
+					<div class="item-pic">
+						<img src="statics/image/icon-round3.png" alt=""/>
+					</div>
+					<h5>推动低碳公益</h5>
+					<div class="item-details">
+						<p>推动低碳公益活动</p>
+						<p>普及低碳生活知识</p>
+						<p>提升公众体坛意识</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!--我们的责任结束-->
+<!--低碳活动开始-->
+	<div class="main main5">
+		<div class="width960">
+			<div class="activity-carbon-title">
+				<h2>低碳活动</h2>
+				<p>汇聚绿色资源，为您提供低碳专享活动</p>
+				<a  href="" class="more">更多</a>
+			</div>
+			<div class="wrap-activity-list">
+				<div class="activity-left">
+					<img src="statics/image/pic3.png" />
+					<div class="hover-content">
+						<h3>爬白云山捡垃圾志愿活动</h3>
+						<div class="activity-address">
+							<span class="plat">平台</span>
+							<span>广州</span>
+						</div>
+						<div class="activity-info">
+							<p><span>【活动主题】:</span>相约秋季，环保公益</p>
+							<p><span>【活动主题】:</span>2016-09-08 16:00:00</p>
+							<p><span>【活动对象】:</span>全体</p>
+							<p><span>【活动地点】:</span>广州白云山</p>
+						</div>
+						<div class="address-intro">
+							白云山未南粤名山之一，位于广州市白云区，是广州市风景区行业的第一家5A级旅游景区。临近中秋佳节很多市民会选择上山赏月，甚至在山上过夜。鱿鱼游客的猛增，可能一些游客随手扔垃圾的不文明行为既影响了后续游客的游玩心情，又加重了····
+						</div>
+					</div>
+					<div class="activity-details">
+								<div class="details-left">
+									<h4>广州</h4>
+									<span>2016-10-10</span>
+								</div>
+								<div class="details-right">
+									<i class="icon-member"></i>
+									<span>2000</span>
+								</div>
+							</div>
+				</div>
+				<div class="activity-right">
+					<ul class="right-list">
+						<li class="item">
+							<img class="pic" src="statics/image/pic-26.png"/>				
+							<div class="hover-content">
+								<h3>爬白云山捡垃圾志愿活动</h3>
+								<div class="activity-address">
+									<span class="plat">平台</span>
+									<span>广州</span>
+								</div>
+								<div class="activity-info">
+									<p>
+										<span>【活动主题】:</span>
+										相约秋季，环保公益
+									</p>
+									<p>
+										<span>【活动主题】:</span>
+										2016-09-08 16:00:00
+									</p>
+									<p>
+										<span>【活动对象】:</span>
+										全体
+									</p>
+									<p>
+										<span>【活动地点】:</span>
+										广州白云山
+									</p>
+								</div>
+								<div class="address-intro" id="str">
+									白云山未南粤名山之一，位于广州市白云区，是广州市风景区行业的第一家5A级旅游景区。临近中秋佳节很多市民会选择上山赏月，甚至在山上过夜。鱿鱼游客的猛增，可能一些游客随手扔垃圾的不文明行为既影响了后续游客的游玩心情，又加重了····
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="details-left">
+									<h4>广州</h4>
+									<span>2016-10-10</span>
+								</div>
+								<div class="details-right"> <i class="icon-member"></i>
+									<span>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<img class="pic" src="statics/image/pic-26.png"/>				
+							<div class="hover-content">
+								<h3>爬白云山捡垃圾志愿活动</h3>
+								<div class="activity-address">
+									<span class="plat">平台</span>
+									<span>广州</span>
+								</div>
+								<div class="activity-info">
+									<p>
+										<span>【活动主题】:</span>
+										相约秋季，环保公益
+									</p>
+									<p>
+										<span>【活动主题】:</span>
+										2016-09-08 16:00:00
+									</p>
+									<p>
+										<span>【活动对象】:</span>
+										全体
+									</p>
+									<p>
+										<span>【活动地点】:</span>
+										广州白云山
+									</p>
+								</div>
+								<div class="address-intro">
+									白云山未南粤名山之一，位于广州市白云区，是广州市风景区行业的第一家5A级旅游景区。临近中秋佳节很多市民会选择上山赏月，甚至在山上过夜。鱿鱼游客的猛增，可能一些游客随手扔垃圾的不文明行为既影响了后续游客的游玩心情，又加重了····
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="details-left">
+									<h4>广州</h4>
+									<span>2016-10-10</span>
+								</div>
+								<div class="details-right"> <i class="icon-member"></i>
+									<span>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<img class="pic" src="statics/image/pic-26.png"/>				
+							<div class="hover-content">
+								<h3>爬白云山捡垃圾志愿活动</h3>
+								<div class="activity-address">
+									<span class="plat">平台</span>
+									<span>广州</span>
+								</div>
+								<div class="activity-info">
+									<p>
+										<span>【活动主题】:</span>
+										相约秋季，环保公益
+									</p>
+									<p>
+										<span>【活动主题】:</span>
+										2016-09-08 16:00:00
+									</p>
+									<p>
+										<span>【活动对象】:</span>
+										全体
+									</p>
+									<p>
+										<span>【活动地点】:</span>
+										广州白云山
+									</p>
+								</div>
+								<div class="address-intro">
+									白云山未南粤名山之一，位于广州市白云区，是广州市风景区行业的第一家5A级旅游景区。临近中秋佳节很多市民会选择上山赏月，甚至在山上过夜。鱿鱼游客的猛增，可能一些游客随手扔垃圾的不文明行为既影响了后续游客的游玩心情，又加重了····
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="details-left">
+									<h4>广州</h4>
+									<span>2016-10-10</span>
+								</div>
+								<div class="details-right">
+									<i class="icon-member"></i>
+									<span>2000</span>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<img class="pic" src="statics/image/pic-26.png"/>				
+							<div class="hover-content">
+								<h3>爬白云山捡垃圾志愿活动</h3>
+								<div class="activity-address">
+									<span class="plat">平台</span>
+									<span>广州</span>
+								</div>
+								<div class="activity-info">
+									<p>
+										<span>【活动主题】:</span>
+										相约秋季，环保公益
+									</p>
+									<p>
+										<span>【活动主题】:</span>
+										2016-09-08 16:00:00
+									</p>
+									<p>
+										<span>【活动对象】:</span>
+										全体
+									</p>
+									<p>
+										<span>【活动地点】:</span>
+										广州白云山
+									</p>
+								</div>
+								<div class="address-intro">
+									白云山未南粤名山之一，位于广州市白云区，是广州市风景区行业的第一家5A级旅游景区。临近中秋佳节很多市民会选择上山赏月，甚至在山上过夜。鱿鱼游客的猛增，可能一些游客随手扔垃圾的不文明行为既影响了后续游客的游玩心情，又加重了····
+								</div>
+							</div>
+							<div class="activity-details">
+								<div class="details-left">
+									<h4>广州</h4>
+									<span>2016-10-10</span>
+								</div>
+								<div class="details-right">
+									<i class="icon-member"></i>
+									<span>2000</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--低碳活动结束-->
+<!--关于我们开始-->
+	<div class="main main6">
+		<div class="add-bg">
+			<div class="width960">
+				<h2>关于我们</h2>
+				<div class="about-details">
+					<p>碳普惠制是全国首个促进小微企业、家庭喝个人碳减排的制度设计，利用碳普惠电子平台，鼓励公众自觉低碳并给与相应奖励。</p>
+					<p>碳普惠平台是由广东省碳普惠创新发展中心负责运营，该中心系广东省发展喝改革委员会批准设立，中国赛宝实验室负责组建的专业机构。</p>
+					<p>碳普惠目前在广州、东莞、中山、河源、佛山顺德区、珠海横琴自贸区、惠州、韶关等地开展试点并设立了运营机构，同时积极向上海、河北等地拓展，</p>
+					<p>旨在唤醒大众低碳意识，促进人人低碳，人人受益。</p>
+				</div>
+				<a href="modules/aboutUs/aboutUs.html" class="know-more">了解更多</a>
+			</div>
+		</div>
+	</div>
+<!--关于我们结束-->
+</div>
+<!--尾部开始-->
+	<div class="pageFooter">
+		<div class="width1220">
+		     <div class="wrap-partner-list">
+		     	<span class="partner-title">合作伙伴：</span>
+		     	<ul class="partner-list">
+		     		<li><a href="">张家界景区</a></li>
+		     		<li><a href="">万绿湖景区</a></li>
+		     		<li><a href="">上海路路通</a></li>
+		     		<li><a href="">汉能</a></li>
+		     		<li><a href="">广州快速公交</a></li>
+		     		<li><a href="">深圳立冰空调</a></li>
+		     	</ul>
+		     </div>  
+		</div>
+		<div class="width960">
+			<div class="company-info">
+				<ul>
+					<li class="item">
+						<img src="statics/image/logo-footer.png"/>
+						<h6>广东省碳普惠创新发展中心</h6>
+					</li>
+					<li class="item item-second">
+						<p><a href="modules/aboutUs/aboutUs.html">关于我们</a></p>
+						<p><a href="">企业联盟</a></p>
+						<p><a href="">网站协议</a></p>
+					</li>
+					<li class="item item-third">
+						<i class="icon-send"></i><span class="email">tanph@ceprei.org</span>
+						<div class="fackback"><a href="">投诉建议</a></div>
+					</li>
+					<li class="item-four">
+						<a href=""><img class="pic-left" src="statics/image/pic-weibo.png" /></a>
+						<a href=""><img class="pic-left" src="statics/image/pic-weixin.png" /></a>
+						<a href="" class="download-link"><img src="statics/image/pic-download.png" class="download-pic" />
+						<span class="link-text">下载app</span>
+						</a> 
+					</li>
+				</ul>
+			</div>
+			<div class="company-copyright">
+				<p>由赛宝认证中心提供技术支持 Tel:020-87236606 Email: tanph@ceprei.org </p>
+				<p>Copyright@2014-2018 广州赛宝认证中心服务有限公司 All Rights Reserved 粤ICP备05096650号-3</p>
+				<p id="str2">asgasgasgasgasfasfasf</p>
+			</div>
+		</div>
+	</div>
+<!--尾部结束-->
+
+	<script src="statics/js/jquery-1.7.2.min.js"></script>
+	<script src="statics/js/sliderImg.js"></script>
+	<script>
+		sliderImg("wrap-banner");
+        
+		 	function strOpearte(obj,length){
+             var _str=obj.trim();
+             return _str.substr(0,length).concat("...")
+      }
+       $(function(){
+      
+        _str1=$("#str").text()
+
+
+       	  lowCarbonSlibar("unionUl")
+
+
+    var _tphNav = $("#tph-nav"),
+        _NavItem = _tphNav.find(".nav-item");
+
+    _NavItem.on("mouseover", function(e) {
+    	  if(_tphNav.attr("attr-status")=="up"){
+    	  	$(this).find('.wrap-sub-nav').show();
+          $(this).siblings().find(".wrap-sub-nav").hide();
+    	  }else{
+           _tphNav.attr("attr-status","up");
+    	  	$(this).find('.wrap-sub-nav').fadeIn();
+          $(this).siblings().find(".wrap-sub-nav").hide();
+    	  }
+        
+        e.stopPropagation();
+
+    });
+    _tphNav.on("mouseover", function(e) {
+        e.stopPropagation();
+    })
+    $(document).on("mouseover", function() {
+        _tphNav.find(".wrap-sub-nav").fadeOut();
+        _tphNav.attr("attr-status","down");
+    })
+
+			/**选择城市**/
+
+			$("#wrapSelectAddress").on("click",function(){
+				var addressList=$("#addressList");
+				if(addressList.css("display")=="none"){
+					$(this).addClass("selectStatus");
+				    addressList.fadeIn();
+
+				}else{
+            $(this).removeClass("selectStatus");
+				    addressList.fadeOut();
+				}
+				
+			})
+		})
+
+
+  function selectCity(obj){
+  	var _selectCity=$("#selectCity");
+      _selectCity.text($(obj).text())
+      $(".wrap-up").removeClass("selectStatus")
+      $("#addressList").fadeOut();
+  }
+
+
+                 	/**低碳联盟轮播图**/
+	function lowCarbonSlibar(obj) {
+    var unionUl = $("#" + obj);
+    var unionItem = unionUl.find(".union-item");
+    var unionItem0 = unionItem.eq(0).outerWidth(true);
+    var unionItem3 = unionItem0 * 3;
+    var _rank = Math.ceil(unionItem0 * unionItem.length / unionItem3);
+    var index = 1,
+        timer1 = null;
+
+    function scrollAuto() {
+        unionUl.animate({
+            left: '-' + unionItem3 * (index - 1)
+        }, 600);
+    }
+    timer1 = setInterval(time, 3000)
+
+    function time() {
+        if (unionItem <= 3) {
+            clearInterval(timer1);
+        } else {
+            index++;
+            if (index > _rank) {
+                index = 1;
+            }
+            scrollAuto();
+        }
+
+    }
+    $("#turnLeft").on("click", function() {
+        index++;
+        clearInterval(timer1);
+        if (index > _rank) {
+            index = 1;
+        }
+        if (!unionUl.is(":animated")) {
+
+            scrollAuto();
+            timer1 = setInterval(time, 3000)
+        }
+    });
+    $("#turnRight").on("click", function() {
+        index--;
+        clearInterval(timer1);
+        if (index <= 0) {
+            index = _rank;
+        }
+        if (!unionUl.is(":animated")) {
+            scrollAuto();
+            timer1 = setInterval(time, 3000)
+        }
+    });
+}
+		
+	</script>
+</body>
+</html>
