@@ -2795,6 +2795,7 @@ body{
 			margin-top:30px;
 			width:120px;
 			height:36px;
+			color:#24b026;
 			line-height:36px;
 			border:1px solid #59d75a;
 			@include borderRadius;
@@ -2880,8 +2881,408 @@ body{
       	background:url(../../statics/image/icons/icon-card-out.png) no-repeat;
       }
       .icon-out{
+      	top:12px;
       	background:url(../../statics/image/icons/icon-losed.png) no-repeat right bottom;
       }
+		}
+	}
+}
+/*注册登录模块**/
+.width1024{
+	margin:0 auto;
+	width:1024px;
+}
+.wrap-register{
+	padding:15px 0 30px 0;
+	overflow:hidden;
+	.register-left{
+		padding-right:110px;
+		float:left;
+		.title{
+			padding:75px 0 20px 8px;
+			color:#24af26;
+			font-size:36px;
+		}
+		.wrap-wc{
+			overflow:hidden;
+			.wc-item{
+				float:left;
+				margin-right:12px;
+				img{
+					width:160px;
+					height:160px;
+					vertical-align:middle;
+				}
+				label{
+					display:block;
+					padding:5px 0 0 8px;
+					font-size:16px;
+					color:#666;
+				}
+			}
+		}
+	}
+	.register-right{
+		padding-left:135px;
+		overflow:hidden;
+		border-left:1px solid #e5e5e5;
+
+		.input-item{
+			margin-bottom:30px;
+			width:418px;
+			height:46px;
+			line-height:46px;
+			font-size:16px;
+			border:1px solid #e5e5e5;
+			input{
+				padding:5px 10px;
+				border:none;
+				outline:none;
+				width:100%;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				box-sizing:border-box;
+			}
+		}
+		.address-item{
+			position:relative;
+			width:205px;
+			input{
+				padding-right:30px;
+			}
+			.icon-down{
+				position:absolute;
+				right:0px;
+				top:0px;
+				display:inline-block;
+				width:30px;
+				height:46px;
+				cursor:pointer;
+				background:url(../../statics/image/icons/icon-dropdown.png) no-repeat center center;
+			}
+		}
+		.tel-item{
+			overflow:hidden;
+			.tel-mark{
+         float:left;
+         display:inline-block;
+         padding:0 10px;
+         border-right:1px solid #e5e5e5;
+			}
+			.wrap-tel{
+				overflow:hidden;
+			}
+		}
+	  .pw-rank{
+	  	margin:-28px 0 12px 0;
+	  	span{
+	  		display:inline-block;
+	  		margin-right:3px;
+	  		width:40px;
+	  		height:18px;
+	  		font-size:12px;
+	  		line-height:18px;
+	  		text-align:center;
+	  		color:#fff;
+	  	}
+	  	.low{
+        background-color:#eb262c;
+	  	}
+	  	.middle{
+	  		background-color:#fd982c;
+	  	}
+	  	.height{
+	  		background-color:#0c9e0d;
+	  	}
+	  }
+	  .wrap-code{
+	  	overflow:hidden;
+	  	.input-item{
+	  		margin-right:25px;
+	  		float:left;
+	  		width:205px;
+	  	}
+	  	.obtain-btn{
+	  		float:left;
+	  		width:185px;
+	  		height:46px;
+	  		line-height:46px;
+	  		text-align:center;
+	  		font-size:16px;
+	  		border:1px solid #24af26;
+	  		color:#24af26;
+	  	}
+	  }
+	  .register-btn{
+	  	width:418px;
+	  	height:60px;
+	  	line-height:60px;
+	  	color:#fff;
+	  	text-align:center;
+	  	cursor:pointer;
+	  	font-size:24px;
+	  	background-color:#24af26;
+	  }
+	  .register-tip{
+	  	padding-top:15px;
+	  	font-size:16px;
+	  	.tip{
+	  		padding-right:15px;
+	  		color:#a9a9a9;
+	  	}
+	  	.login-now{
+	  		color:#199ae2;
+	  	}
+	  }
+	  .login-title{
+	  	padding:20px 0 40px 0;
+	  	color:#24af26;
+	  	font-size:22px;
+	  }
+	  .remeber-status{
+	  	margin:-5px 0 25px 0;
+	  	font-size:16px;
+	  	color:#a9a9a9;
+	  	.remeber-checkbox{
+	  		position:relative;
+	  		display:inline-block;
+	  		margin-right:5px;
+	  		width:24px;
+	  		height:24px;
+	  		background:url(../../statics/image/icons/icon-checkbox.png) no-repeat;
+	  		vertical-align:-7px;
+	  		input{
+	  			position:absolute;
+	  			left:0;
+	  			top:0;
+	  			width:24px;
+	  			height:24px;
+	  			outline:none;
+	  			opacity:0;
+	  			filter:alpha(opacity=0);
+	  		}
+	  	}
+	  	.remeber-checkbox-no{
+	  		background:url(../../statics/image/icons/icon-checkbox-no.png) no-repeat;
+	  	}
+	  }
+	  .login-tip{
+	  	text-align:right;
+	  	.login-now{
+	  		margin-right:15px;
+	  	}
+	  }
+	  .changeCode{
+	  	.pic{
+	  		width:123px;
+	  		height:48px;
+	  		vertical-align:-5px;
+	  	}
+	  	.change-btn{
+	  		margin-left:5px;
+	  		cursor:pointer;
+	  		color:#199ae2;
+	  		font-size:16px;
+	  	}
+	  }
+	}
+	.forgetPassword-title{
+		font-size:24px;
+	}
+	.wrap-process{
+		margin:0 auto;
+		width:720px;
+		height:120px;
+		margin-top:50px;
+		.process-line{
+			height:4px;
+			background-color:#e5e5e5;
+		}
+		.process-part{
+			position:relative;
+			float:left;
+			width:240px;
+			text-align:center;
+			.part-line{
+				height:4px;
+				background-color:#e5e5e5;
+			}
+			.process-number{
+				position:absolute;
+				top:-13px;
+				left:106px;
+				width:29px;
+				height:29px;
+				line-height:29px;
+				color:#fff;
+				font-size:20px;
+				background:url(../../statics/image/icons/icon-round29.png) no-repeat;
+			}
+			.part-tip{
+				display:inline-block;
+				margin-top:25px;
+				color:#a9a9a9;
+			}
+		}
+		.part-finished{
+			.process-number{
+				background:url(../../statics/image/icons/icon-round29-active.png) no-repeat;
+			}
+			.part-tip{
+				color:#24af26;
+			}
+			.part-line{
+				background-color:#24af26;
+			}
+		}
+	}
+	.forgetpw-item{
+		position:relative;
+		text-align:center;
+		.label{
+			display:inline-block;
+			margin-right:10px;
+			width:105px;
+			line-height:36px;
+			text-align:right;
+		}
+		.input-item{
+			display:inline-block;
+			margin-bottom:20px;
+			height:36px;
+			line-height:36px;
+			width:258px;
+			border:1px solid #e5e5e5;
+			input{
+				width:100%;
+				border:none;
+				outline:none;
+				padding:3px 10px;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				box-sizing:border-box;
+			}
+		}
+		.submit-request{
+			display:inline-block;
+			margin-top:10px;
+			width:120px;
+			height:38px;
+			line-height:38px;
+			font-size:16px;
+			color:#fff;
+			text-align:center;
+			background-color:#24b026;	
+		}
+		.password-tip{
+			margin-left:5px;
+			position:absolute;
+			top:10px;
+			font-size:12px;
+			color:#a9a9a9;
+		}
+	}
+	.code-item{
+		.input-item{
+			width:140px;
+		}
+		.send-code{
+			margin-left:4px;
+			display:inline-block;
+			height:36px;
+			width:108px;
+			line-height:36px;
+			text-align:center;
+			border:1px solid #24af26;
+			cursor:pointer;
+			color:#24af26;
+		}
+	}
+	.wrap-checking{
+		text-align:center;
+		.check-left{
+			width:75px;
+			height:75px;
+			display:inline-block;
+			margin-right:5px;
+			overflow:hidden;
+			img{
+				max-width:100%;
+			}
+		}
+		.check-right{
+			display:inline-block;
+			text-align:left;
+			vertical-align:20px;
+			.check-name{
+				padding-bottom:10px;
+         font-size:16px;
+			}
+			.check-tip{
+				font-size:12px;
+				color:#a9a9a9;
+			}
+		}
+	}
+	.reset-item{
+		.label{
+			vertical-align:30px;
+		}
+		.input-item{
+			margin-bottom:32px;
+		}
+		.pw-rank{
+			text-align:left;
+	  	margin-top:-5px;
+	  	span{
+	  		display:inline-block;
+	  		margin-right:3px;
+	  		width:40px;
+	  		height:18px;
+	  		font-size:12px;
+	  		line-height:18px;
+	  		text-align:center;
+	  		color:#fff;
+	  	}
+	  	.low{
+        background-color:#eb262c;
+	  	}
+	  	.middle{
+	  		background-color:#fd982c;
+	  	}
+	  	.height{
+	  		background-color:#0c9e0d;
+	  	}
+	  }
+	}
+	.finished-step{
+		text-align:center;
+		.finished-tip{
+			span{
+				display:inline-block;
+				padding:12px 0 12px 55px;
+				font-size:18px;
+				background:url(../../statics/image/icons/icon-success.png) no-repeat left center;
+			}
+		}
+		.back-login{
+			padding:20px 0 20px 0;
+			a{
+				display:inline-block;
+				width:118px;
+				height:32px;
+				line-height:32px;
+				background-color:#24af26;
+				color:#fff;
+			}
+		}
+		.back-tip{
+			font-size:12px;
+			color:#a9a9a9;
+			strong{
+				margin:0 3px;
+				color:#ff0000;
+			}
 		}
 	}
 }

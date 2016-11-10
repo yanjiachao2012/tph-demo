@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../statics/css/base.css"/>
+<link rel="stylesheet" href="../statics/css/newStyle.css"/>
+<script src="../statics/script/config/config.js"></script>
+<script src="../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../statics/script/login.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user" style="display:none;">
+				<a href="" class="user-info">
+					<img src="../statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-user">
+				<a href="" class="user-loginOut">登录</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+	
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="../statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					 <li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="item-a">低碳活动</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳资讯</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动1</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</div>
+<div class="wrap-main">
+	<div class="width1024 wrap-register">
+		<div class="register-left">
+			<h3 class="title">低碳权益&nbsp;&nbsp;惠及你我</h3>
+			<div class="wrap-wc">
+				<span class="wc-item">
+			  	<img src="../statics/image/pic9.png" alt="">
+			  	<label>扫描添加微信公众号</label>
+				</span>
+				<span class="wc-item">
+				  <img src="../statics/image/pic10.png" alt="">
+				  <label>扫描下载APP客户端</label>
+				</span>
+			</div>
+		</div>
+		<div class="register-right">
+			<h4 class="login-title">会员登录</h4>
+			<div class="input-item">
+				<input type="text" id="loginName" placeholder="邮箱/手机号码/昵称">
+			</div>
+			<div class="input-item">
+			  <input type="text" id="loginPw" placeholder="密码">
+			</div>
+			<div class="wrap-code">
+				<div class="input-item">
+					<input type="text" id="loginCode" placeholder="验证码" />
+				</div>
+				<div class="changeCode">
+					<img src="../statics/image/icon-code.png" class="pic"/>
+					<span class="change-btn">换一张</span>
+				</div>
+			</div>
+			<div class="remeber-status">
+				<label class="remeber-checkbox" onclick="toggleStatus(this)"><input type="checkbox" checked id="remeber-checkbox"/></label>
+				<span>记住登录状态</span>
+			</div>
+			<div class="register-btn">立即登录</div>
+			<div class="register-tip login-tip">
+				<a href="" class="tip">忘记密码?</a>
+				<a href="" class="login-now">快速注册</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pageFoot"></div>
+	<script>
+	/*控制搜索框的placeholder属性*/
+function funPlaceholder(element) {
+	var placeholder = '';
+	if (element && !("placeholder" in document.createElement("input")) && (placeholder = element.getAttribute("placeholder"))) {
+		element.onfocus = function() {
+			if (this.value === placeholder) {
+				this.value = "";
+			}
+			this.style.color = '';
+		};
+		element.onblur = function() {
+			if (this.value === "") {
+				this.value = placeholder;
+				this.style.color = '#a8a8a8';
+			}
+		};
+
+		//样式初始化
+		if (element.value === "") {
+			element.value = placeholder;
+			element.style.color = '#a8a8a8';
+		}
+	}
+};
+
+funPlaceholder(document.getElementById("loginName"));
+funPlaceholder(document.getElementById("loginPw"));
+funPlaceholder(document.getElementById("loginCode"));
+	</script>
+</body>
+</html>

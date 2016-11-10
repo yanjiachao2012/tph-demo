@@ -2717,6 +2717,7 @@ body {
   margin-top: 30px;
   width: 120px;
   height: 36px;
+  color: #24b026;
   line-height: 36px;
   border: 1px solid #59d75a;
   -webkit-border-radius: 2px;
@@ -2790,7 +2791,398 @@ body {
   background: url(../../statics/image/icons/icon-card-out.png) no-repeat;
 }
 .customer-right .myCard-list-content .out-card-item .icon-out {
+  top: 12px;
   background: url(../../statics/image/icons/icon-losed.png) no-repeat right bottom;
+}
+
+/*注册登录模块**/
+.width1024 {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.wrap-register {
+  padding: 15px 0 30px 0;
+  overflow: hidden;
+}
+.wrap-register .register-left {
+  padding-right: 110px;
+  float: left;
+}
+.wrap-register .register-left .title {
+  padding: 75px 0 20px 8px;
+  color: #24af26;
+  font-size: 36px;
+}
+.wrap-register .register-left .wrap-wc {
+  overflow: hidden;
+}
+.wrap-register .register-left .wrap-wc .wc-item {
+  float: left;
+  margin-right: 12px;
+}
+.wrap-register .register-left .wrap-wc .wc-item img {
+  width: 160px;
+  height: 160px;
+  vertical-align: middle;
+}
+.wrap-register .register-left .wrap-wc .wc-item label {
+  display: block;
+  padding: 5px 0 0 8px;
+  font-size: 16px;
+  color: #666;
+}
+.wrap-register .register-right {
+  padding-left: 135px;
+  overflow: hidden;
+  border-left: 1px solid #e5e5e5;
+}
+.wrap-register .register-right .input-item {
+  margin-bottom: 30px;
+  width: 418px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  border: 1px solid #e5e5e5;
+}
+.wrap-register .register-right .input-item input {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrap-register .register-right .address-item {
+  position: relative;
+  width: 205px;
+}
+.wrap-register .register-right .address-item input {
+  padding-right: 30px;
+}
+.wrap-register .register-right .address-item .icon-down {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  width: 30px;
+  height: 46px;
+  cursor: pointer;
+  background: url(../../statics/image/icons/icon-dropdown.png) no-repeat center center;
+}
+.wrap-register .register-right .tel-item {
+  overflow: hidden;
+}
+.wrap-register .register-right .tel-item .tel-mark {
+  float: left;
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #e5e5e5;
+}
+.wrap-register .register-right .tel-item .wrap-tel {
+  overflow: hidden;
+}
+.wrap-register .register-right .pw-rank {
+  margin: -28px 0 12px 0;
+}
+.wrap-register .register-right .pw-rank span {
+  display: inline-block;
+  margin-right: 3px;
+  width: 40px;
+  height: 18px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+}
+.wrap-register .register-right .pw-rank .low {
+  background-color: #eb262c;
+}
+.wrap-register .register-right .pw-rank .middle {
+  background-color: #fd982c;
+}
+.wrap-register .register-right .pw-rank .height {
+  background-color: #0c9e0d;
+}
+.wrap-register .register-right .wrap-code {
+  overflow: hidden;
+}
+.wrap-register .register-right .wrap-code .input-item {
+  margin-right: 25px;
+  float: left;
+  width: 205px;
+}
+.wrap-register .register-right .wrap-code .obtain-btn {
+  float: left;
+  width: 185px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #24af26;
+  color: #24af26;
+}
+.wrap-register .register-right .register-btn {
+  width: 418px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: #24af26;
+}
+.wrap-register .register-right .register-tip {
+  padding-top: 15px;
+  font-size: 16px;
+}
+.wrap-register .register-right .register-tip .tip {
+  padding-right: 15px;
+  color: #a9a9a9;
+}
+.wrap-register .register-right .register-tip .login-now {
+  color: #199ae2;
+}
+.wrap-register .register-right .login-title {
+  padding: 20px 0 40px 0;
+  color: #24af26;
+  font-size: 22px;
+}
+.wrap-register .register-right .remeber-status {
+  margin: -5px 0 25px 0;
+  font-size: 16px;
+  color: #a9a9a9;
+}
+.wrap-register .register-right .remeber-status .remeber-checkbox {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  background: url(../../statics/image/icons/icon-checkbox.png) no-repeat;
+  vertical-align: -7px;
+}
+.wrap-register .register-right .remeber-status .remeber-checkbox input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.wrap-register .register-right .remeber-status .remeber-checkbox-no {
+  background: url(../../statics/image/icons/icon-checkbox-no.png) no-repeat;
+}
+.wrap-register .register-right .login-tip {
+  text-align: right;
+}
+.wrap-register .register-right .login-tip .login-now {
+  margin-right: 15px;
+}
+.wrap-register .register-right .changeCode .pic {
+  width: 123px;
+  height: 48px;
+  vertical-align: -5px;
+}
+.wrap-register .register-right .changeCode .change-btn {
+  margin-left: 5px;
+  cursor: pointer;
+  color: #199ae2;
+  font-size: 16px;
+}
+.wrap-register .forgetPassword-title {
+  font-size: 24px;
+}
+.wrap-register .wrap-process {
+  margin: 0 auto;
+  width: 720px;
+  height: 120px;
+  margin-top: 50px;
+}
+.wrap-register .wrap-process .process-line {
+  height: 4px;
+  background-color: #e5e5e5;
+}
+.wrap-register .wrap-process .process-part {
+  position: relative;
+  float: left;
+  width: 240px;
+  text-align: center;
+}
+.wrap-register .wrap-process .process-part .part-line {
+  height: 4px;
+  background-color: #e5e5e5;
+}
+.wrap-register .wrap-process .process-part .process-number {
+  position: absolute;
+  top: -13px;
+  left: 106px;
+  width: 29px;
+  height: 29px;
+  line-height: 29px;
+  color: #fff;
+  font-size: 20px;
+  background: url(../../statics/image/icons/icon-round29.png) no-repeat;
+}
+.wrap-register .wrap-process .process-part .part-tip {
+  display: inline-block;
+  margin-top: 25px;
+  color: #a9a9a9;
+}
+.wrap-register .wrap-process .part-finished .process-number {
+  background: url(../../statics/image/icons/icon-round29-active.png) no-repeat;
+}
+.wrap-register .wrap-process .part-finished .part-tip {
+  color: #24af26;
+}
+.wrap-register .wrap-process .part-finished .part-line {
+  background-color: #24af26;
+}
+.wrap-register .forgetpw-item {
+  position: relative;
+  text-align: center;
+}
+.wrap-register .forgetpw-item .label {
+  display: inline-block;
+  margin-right: 10px;
+  width: 105px;
+  line-height: 36px;
+  text-align: right;
+}
+.wrap-register .forgetpw-item .input-item {
+  display: inline-block;
+  margin-bottom: 20px;
+  height: 36px;
+  line-height: 36px;
+  width: 258px;
+  border: 1px solid #e5e5e5;
+}
+.wrap-register .forgetpw-item .input-item input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 3px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrap-register .forgetpw-item .submit-request {
+  display: inline-block;
+  margin-top: 10px;
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #24b026;
+}
+.wrap-register .forgetpw-item .password-tip {
+  margin-left: 5px;
+  position: absolute;
+  top: 10px;
+  font-size: 12px;
+  color: #a9a9a9;
+}
+.wrap-register .code-item .input-item {
+  width: 140px;
+}
+.wrap-register .code-item .send-code {
+  margin-left: 4px;
+  display: inline-block;
+  height: 36px;
+  width: 108px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #24af26;
+  cursor: pointer;
+  color: #24af26;
+}
+.wrap-register .wrap-checking {
+  text-align: center;
+}
+.wrap-register .wrap-checking .check-left {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  margin-right: 5px;
+  overflow: hidden;
+}
+.wrap-register .wrap-checking .check-left img {
+  max-width: 100%;
+}
+.wrap-register .wrap-checking .check-right {
+  display: inline-block;
+  text-align: left;
+  vertical-align: 20px;
+}
+.wrap-register .wrap-checking .check-right .check-name {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.wrap-register .wrap-checking .check-right .check-tip {
+  font-size: 12px;
+  color: #a9a9a9;
+}
+.wrap-register .reset-item .label {
+  vertical-align: 30px;
+}
+.wrap-register .reset-item .input-item {
+  margin-bottom: 32px;
+}
+.wrap-register .reset-item .pw-rank {
+  text-align: left;
+  margin-top: -5px;
+}
+.wrap-register .reset-item .pw-rank span {
+  display: inline-block;
+  margin-right: 3px;
+  width: 40px;
+  height: 18px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+}
+.wrap-register .reset-item .pw-rank .low {
+  background-color: #eb262c;
+}
+.wrap-register .reset-item .pw-rank .middle {
+  background-color: #fd982c;
+}
+.wrap-register .reset-item .pw-rank .height {
+  background-color: #0c9e0d;
+}
+.wrap-register .finished-step {
+  text-align: center;
+}
+.wrap-register .finished-step .finished-tip span {
+  display: inline-block;
+  padding: 12px 0 12px 55px;
+  font-size: 18px;
+  background: url(../../statics/image/icons/icon-success.png) no-repeat left center;
+}
+.wrap-register .finished-step .back-login {
+  padding: 20px 0 20px 0;
+}
+.wrap-register .finished-step .back-login a {
+  display: inline-block;
+  width: 118px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #24af26;
+  color: #fff;
+}
+.wrap-register .finished-step .back-tip {
+  font-size: 12px;
+  color: #a9a9a9;
+}
+.wrap-register .finished-step .back-tip strong {
+  margin: 0 3px;
+  color: #ff0000;
 }
 
 /***尾部**/

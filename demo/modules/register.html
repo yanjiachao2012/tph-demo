@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../statics/css/base.css"/>
+<link rel="stylesheet" href="../statics/css/newStyle.css"/>
+<script src="../statics/script/config/config.js"></script>
+<script src="../statics/script/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user" style="display:none;">
+				<a href="" class="user-info">
+					<img src="../statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-user">
+				<a href="" class="user-loginOut">登录</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+	
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="../statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					 <li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="item-a">低碳活动</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳资讯</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动1</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</div>
+<div class="wrap-main">
+	<div class="width1024 wrap-register">
+		<div class="register-left">
+			<h3 class="title">低碳权益&nbsp;&nbsp;惠及你我</h3>
+			<div class="wrap-wc">
+				<span class="wc-item">
+			  	<img src="../statics/image/pic9.png" alt="">
+			  	<label>扫描添加微信公众号</label>
+				</span>
+				<span class="wc-item">
+				  <img src="../statics/image/pic10.png" alt="">
+				  <label>扫描下载APP客户端</label>
+				</span>
+			</div>
+		</div>
+		<div class="register-right">
+			<div class="input-item address-item">
+				<input type="text" value="中国"/>
+				<i class="icon-down"></i>
+			</div>
+			<div class="input-item tel-item">
+				<span class="tel-mark">+86</span>
+				<div class="wrap-tel">
+					<input type="text" placeholder="移动电话" />
+				</div>
+			</div>
+			<div class="input-item">
+				<input type="text" placeholder="设置6-18位数密码（由数字、字母、特殊符号组成）">
+			</div>
+			<div class="pw-rank">
+				<span class="low">低</span><span class="middle">中</span><span class="height">高</span>
+			</div>
+			<div class="input-item">
+			  <input type="text" placeholder="确认密码">
+			</div>
+			<div class="wrap-code">
+				<div class="input-item">
+					<input type="text" placeholder="短信验证码" />
+				</div>
+				<span class="obtain-btn">获取短信验证码</span>
+			</div>
+			<div class="register-btn">立即注册</div>
+			<div class="register-tip">
+				<span class="tip">我已注册碳普惠账号</span>
+				<a href="" class="login-now">立即登录</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pageFoot"></div>
+</body>
+</html>
