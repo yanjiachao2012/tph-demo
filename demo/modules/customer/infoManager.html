@@ -4,18 +4,47 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap.min.css"/>
+<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.css"/>
 <link rel="stylesheet" href="../../statics/css/base.css"/>
 <link rel="stylesheet" href="../../statics/css/newStyle.css"/>
 <link rel="stylesheet" href="../../statics/css/customer.css"/>
 <script src="../../statics/script/config/config.js"></script>
 <script src="../../statics/script/jquery-1.7.2.min.js"></script>
+
+<script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
 <script>
+
 	function toggleTab(obj,obj0,obj1){
 		$(obj).addClass("active-item");
 		$(obj).siblings().removeClass("active-item");
 		$("#"+obj0).css("display","block");
     $("#"+obj1).css("display","none");
 	}
+	$(function(){
+		$('.start_date').datetimepicker({
+            language: 'zh-CN',
+            minView: "month",
+            format: "yyyy-mm-dd",
+
+            todayHighlight: true,
+            showMeridian: true,
+            autoclose: true
+     });
+		$('.end_date').datetimepicker({
+            language: 'zh-CN',
+            minView: "month",
+            format: "yyyy-mm-dd",
+
+            todayHighlight: true,
+            showMeridian: true,
+            autoclose: true
+     });
+		$(".dropdown").on("click",function(){
+			$(this).prev("input").focus();
+		})
+	})
 </script>
 </head>
 <body>
@@ -194,114 +223,115 @@
 		  	</div>
 		  </div>
 		  <div class="customer-right">
-		    <!--没有绑定社区提示-->
-		    <div class="no-content no-community-binding"  style="display:none;">
-		  	  <div class="no-spot-remind">
-		  	    <i class="no-content-icon"></i>您还没有绑定社区 
-		  	  </div>
-		  	  <a href="" class="go-binding">去绑定</a>
-			  </div>
-		  	<div class="wrap-list-content scenicSpot-list-content community-list-content">
-		  	  <div class="myCommunity-title">
-		  	   	  电子五所社区
-		  	  </div>
-		  	  <div class="community-notice">
-		  	   	  <div class="wrap-info">
-			  	   	  <div class="community-member community-v">
-			  	   	  	<i></i>
-			  	   	  	<div class="member-info">
-			  	   	  		<p class="info-up">已绑定用户</p>
-			  	   	  		<div class="member"><strong class="number">1000+</strong>人</div>
-			  	   	  	</div>
-			  	   	  </div>
-			  	   	  <div class="community-member community-co2">
-			  	   	  	<i></i>
-			  	   	  	<div class="member-info">
-			  	   	  		<p class="info-up">累计减碳量</p>
-			  	   	  		<div class="member"><strong class="number">230</strong>万吨</div>
-			  	   	  	</div>
-			  	   	  </div>
-		  	   	  </div>
-		  	   	  <div class="community-notice-content">
-			  	   	  <span class="notice-icon">公告：</span>
-			  	   	  <p class="notice-content">
-			  	   	  	2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
-			  	   	  </p>
-		  	   	  </div>
-		  	  </div>
+		  	<div class="wrap-list-content infoManager-content">
+		  	   <div class="wrap-process">
+		  	      <div class="process-line">
+		  	      	<div class="finished-process" id="finished-process" style="width:50%"></div>
+		  	      </div>
+		  	     	<div class="process-part process-active-part">
+		  	     		<div class="wrap-round">
+			  	     		<span class="part-round">
+			  	     		  <img src="../../statics/image/icons/icon-edit23.png"/>
+			  	     		</span>
+		  	     		</div>
+		  	     		<p>编辑个人资料</p>
+		  	     	</div>
+		  	     	<div class="process-part common-part">
+			  	     	<div class="wrap-round">
+			  	     		<span class="part-round">
+			  	     			<img src="../../statics/image/icons/icon-bingding.png"/>
+			  	     		</span>
+			  	     	</div>
+		  	     		<p>低碳行为绑定项</p>
+		  	     	</div>
+		  	     	<div class="process-part common-part">
+		  	     	  <div class="wrap-round">
+			  	     		<span class="part-round">
+			  	     			<img src="../../statics/image/icons/icon-shiming.png"/>
+			  	     		</span>
+			  	     	</div>
+		  	     		<p>实名认证</p>
+		  	     	</div>
+		  	     
+		  	   </div>
 		  	</div>
-		  	<!--没有商家-->
-		  	<div class="wrap-list-content scenicSpot-list-content community-list-content">
-	  	    <div class="scenicSpot-list">
-		  	   	<div class="myCommunity-title">
-		  	   		社区周边的商家
-		  	   	</div>
-		  	   	<ul class="myCommunity-ul">
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic131.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic133.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/user-example.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic131.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic133.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/user-example.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   	</ul>
-		  	   	<div class="no-content" style="display:none;padding:100px 0 150px;">
-		  	   	  <div class="no-spot-remind"><i class="no-content-icon"></i>
-		  	   	    <div class="remind-tip">景区附近还没有低碳联盟商家信息，我们正在努力喔~ 
-		  	   	    </div>
-		  	   	  </div>
-		  		  </div>
-	  	    </div>
+		  	<div class="wrap-list-content infoManager-edit">
+		  		<h4 class="infoManager-title">
+		  			完善您得个人信息，有利于您得账号安全，也便于您及时获取推荐信息~
+		  		</h4>
+		  		<div class="wrap-user-pic">
+		  			<div class="user-pic">
+		  				<img src="../../statics/image/icons/icon-default.png" alt=""> 
+		  			</div>
+		  			<div class="upload-img">
+		  				<span class="wrap-upload" href="">
+		  				  上传/更改头像
+			  				<input type="file" class="upload-btn" name="upload" />
+			  			</span>
+		  			</div>		
+		  		</div>
+		  		<div class="wrap-user-edit">
+		  			<div class="edit-item">
+		  				<label class="item-left"><span class="mark">*</span>昵称：</label>
+		  				<div class="item-right">
+		  					 <input type="text" placeholder="不超过10个字" />
+		  				</div>
+		  			</div>
+		  			<div class="edit-item sex-item">
+		  				<label class="item-left">性别：</label>
+		  				<div class="sex-right">
+		  					<span class="select-input"><input type="radio" name="sex"/>男</span>
+		  					<span><input type="radio" name="sex"/>女</span>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">出生日期：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left"><span class="mark">*</span>手机号码：</label>
+		  				<div class="item-right">
+		  					 <input type="text"/>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">邮箱：</label>
+		  				<div class="item-right">
+		  					 <input type="text" />
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">所在城市：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">所在社区：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  				<p class="item-details">绑定所在社区可以在“个人中心-我的社区”里查看社区信息~</p>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">关注的景区：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  					<p class="item-details">绑定所在社区可以在“个人中心-我的景区”里查看社区信息~</p>
+		  			</div>
+		  		</div>
+		  		<div class="save-edit"><a href="">保存并下一步</a></div>
 		  	</div>
 		  </div>
 	</div>
+	
 </div>
 </body>
 </html>

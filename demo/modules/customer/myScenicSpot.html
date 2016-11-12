@@ -6,6 +6,7 @@
 <title>碳普惠</title>
 <link rel="stylesheet" href="../../statics/css/base.css"/>
 <link rel="stylesheet" href="../../statics/css/newStyle.css"/>
+<link rel="stylesheet" href="../../statics/css/customer.css"/>
 <script src="../../statics/script/config/config.js"></script>
 <script src="../../statics/script/jquery-1.7.2.min.js"></script>
 <script>
@@ -193,7 +194,14 @@
 		  	</div>
 		  </div>
 		  <div class="customer-right">
-		  	<div class="wrap-list-content scenicSpot-list-content">
+		    <!--没有绑定社区提示-->
+		    <div class="no-content no-community-binding">
+		  	  <div class="no-spot-remind">
+		  	    <i class="no-content-icon"></i>您还没有绑定景区 
+		  	  </div>
+		  	  <a href="" class="go-binding">去绑定</a>
+			  </div>
+		  	<div class="wrap-list-content scenicSpot-list-content" style="display:none;">
 		  	   <div class="scenicSpot-title">
 		  	   	  万胡景区
 		  	   </div>
@@ -250,7 +258,7 @@
 		  	   	</div>
 		  	   </div>
 		  	</div>
-		  	<div class="wrap-list-content scenicSpot-list-content">
+		  	<div class="wrap-list-content scenicSpot-list-content" style="display:none;">
 		  	   <div class="scenicSpot-title">
 		  	   	  张家界景区
 		  	   </div>
@@ -325,7 +333,7 @@
 		  	   	</div>
 		  	   </div>
 		  	</div>
-		  	<div class="wrap-list-content scenicSpot-list-content">
+		  	<div class="wrap-list-content scenicSpot-list-content" style="display:none;">
 		  	   <div class="scenicSpot-title">
 		  	   	  张家界景区
 		  	   </div>
