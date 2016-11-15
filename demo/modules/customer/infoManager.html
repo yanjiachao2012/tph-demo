@@ -14,38 +14,8 @@
 
 <script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.js"></script>
 <script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
-<script>
 
-	function toggleTab(obj,obj0,obj1){
-		$(obj).addClass("active-item");
-		$(obj).siblings().removeClass("active-item");
-		$("#"+obj0).css("display","block");
-    $("#"+obj1).css("display","none");
-	}
-	$(function(){
-		$('.start_date').datetimepicker({
-            language: 'zh-CN',
-            minView: "month",
-            format: "yyyy-mm-dd",
-
-            todayHighlight: true,
-            showMeridian: true,
-            autoclose: true
-     });
-		$('.end_date').datetimepicker({
-            language: 'zh-CN',
-            minView: "month",
-            format: "yyyy-mm-dd",
-
-            todayHighlight: true,
-            showMeridian: true,
-            autoclose: true
-     });
-		$(".dropdown").on("click",function(){
-			$(this).prev("input").focus();
-		})
-	})
-</script>
+	<script src="script/infoManager.js"></script>
 </head>
 <body>
 <!--头部开始-->
@@ -226,7 +196,7 @@
 		  	<div class="wrap-list-content infoManager-content">
 		  	   <div class="wrap-process">
 		  	      <div class="process-line">
-		  	      	<div class="finished-process" id="finished-process" style="width:50%"></div>
+		  	      	<div class="finished-process" id="finished-process" style="width:100%"></div>
 		  	      </div>
 		  	     	<div class="process-part process-active-part">
 		  	     		<div class="wrap-round">
@@ -251,11 +221,11 @@
 			  	     		</span>
 			  	     	</div>
 		  	     		<p>实名认证</p>
-		  	     	</div>
-		  	     
+		  	     	</div>  
 		  	   </div>
 		  	</div>
-		  	<div class="wrap-list-content infoManager-edit">
+		  	<!--编辑查看个人资料-->
+		  	<div class="wrap-list-content infoManager-edit" style="display:none;">
 		  		<h4 class="infoManager-title">
 		  			完善您得个人信息，有利于您得账号安全，也便于您及时获取推荐信息~
 		  		</h4>
@@ -287,7 +257,7 @@
 		  			<div class="edit-item">
 		  				<label class="item-left">出生日期：</label>
 		  				<div class="item-right">
-		  					 <input type="text" readonly />
+		  					 <input type="text" class="birthday_date" readonly />
 		  					 <i class="dropdown"></i>
 		  				</div>
 		  			</div>
@@ -329,9 +299,147 @@
 		  		</div>
 		  		<div class="save-edit"><a href="">保存并下一步</a></div>
 		  	</div>
+		  	<div class="wrap-list-content infoManager-bingding" style="display:none;">
+		  		<h5 class="bingding-title">
+		  			绑定低碳行为项，可以关联您得低碳数据，核算减碳量！
+		  		</h5>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">羊城通/岭南通<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">羊城通/岭南通卡号：</label>
+			  				<div class="content-right">
+			  					<input type="text" placeholder="请输入10位数字" />
+			  				</div>
+		  				</div>
+		  				<p class="tip">备注：输入羊城通 / 岭南通的十位卡号数字，不足10位在前面叫0补足。如 卡号为12345678，应填写为 001234567</p>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title"  onclick="toggleShow(this);">管道天然气用户编号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">管道天然气用户编号：</label>
+			  				<div class="content-right">
+			  					<input type="text" value="" />
+			  				</div>
+		  				</div>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">光伏发电用户编号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">光伏发电用户编号：</label>
+			  				<div class="content-right">
+			  					<input type="text" value="" />
+			  				</div>
+		  				</div>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">用水用户编号<span class="bingding-tip">已绑定</span><a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">用水用户编号：</label>
+			  				<div class="content-right">
+			  					<input type="text"  />
+			  				</div>
+		  				</div>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">社区门牌号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">社区门牌号：</label>
+			  				<div class="content-right">
+			  					<input type="text"/>
+			  				</div>
+		  				</div>
+		  				<p class="tip">用户获取水、电、气等低碳行为数据</p>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">车牌号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">车牌号：</label>
+			  				<div class="content-right">
+			  					<input type="text" />
+			  				</div>
+		  				</div>
+		  				<p class="tip">车主车牌号码，如粤S88888</p>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	<div class="wrap-list-content infoManager-realName">
+		  			<h4 class="realName-title">
+		  			实名认证通过后，您才可以发起低碳活动哦～
+		  		  </h4>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left"><span class="mark">*</span>真实姓名：</label>
+		  		  	<div class="realName-right">
+		  		  		<input type="text" id="realName" placeholder="您的身份证信息不会被泄露，请放心填写！" />
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left"><span class="mark">*</span>身份证号：</label>
+		  		  	<div class="realName-right">
+		  		  		<input type="text" id="realId" placeholder="请输入18位身份证号码" />
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left">签发机关：</label>
+		  		  	<div class="realName-right">
+		  		  		<input type="text" id="realSign" placeholder="请填写身份证反面的签发机关" />
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left">有效期：</label>
+		  		  	<div class="realName-right date-right">
+		  		  		<input type="text" class="real_date" id="realTime" readonly />
+		  		  		<i class="time-dropdown"></i>
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item pic-item">
+		  		  	<label class="realName-left"><span class="mark">*</span>证件上传：</label>
+		  		  	<div class="realName-pic">
+		  		  		<div class="pic-item">
+		  		  			<img src="../../statics/image/pic-id1.png" />
+		  		  			<div class="wrap-input">
+		  		  				<span class="up-btn">
+                      本地上传
+                      <input type="hidden" id="picId1" value="" />
+		  		  					<input type="file" />
+		  		  				</span>
+		  		  			</div>
+		  		  		</div>
+		  		  		<div class="pic-item">
+		  		  			<img src="../../statics/image/pic-id2.png" />
+		  		  			<div class="wrap-input">
+		  		  				<span class="up-btn">
+                      本地上传
+                      <input type="hidden" id="picId2" value="" />
+		  		  					<input type="file" />
+		  		  				</span>
+		  		  			</div>
+		  		  		</div>
+		  		  		<p class="pic-tip">仅支持JPG、BMP格式，大小不超过5M</p>
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-save">
+		  		    <a href="javascript:realSave();">保存并提交</a>
+		  		  </div>
+		  	</div>
 		  </div>
 	</div>
-	
 </div>
 </body>
 </html>
