@@ -13,8 +13,13 @@
 /**个人中心***/
 .wrap-customer-main{
 	background-color:#f8f8f8;
+	.infoManager-common{
+		margin-bottom:0;
+		display:none;
+	}
 }
 .customer-main{
+	padding-bottom:20px;
 	.customer-left{
 		float:left;
 		margin-right:20px;
@@ -175,6 +180,11 @@
 				padding:15px 5px;
 				color:#666;
 				border-bottom:1px solid #e6e5e5;
+			}
+		}
+		.active-item{
+			a{
+				color:#16b115;
 			}
 		}
 		.item-news{	
@@ -1332,6 +1342,7 @@
 				border:1px solid #e5e5e5;
 				input{
 					padding-right:12px;
+					padding-left:10px;
 					margin:0;
 					height:100%;
 					width:100%;
@@ -1352,11 +1363,69 @@
 			    background: url(../../statics/image/icons/icon-dropdown9.png) no-repeat center center;
 			    background-size: 9px 5px;
 				}
+				.dropdown-list{
+					display:none;
+					position:absolute;
+					left:-1px;
+					z-index:9;
+					width:100%;
+					max-height:150px;
+					overflow-y:auto;
+					border:1px solid #e5e5e5;
+					background-color:#fff;
+					li{
+						height:25px;
+						line-height:25px;
+						text-indent: 10px;
+						cursor:pointer;
+						color:#666;
+						&:hover{
+							color:#999;
+							background-color:#f8f8f8;
+						}
+					}
+				}
 			}
 			.item-details{
 				display:inline-block;
 				font-size:12px;
 				color:#a9a9a9;
+			}
+		}
+		.spot-item{
+			.item-left{
+				margin-top:5px;
+				vertical-align:top;
+			}
+		
+			.wrap-right{
+				position:relative;
+				display:inline-block;
+
+			}
+			.show-selected{
+				position:absolute;
+				margin-top:10px;
+				height:60px;
+				overflow:hidden;
+				li{
+					display:inline-block;
+					margin-right:5px;
+					margin-bottom:5px;
+					padding:2px 5px 2px 5px;
+					font-size:12px;
+					color:#24b026;
+					background-color:#f9f9f9;
+					border:1px solid #e5e5e5;
+					@include borderRadius;
+					.i-remove{
+						display:inline-block;
+						width:24px;
+						height:16px;
+					   vertical-align:-2px;
+						background:url(../../statics/image/icons/icon-remove.png) no-repeat right center;
+					}
+				}
 			}
 		}
 		.sex-item{
@@ -1389,6 +1458,7 @@
 		}
 	}
 	.save-edit{
+		padding-top:20px;
 		padding-bottom:30px;
 		text-align:center;
 		a{
@@ -1404,7 +1474,7 @@
 	}
 }
 .infoManager-bingding{
-	height:700px;
+	padding-bottom:20px;
 	padding-left:20px;
 	padding-right:20px;
 	.bingding-title{
@@ -1447,6 +1517,7 @@
 				padding-bottom:20px;
 			}
 			.content-right{
+				position:relative;
 				display:inline-block;
 				height:28px;
 				width:158px;
@@ -1458,7 +1529,39 @@
 					height:100%;
 					border:none;
 					box-shadow: none;
+					border-radius:0;
 					@include boxSizing;
+				}
+				.i-dropdown{
+					display:inline-block;
+					position:absolute;
+					right:5px;
+					top:12px;
+					width:9px;
+					height:5px;
+					z-index:0;
+					background:url(../../statics/image/icons/icon-dropdown9.png) no-repeat center center;
+				}
+				.dropdown-list{
+					display:none;
+					position:absolute;
+					left:-1px;
+					z-index:10;
+					width:158px;
+					border:1px solid #e5e5e5;
+					background-color:#fff;
+					li{
+						text-indent:10px;
+						height:28px;
+						text-align:left;
+						line-height:28px;
+						color:#666;
+						cursor:pointer;
+						&:hover{
+							color:#999;
+							background-color:#f8f8f8;
+						}
+					}
 				}
 			}
 			.tip{
@@ -1480,12 +1583,14 @@
 
 	}
 	.active-item{
+
 			.item-title{
          color:#16b115;
          background:url(../../statics/image/icons/icon-turndown.png) no-repeat left center;
 			}
 			.item-content{
 				display:block;
+				transition:all 1s;
 			}
 		}
 }
