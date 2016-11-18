@@ -1,0 +1,214 @@
+@CHARSET "UTF-8";
+/*共有样式*/
+.bg-wihte{
+	background: #fff;
+}
+.sign-green{
+	color: #24b026;
+}
+.sign-gray{
+	color: #a9a9a9 !important;
+}
+.sign-red{
+	color: #ff0000 !important;
+}
+.sign-blue{
+	color: #4dcdc2;
+}
+.sign-orange{
+	color: #f38446;
+}
+.sign-plus{
+	font-size: 16px;
+	color:#16b115;
+}
+.sign-minus{
+	font-size: 16px;
+	color:#ff0000;
+}
+.nopadding{
+	padding: 0px !important;
+}
+.align-right{
+	text-align: right;
+}
+.hide{
+	display: none;
+}
+/*页面样式*/
+.complaint{
+	padding-left: 22px;
+	background:url(../../statics/image/icon-complaint.png) no-repeat 10px center;
+}
+.tips-box{
+	margin: 20px 30px;
+	background:#fcfcfc url(../../statics/image/logo-footer.png) no-repeat 10px center;
+	padding: 20px 20px 20px 100px;
+	border:1px solid #eee;
+	line-height: 24px;
+}
+.tab-item{
+	position: relative;
+}
+.tab-item .tip{
+	position: absolute;
+	top: 4px;
+	right: 14px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	background: url(../../statics/image/icons/icon-news.png) no-repeat center center;
+}
+.fold-list-box{
+	padding-bottom: 20px;
+	border-top: 1px solid #eee;
+}
+/*
+	由于该列表有展示和编辑两种状态，
+	edit-state类为该列表是否编辑状态的区分类
+*/
+.fold-list li{
+	border-bottom: 1px solid #eee;
+}
+.fold-list .fold-handle{
+	display: block;
+	color: #333;
+	line-height: 56px;
+	background: url(../../statics/image/icons/icon-dropdown.png) no-repeat right center;
+}
+.fold-list .fold-handle span{
+	float: left;
+	width: 22px;
+	height: 22px;
+	margin: 17px 10px 0 0;
+	background: url(../../statics/image/icons/icon-checkbox-no.png) no-repeat;
+	display: none;
+}
+.fold-list li.active .fold-handle{
+	background: url(../../statics/image/icons/icon-dropup.png) no-repeat right center;
+}
+
+.fold-list .fold-detail{
+	display: none;
+	padding-bottom: 20px;
+}
+.fold-list li.active .fold-detail{
+	display: block;
+}
+.fold-list .vice{
+	margin-top: 10px;
+	font-size: 11px;
+	color: #a9a9a9;
+	line-height: 20px;
+}
+.fold-list.edit-state li.active .fold-detail{
+	display: none;
+}
+.fold-list.edit-state li.active .fold-handle{
+	background: url(../../statics/image/icons/icon-dropdown.png) no-repeat right center;
+}
+.fold-list.edit-state .checkbox{
+	display: block;
+}
+.fold-list.edit-state li.active .checkbox{
+	background: url(../../statics/image/icons/icon-checkbox.png) no-repeat;
+}
+.complaint-tap{
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+.complaint-tap a{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	color: #333;
+	padding: 0 30px;
+}
+.complaint-tap a.active{
+	color: #24b026;
+}
+.complaint-tap .line-active{
+	height: 3px;
+	width: 88px;
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	background: #24b026;
+}
+.form-box{
+	padding-bottom: 20px;
+}
+.mailTo{
+	margin:20px 0 ;
+}
+
+.notice-box{
+	padding-bottom: 20px;
+}
+.notice-list li{	
+	border-bottom: 1px solid #eee;
+	line-height: 56px;
+
+}
+.notice-list .time{
+	float: right;
+	color: #a9a9a9;
+}
+.notice-list .text{
+	display: inline-block;
+	margin-left: 14px;
+	width: 300px;
+	white-space: nowrap;
+　　overflow: hidden;
+　　text-overflow: ellipsis;
+}
+.customer-right .list-content-activity .list-activity .activity-left h5.sex-boy{
+	display: inline-block;
+	padding:0 20px 0 0;
+	line-height: 32px;
+	background: url(../../statics/image/icon-boy.png) no-repeat right center;
+}
+.customer-right .list-content-activity .list-activity .activity-left h5.sex-girl{
+	display: inline-block;
+	padding:0 20px 0 0;
+	line-height: 28px;
+	background: url(../../statics/image/icon-girl.png) no-repeat right center;
+}
+.activity-info .autograph{
+	display: inline-block;
+	font-size: 12px;
+	width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.empty-box{
+	line-height: 100px;
+	text-align: center;
+	color: #a9a9a9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

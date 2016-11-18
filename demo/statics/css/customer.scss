@@ -14,7 +14,7 @@
 .wrap-customer-main{
 	background-color:#f8f8f8;
 	.infoManager-common{
-		margin-bottom:0;
+		margin-bottom:0!important;
 		display:none;
 	}
 }
@@ -65,6 +65,7 @@
 				padding-bottom:5px;
 				font-size:18px;
 			  overflow:hidden;
+			  color:#333;
 			}
 			.sex{
 				font-size:12px;
@@ -1261,6 +1262,9 @@
 				text-align:center;
 				line-height:45px;
 				background:url(../../statics/image/icons/icon-round45.png) no-repeat center center;
+				img{
+					vertical-align:-6px;
+				}
 			}
 		}
 		.common-part{
@@ -1295,6 +1299,7 @@
 			overflow:hidden;
 		}
 		img{
+			width:100%;
 			vertical-align: middle;
 		}
 		.wrap-upload{
@@ -1530,6 +1535,7 @@
 					border:none;
 					box-shadow: none;
 					border-radius:0;
+					outline:none;
 					@include boxSizing;
 				}
 				.i-dropdown{
@@ -1541,6 +1547,10 @@
 					height:5px;
 					z-index:0;
 					background:url(../../statics/image/icons/icon-dropdown9.png) no-repeat center center;
+				}
+				.bingding-input{
+					cursor: not-allowed;
+          background-color: #eeeeee;
 				}
 				.dropdown-list{
 					display:none;
@@ -1627,6 +1637,7 @@
 			border:none;
 			margin:0;
 			color:#333;
+			padding:2px 10px;
 			background-color:#fff;
 			@include boxSizing;
 		}

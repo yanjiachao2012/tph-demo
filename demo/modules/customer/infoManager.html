@@ -4,427 +4,439 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <title>碳普惠</title>
-<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap.min.css"/>
-<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.css"/>
 <link rel="stylesheet" href="../../statics/css/base.css"/>
 <link rel="stylesheet" href="../../statics/css/newStyle.css"/>
 <link rel="stylesheet" href="../../statics/css/customer.css"/>
-<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/plugins/laydate/laydate.js"></script>
 <script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
 <script src="../../statics/script/nav.js"></script>
-	<script src="script/customer.js"></script>
-<script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.js"></script>
-<script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
-
+<script src="../../statics/script/plugins/jquery.form.js"></script>
+<script src="script/customer.js"></script>
 <script src="script/infoManager.js"></script>
 </head>
 <body>
 <!--头部开始-->
 <div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user" style="display:none;">
+				<a href="" class="user-info">
+					<img src="../statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-user">
+				<a href="" class="user-loginOut">登录</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+	
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="../statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					 <li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="item-a">低碳活动</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳资讯</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动1</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
 </div>
 <!--头部结束-->
 <div class="wrap-main wrap-customer-main">
 	<div class="width960 customer-main">
-		<div class="customer-left">
-			<div class="customer-left-title">
-				<div class="user-info">
-					<div class="wrap-pic">
-						<img class="pic" src="../../statics/image/pic126.png" />
-					</div>
-					<div class="user-info-right">
-						<h4>史女士</h4>
-						<span class="sex">性别：女</span>
-						<p class="user-carbon-number">400</p>
-						<span class="address">广东 深圳</span>
-					</div>
-				</div>
-				<div class="carbon-rank">
-					碳友排名：
-					<span>4005</span>
-				</div>
-				<div class="carbon-expression">
-					<div class="expression-left">碳友印象：</div>
-					<div class="expression-right">
-						<span class="expression0">电脑高手</span>
-						<span class="expression1">宅男</span>
-						<span class="expression2">技术牛人</span>
-						<span class="expression0">阳光</span>
-					</div>
-				</div>
-				<div class="user-info-perfect">
-					<div class="info-perfect-title">
-						信息完整度：
-						<span>80%</span>
-					</div>
-					<div class="perfect-bg">
-						<div class="info-perfected" style="width:50%"></div>
-					</div>
-					<a href="" class="go-perfect">去完善</a>
-				</div>
-			</div>
-			<div class="customer-left-list">
-				<h3 class="list-title">我的个人中心</h3>
-				<ul>
-					<li class="left-item">
-						<a href="">我的碳币</a>
-					</li>
-					<li class="left-item">
-						<a href="">我的钱包</a>
-					</li>
-					<li class="left-item">
-						<a href="">我的活动</a>
-					</li>
-					<li class="left-item">
-						<a href="">我的社区</a>
-					</li>
-					<li class="left-item">
-						<a href="">我的景区</a>
-					</li>
-					<li class="left-item">
-						<a href="">我的碳友</a>
-					</li>
-					<li class="left-item item-news">
-						<a href="">
-							<span class="tip">4</span>
-							消息
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="customer-left-list">
-				<h3 class="list-title">个人信息管理</h3>
-				<ul id="leftInfoManager">
-					<li class="left-item">
-						<a href="infoManager.html?infoManagerid=infoManagerEdit">编辑个人资料</a>
-					</li>
-					<li class="left-item">
-						<a href="infoManager.html?infoManagerid=infoManagerBingding">低碳行为绑定项</a>
-					</li>
-					<li class="left-item">
-						<a href="infoManager.html?infoManagerid=infoManagerRealName">实名认证</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="customer-right">
-			<div class="wrap-list-content infoManager-content">
-				<div class="wrap-process">
-					<div class="process-line">
-						<div class="finished-process" id="finished-process" style="width:100%"></div>
-					</div>
-					<div class="process-part process-active-part">
-						<div class="wrap-round">
-							<span class="part-round">
-								<img src="../../statics/image/icons/icon-edit23.png"/>
-							</span>
-						</div>
-						<p>编辑个人资料</p>
-					</div>
-					<div class="process-part common-part" id="process-part2">
-						<div class="wrap-round">
-							<span class="part-round">
-								<img src="../../statics/image/icons/icon-bingding.png"/>
-							</span>
-						</div>
-						<p>低碳行为绑定项</p>
-					</div>
-					<div class="process-part common-part" id="process-part3">
-						<div class="wrap-round">
-							<span class="part-round">
-								<img src="../../statics/image/icons/icon-shiming.png"/>
-							</span>
-						</div>
-						<p>实名认证</p>
-					</div>
-				</div>
-			</div>
-			<!--编辑查看个人资料-->
-			<div class="wrap-list-content infoManager-common infoManager-edit" id="infoManagerEdit">
-				<h4 class="infoManager-title">完善您得个人信息，有利于您得账号安全，也便于您及时获取推荐信息~</h4>
-				<div class="wrap-user-pic">
-					<div class="user-pic">
-						<img src="../../statics/image/icons/icon-default.png" alt=""></div>
-					<div class="upload-img">
-						<span class="wrap-upload" href="">
-							上传/更改头像
-							<input type="file" class="upload-btn" name="upload" />
-						</span>
-					</div>
-				</div>
-				<div class="wrap-user-edit">
-					<div class="edit-item">
-						<label class="item-left">
-							<span class="mark">*</span>
-							昵称：
-						</label>
-						<div class="item-right">
-							<input type="text" id="editName" placeholder="不超过10个字" />
-						</div>
-					</div>
-					<div class="edit-item sex-item">
-						<label class="item-left">性别：</label>
-						<div class="sex-right">
-							<input type="hidden" id="selectSex" value="M" />
-							<span onclick="infoManager.selectSex(this);" class="select-input" attr-value="M">男</span>
-							<span onclick="infoManager.selectSex(this);" attr-value="F">女</span>
-						</div>
-					</div>
-					<div class="edit-item">
-						<label class="item-left">出生日期：</label>
-						<div class="item-right">
-							<input type="text" id="birthdayDate" class="birthday_date" readonly /> <i class="dropdown"></i>
-						</div>
-					</div>
-					<div class="edit-item">
-						<label class="item-left">
-							<span class="mark">*</span>
-							手机号码：
-						</label>
-						<div class="item-right">
-							<input type="text" id="editTel"/>
-						</div>
-					</div>
-					<div class="edit-item">
-						<label class="item-left">邮箱：</label>
-						<div class="item-right">
-							<input type="text" id="editEmail"/>
-						</div>
-					</div>
-					<div class="edit-item">
-						<label class="item-left">所在社区：</label>
-						<div class="item-right" onclick="infoManager.toggleDropdown(this)">
-							<input type="text" value="" attr-value="" id="communitySelect" readonly /> <i class="dropdown"></i>
-							<ul class="dropdown-list" id="communityDropdown">
-								<li onclick="infoManager.selectItem(this)" id="1">张家界社区</li>
-								<li onclick="infoManager.selectItem(this)" id="2">无所社区</li>
-								<li onclick="infoManager.selectItem(this)" id="3">我的加我的社区</li>
-							</ul>
-						</div>
-						<p class="item-details">绑定所在社区可以在“个人中心-我的社区”里查看社区信息~</p>
-					</div>
-					<div class="edit-item spot-item">
-						<label class="item-left">关注的景区：</label>
-						<div class="wrap-right">
-							<div class="item-right" onclick="infoManager.toggleDropdown(this)">
-								<input type="text" id="spotSelect" readonly />
-								<i class="dropdown"></i>
-								<ul class="dropdown-list" id="spotDropdown">
-									<li onclick="infoManager.selectItem2(this)">张家界社区</li>
-									<li onclick="infoManager.selectItem2(this)">无所社区</li>
-									<li onclick="infoManager.selectItem2(this)">我的加我的社区</li>
-								</ul>
-							</div>
-							<p class="item-details">绑定所在社区可以在“个人中心-我的景区”里查看社区信息~</p>
-							<ul class="show-selected" id="showSelected">
-								<li>
-									张家界1
-									<i class="i-remove"></i>
-								</li>
-							</ul>
-						</div>
-
-					</div>
-				</div>
-				<div class="save-edit">
-					<a href="javascript:infoManager.nextStep();">保存并下一步</a>
-				</div>
-			</div>
-			<div class="wrap-list-content infoManager-common infoManager-bingding" id="infoManagerBingding">
-				<h5 class="bingding-title">绑定低碳行为项，可以关联您得低碳数据，核算减碳量！</h5>
-				<div id="wrapManagerBingding">
-					<div class="bingding-item">
-						<h6 class="item-title" onclick="toggleShow(this);">
-							羊城通/岭南通
-							<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a>
-						</h6>
-						<div class="item-content">
-							<div class="wrap-item">
-								<label class="content-left">羊城通/岭南通卡号：</label>
-								<div class="content-right">
-									<input type="text" placeholder="请输入10位数字" />
-								</div>
-							</div>
-							<p class="tip">
-								备注：输入羊城通 / 岭南通的十位卡号数字，不足10位在前面叫0补足。如 卡号为12345678，应填写为 001234567
-							</p>
-							<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
-						</div>
-					</div>
-					<div class="bingding-item">
-						<h6 class="item-title"  onclick="toggleShow(this);">
-							管道天然气用户编号
-							<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a>
-						</h6>
-						<div class="item-content">
-							<div class="wrap-item">
-								<label class="content-left">管道天然气用户编号：</label>
-								<div class="content-right">
-									<input type="text" value="" />
-								</div>
-							</div>
-							<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
-						</div>
-					</div>
-					<div class="bingding-item">
-						<h6 class="item-title" onclick="toggleShow(this);">
-							光伏发电用户编号
-							<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a>
-						</h6>
-						<div class="item-content">
-							<div class="wrap-item">
-								<label class="content-left">光伏发电用户编号：</label>
-								<div class="content-right">
-									<input type="text" value="" />
-								</div>
-							</div>
-							<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
-						</div>
-					</div>
-					<div class="bingding-item">
-						<h6 class="item-title" onclick="infoManager.toggleShow(this);">
-							用水用户编号
-							<span class="bingding-tip">已绑定</span>
-							<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a>
-						</h6>
-						<div class="item-content">
-							<div class="wrap-item">
-								<label class="content-left" style="width:98px;">社区名称：</label>
-								<div class="content-right"  onclick="infoManager.toggleDropdown(this)">
-									<input type="text" id="obtainName" readonly />
-									<i class="i-dropdown"></i>
-									<ul class="dropdown-list">
-										<li onclick="infoManager.obtainName(this)">五山名称</li>
-										<li onclick="infoManager.obtainName(this)">五山名称</li>
-										<li onclick="infoManager.obtainName(this)">五山名称</li>
-										<li onclick="infoManager.obtainName(this)">五山名称</li>
-										<li onclick="infoManager.obtainName(this)">五山名称</li>
-										<li onclick="infoManager.obtainName(this)">五山名称</li>
-									</ul>
-								</div>
-							</div>
-							<div class="wrap-item">
-								<label class="content-left">用水用户编号：</label>
-								<div class="content-right" onclick="infoManager.toggleDropdown(this)">
-									<input type="text" id="obtainUserCode" readonly />
-									<i class="i-dropdown"></i>
-									<ul class="dropdown-list">
-										<li onclick="infoManager.obtainUserCode(this);">五山名称</li>
-										<li onclick="infoManager.obtainUserCode(this);">五山名称</li>
-										<li onclick="infoManager.obtainUserCode(this);">五山名称</li>
-										<li onclick="infoManager.obtainUserCode(this);">五山名称</li>
-										<li onclick="infoManager.obtainUserCode(this);">五山名称</li>
-										<li onclick="infoManager.obtainUserCode(this);">五山名称</li>
-									</ul>
-								</div>
-								<div class="content-right">
-									<input type="text" value="" />
-								</div>
-							</div>
-							<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
-						</div>
-					</div>
-					<div class="bingding-item">
-						<h6 class="item-title" onclick="toggleShow(this);">
-							社区门牌号
-							<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a>
-						</h6>
-						<div class="item-content">
-							<div class="wrap-item">
-								<label class="content-left">社区门牌号：</label>
-								<div class="content-right">
-									<input type="text"/>
-								</div>
-							</div>
-							<p class="tip">用户获取水、电、气等低碳行为数据</p>
-							<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
-						</div>
-					</div>
-					<div class="bingding-item">
-						<h6 class="item-title" onclick="toggleShow(this);">
-							车牌号
-							<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a>
-						</h6>
-						<div class="item-content">
-							<div class="wrap-item">
-								<label class="content-left">车牌号：</label>
-								<div class="content-right">
-									<input type="text" />
-								</div>
-							</div>
-							<p class="tip">车主车牌号码，如粤S88888</p>
-							<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="wrap-list-content  infoManager-common infoManager-realName" id="infoManagerRealName">
-				<h4 class="realName-title">实名认证通过后，您才可以发起低碳活动哦～</h4>
-				<div class="realName-item">
-					<label class="realName-left">
-						<span class="mark">*</span>
-						真实姓名：
-					</label>
-					<div class="realName-right">
-						<input type="text" id="realName" placeholder="您的身份证信息不会被泄露，请放心填写！" />
-					</div>
-				</div>
-				<div class="realName-item">
-					<label class="realName-left">
-						<span class="mark">*</span>
-						身份证号：
-					</label>
-					<div class="realName-right">
-						<input type="text" id="realId" placeholder="请输入18位身份证号码" />
-					</div>
-				</div>
-				<div class="realName-item">
-					<label class="realName-left">签发机关：</label>
-					<div class="realName-right">
-						<input type="text" id="realSign" placeholder="请填写身份证反面的签发机关" />
-					</div>
-				</div>
-				<div class="realName-item">
-					<label class="realName-left">有效期：</label>
-					<div class="realName-right date-right">
-						<input type="text" class="real_date" id="realTime" readonly />
-						<i class="time-dropdown"></i>
-					</div>
-				</div>
-				<div class="realName-item pic-item">
-					<label class="realName-left">
-						<span class="mark">*</span>
-						证件上传：
-					</label>
-					<div class="realName-pic">
-						<div class="pic-item">
-							<img src="../../statics/image/pic-id1.png" />
-							<div class="wrap-input">
-								<span class="up-btn">
-									本地上传
-									<input type="hidden" id="picId1" value="" />
-									<input type="file" />
-								</span>
-							</div>
-						</div>
-						<div class="pic-item">
-							<img src="../../statics/image/pic-id2.png" />
-							<div class="wrap-input">
-								<span class="up-btn">
-									本地上传
-									<input type="hidden" id="picId2" value="" />
-									<input type="file" />
-								</span>
-							</div>
-						</div>
-						<p class="pic-tip">仅支持JPG、BMP格式，大小不超过5M</p>
-					</div>
-				</div>
-				<div class="realName-save">
-					<a href="javascript:realSave();">保存并提交</a>
-				</div>
-			</div>
-		</div>
+		  <div class="customer-left">
+		  	<div class="customer-left-title">
+			  	<div class="user-info">
+			  		<div class="wrap-pic">
+			  			<img class="pic" src="../../statics/image/pic126.png" />
+			  		</div>
+			  		<div class="user-info-right">
+			  			<h4>史女士</h4>
+			  			<span class="sex">性别：女</span>
+			  			<p class="user-carbon-number">400</p>
+			  			<span class="address">广东 深圳</span>
+			  		</div>
+			  	</div>
+			  	<div class="carbon-rank">
+			  		碳友排名：<span>4005</span>
+			  	</div>
+			  	<div class="carbon-expression">
+			  		<div class="expression-left">碳友印象：</div>
+			  		<div class="expression-right">
+			  			<span class="expression0">电脑高手</span>
+			  			<span class="expression1">宅男</span>
+			  			<span class="expression2">技术牛人</span>
+			  			<span class="expression0">阳光</span>
+			  		</div>
+			  	</div>
+			  	<div class="user-info-perfect">
+			  		<div class="info-perfect-title">
+			  			信息完整度：<span>80%</span>
+			  		</div>
+			  		<div class="perfect-bg">
+			  			<div class="info-perfected" style="width:50%"></div>
+			  		</div>
+			  		<a href="" class="go-perfect">去完善</a>
+			  	</div>
+		  	</div>
+		  	<div class="customer-left-list">
+		  		<h3 class="list-title">我的个人中心</h3>
+		  		<ul>
+		  			<li class="left-item"><a href="">我的碳币</a></li>
+		  			<li class="left-item"><a href="">我的钱包</a></li>
+		  			<li class="left-item"><a href="">我的活动</a></li>
+		  			<li class="left-item"><a href="">我的社区</a></li>
+		  			<li class="left-item"><a href="">我的景区</a></li>
+		  			<li class="left-item"><a href="">我的碳友</a></li>
+		  			<li class="left-item item-news"><a href=""><span class="tip">4</span>消息</a></li>
+		  		</ul>
+		  	</div>
+		  	<div class="customer-left-list">
+		  		<h3 class="list-title">个人信息管理</h3>
+		  		<ul id="leftInfoManager">
+		  			<li class="left-item"><a href="infoManager.html?infoManagerid=infoManagerEdit">编辑个人资料</a></li>
+		  			<li class="left-item"><a href="infoManager.html?infoManagerid=infoManagerBingding">低碳行为绑定项</a></li>
+		  			<li class="left-item"><a href="infoManager.html?infoManagerid=infoManagerRealName">实名认证</a></li>
+		  		</ul>
+		  	</div>
+		  </div>
+		  <div class="customer-right">
+		  	<div class="wrap-list-content infoManager-content">
+		  	   <div class="wrap-process">
+		  	      <div class="process-line">
+		  	      	<div class="finished-process" id="finished-process" style="width:0%"></div>
+		  	      </div>
+		  	     	<div class="process-part process-active-part">
+		  	     		<div class="wrap-round">
+			  	     		<span class="part-round">
+			  	     		  <img src="../../statics/image/icons/icon-edit23.png"/>
+			  	     		</span>
+		  	     		</div>
+		  	     		<p>编辑个人资料</p>
+		  	     	</div>
+		  	     	<div class="process-part common-part" id="process-part2">
+			  	     	<div class="wrap-round">
+			  	     		<span class="part-round">
+			  	     			<img src="../../statics/image/icons/icon-bingding.png"/>
+			  	     		</span>
+			  	     	</div>
+		  	     		<p>低碳行为绑定项</p>
+		  	     	</div>
+		  	     	<div class="process-part common-part" id="process-part3">
+		  	     	  <div class="wrap-round">
+			  	     		<span class="part-round">
+			  	     			<img src="../../statics/image/icons/icon-shiming.png"/>
+			  	     		</span>
+			  	     	</div>
+		  	     		<p>实名认证</p>
+		  	     	</div>  
+		  	   </div>
+		  	</div>
+		  	<!--编辑查看个人资料-->
+		  	<div class="wrap-list-content infoManager-common infoManager-edit" id="infoManagerEdit">
+		  		<h4 class="infoManager-title">
+		  			完善您得个人信息，有利于您得账号安全，也便于您及时获取推荐信息~
+		  		</h4>
+		  		<div class="wrap-user-pic">
+		  			<div class="user-pic">
+		  				<img src="../../statics/image/icons/icon-default.png" alt=""> 
+		  			</div>
+		  			<div class="upload-img">
+		  				<span class="wrap-upload" href="">
+		  				  上传/更改头像
+			  				<input type="file" class="upload-btn" name="upload" />
+			  			</span>
+		  			</div>		
+		  		</div>
+		  		<div class="wrap-user-edit">
+		  			<div class="edit-item">
+		  				<label class="item-left"><span class="mark">*</span>昵称：</label>
+		  				<div class="item-right">
+		  					 <input type="text" placeholder="不超过10个字" />
+		  				</div>
+		  			</div>
+		  			<div class="edit-item sex-item">
+		  				<label class="item-left">性别：</label>
+		  				<div class="sex-right">
+		  					<span class="select-input"><input type="radio" name="sex"/>男</span>
+		  					<span><input type="radio" name="sex"/>女</span>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">出生日期：</label>
+		  				<div class="item-right">
+		  					 <input type="text" class="birthday_date" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left"><span class="mark">*</span>手机号码：</label>
+		  				<div class="item-right">
+		  					 <input type="text"/>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">邮箱：</label>
+		  				<div class="item-right">
+		  					 <input type="text" />
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">所在城市：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">所在社区：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  				<p class="item-details">绑定所在社区可以在“个人中心-我的社区”里查看社区信息~</p>
+		  			</div>
+		  			<div class="edit-item">
+		  				<label class="item-left">关注的景区：</label>
+		  				<div class="item-right">
+		  					 <input type="text" readonly />
+		  					 <i class="dropdown"></i>
+		  				</div>
+		  					<p class="item-details">绑定所在社区可以在“个人中心-我的景区”里查看社区信息~</p>
+		  			</div>
+		  		</div>
+		  		<div class="save-edit"><a href="">保存并下一步</a></div>
+		  	</div>
+		  	<div class="wrap-list-content infoManager-common infoManager-bingding" id="infoManagerBingding">
+		  		<h5 class="bingding-title">
+		  			绑定低碳行为项，可以关联您得低碳数据，核算减碳量！
+		  		</h5>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">羊城通/岭南通<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">羊城通/岭南通卡号：</label>
+			  				<div class="content-right">
+			  					<input type="text" placeholder="请输入10位数字" />
+			  				</div>
+		  				</div>
+		  				<p class="tip">备注：输入羊城通 / 岭南通的十位卡号数字，不足10位在前面叫0补足。如 卡号为12345678，应填写为 001234567</p>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title"  onclick="toggleShow(this);">管道天然气用户编号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">管道天然气用户编号：</label>
+			  				<div class="content-right">
+			  					<input type="text" value="" />
+			  				</div>
+		  				</div>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">光伏发电用户编号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">光伏发电用户编号：</label>
+			  				<div class="content-right">
+			  					<input type="text" value="" />
+			  				</div>
+		  				</div>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">用水用户编号<span class="bingding-tip">已绑定</span><a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">用水用户编号：</label>
+			  				<div class="content-right">
+			  					<input type="text"  />
+			  				</div>
+		  				</div>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">社区门牌号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">社区门牌号：</label>
+			  				<div class="content-right">
+			  					<input type="text"/>
+			  				</div>
+		  				</div>
+		  				<p class="tip">用户获取水、电、气等低碳行为数据</p>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  		<div class="bingding-item">
+		  			<h6 class="item-title" onclick="toggleShow(this);">车牌号<a href="javascript:" onclick="modifyContent(event,this);" class="modify">修改</a></h6>
+		  			<div class="item-content">
+		  				<div class="wrap-item">
+		  					<label class="content-left">车牌号：</label>
+			  				<div class="content-right">
+			  					<input type="text" />
+			  				</div>
+		  				</div>
+		  				<p class="tip">车主车牌号码，如粤S88888</p>
+		  				<a class="save-bingding" href="javascript:" onclick="saveContent(this);">保存并下一步</a>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	<div class="wrap-list-content infoManager-common infoManager-realName" id="infoManagerRealName">
+		  			<h4 class="realName-title">
+		  			实名认证通过后，您才可以发起低碳活动哦～
+		  		  </h4>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left"><span class="mark">*</span>真实姓名：</label>
+		  		  	<div class="realName-right">
+		  		  		<input type="text" id="realName" placeholder="您的身份证信息不会被泄露，请放心填写！" />
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left"><span class="mark">*</span>身份证号：</label>
+		  		  	<div class="realName-right">
+		  		  		<input type="text" id="realId" placeholder="请输入18位身份证号码" />
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left">签发机关：</label>
+		  		  	<div class="realName-right">
+		  		  		<input type="text" id="realSign" placeholder="请填写身份证反面的签发机关" />
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item">
+		  		  	<label class="realName-left">有效期：</label>
+		  		  	<div class="realName-right date-right">
+		  		  		<input type="text" class="real_date" id="realTime" readonly />
+		  		  		<i class="time-dropdown"></i>
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-item pic-item">
+		  		  	<label class="realName-left"><span class="mark">*</span>证件上传：</label>
+		  		  	<div class="realName-pic">
+		  		  		<div class="pic-item">
+		  		  			<img src="../../statics/image/pic-id1.png" />
+		  		  			<div class="wrap-input">
+		  		  				<span class="up-btn">
+                      本地上传
+                      <input type="hidden" id="picId1" value="" />
+		  		  					<input type="file" />
+		  		  				</span>
+		  		  			</div>
+		  		  		</div>
+		  		  		<div class="pic-item">
+		  		  			<img src="../../statics/image/pic-id2.png" />
+		  		  			<div class="wrap-input">
+		  		  				<span class="up-btn">
+                      本地上传
+                      <input type="hidden" id="picId2" value="" />
+		  		  					<input type="file" />
+		  		  				</span>
+		  		  			</div>
+		  		  		</div>
+		  		  		<p class="pic-tip">仅支持JPG、BMP格式，大小不超过5M</p>
+		  		  	</div>
+		  		  </div>
+		  		  <div class="realName-save">
+		  		    <a href="javascript:realSave();">保存并提交</a>
+		  		  </div>
+		  	</div>
+		  </div>
 	</div>
 </div>
 </body>

@@ -7,7 +7,7 @@ function toggleTab(obj, obj0, obj1, obj2) {
 }
 
 /**个人信息加载**/
-$.ajax({
+/*$.ajax({
 	type: "post",
 	url: path() + "/myInfoController/init.do",
 	dataType: "json",
@@ -63,4 +63,4 @@ $.ajax({
 		}
 		$("#showSelected").append(html1);
 	}
-});
+});*/

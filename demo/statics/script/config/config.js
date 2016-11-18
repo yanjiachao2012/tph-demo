@@ -95,3 +95,18 @@ function funPlaceholder(element) {
 		}
 	}
 };
+$(function() {
+	/**选择城市**/
+	$("#wrapSelectAddress").on("click", function() {
+		var addressList = $("#addressList");
+		if (addressList.css("display") == "none") {
+			$(this).addClass("selectStatus");
+			addressList.fadeIn();
+
+		} else {
+			$(this).removeClass("selectStatus");
+			addressList.fadeOut();
+		}
+
+	})
+})
