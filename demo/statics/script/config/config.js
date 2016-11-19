@@ -95,6 +95,15 @@ function funPlaceholder(element) {
 		}
 	}
 };
+
+function selectCity(obj) {
+	var _selectCity = $("#selectCity");
+	var _selectCityText = _selectCity.text(); //旧城市
+	_selectCity.text($(obj).text()) //新城市
+	$(obj).text(_selectCityText)
+	$(".wrap-up").removeClass("selectStatus")
+	$("#addressList").fadeOut();
+}
 $(function() {
 	/**选择城市**/
 	$("#wrapSelectAddress").on("click", function() {
