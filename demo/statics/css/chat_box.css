@@ -56,9 +56,9 @@
     border-radius: 5px;
     cursor: pointer;
     margin-left: 8px;
-    vertical-align: super;
+    vertical-align: 4px;
     position: relative;
-    background: url(../image/icon_arrow_down.png) no-repeat center;
+    background: url(../image/icon_arrow_down.png) no-repeat center center;
 }
 
 .chat-box-left .chat-search a.rid-btn:hover{
@@ -362,6 +362,7 @@ position: absolute;
     border-bottom: none;
     padding: 10px;
     overflow-y: scroll;
+    background-color: #fff;
 }
 
 .chat-box-right .chat-box-con ul li{
@@ -419,6 +420,8 @@ position: absolute;
 }
 
 .chat-box-right .chat-box-con ul li.me-say i{
+    right: -9px;
+    left: auto;
 	background-image: url(../image/me_say.png);
 }
 
@@ -426,6 +429,7 @@ position: absolute;
 	height: 112px;
 	width: 100%;
 	position: relative;
+    background-color: #fff;
 }
 
 .chat-box-right  .chat-box-inpt button{

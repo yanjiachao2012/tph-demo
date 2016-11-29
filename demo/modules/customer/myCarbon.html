@@ -4,223 +4,47 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <title>碳普惠</title>
-<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap.min.css"/>
-<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.css"/>
 <link rel="stylesheet" href="../../statics/css/base.css"/>
 <link rel="stylesheet" href="../../statics/css/newStyle.css"/>
 <link rel="stylesheet" href="../../statics/css/customer.css"/>
-<script src="../../statics/script/config/config.js"></script>
 <script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/plugins/laydate/laydate.js"></script>
+<script src="../../statics/script/nav.js"></script>
+<script src="script/customer.js"></script>
 
-<script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.min.js"></script>
-<script src="../../statics/script/plugins/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
-<script>
-
-	function toggleTab(obj,obj0,obj1){
-		$(obj).addClass("active-item");
-		$(obj).siblings().removeClass("active-item");
-		$("#"+obj0).css("display","block");
-    $("#"+obj1).css("display","none");
-	}
-	$(function(){
-		$('.start_date').datetimepicker({
-            language: 'zh-CN',
-            minView: "month",
-            format: "yyyy-mm-dd",
-
-            todayHighlight: true,
-            showMeridian: true,
-            autoclose: true
-     });
-		$('.end_date').datetimepicker({
-            language: 'zh-CN',
-            minView: "month",
-            format: "yyyy-mm-dd",
-
-            todayHighlight: true,
-            showMeridian: true,
-            autoclose: true
-     });
-		$(".dropdown").on("click",function(){
-			$(this).prev("input").focus();
-		})
-	})
-</script>
 </head>
 <body>
 <!--头部开始-->
 <div class="wrap-nav-tph">
-	<div class="wrap-nav-top">
-		<div class="nav-top">
-			<div class="nav-user" style="display:none;">
-				<a href="" class="user-info">
-					<img src="../../statics/image/pic-user-example.png" alt=""/>
-					<span>张女士</span>
-				</a>
-				<a href="" class="user-loginOut">退出</a>
-				<a href="" class="user-news"> <i class="icon-tip">93</i>
-				</a>
-			</div>
-			<div class="nav-user">
-				<a href="" class="user-loginOut">登录</a>
-			</div>
-			<div class="nav-time">
-				<span class="left">2016-10-12</span>
-				<span class="right">星期四</span>
-			</div>
-	
-		</div>
-	</div>
-	<div class="wrap-nav-content">
-		<div class="nav-tph">
-			<div class="nav-left">
-				<div class="wrap-logo">
-					<a href="">
-						<img src="../../statics/image/logo.png"></a>
-				</div>
-				<div class="wrap-address">
-					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
-						<span class="address" id="selectCity">广州</span>
-						<span class="icon-dropdown"></span>
-					</div>
-					<ul class="address-list" id="addressList">
-						<li class="item" onclick="selectCity(this);">韶关市</li>
-						<li class="item" onclick="selectCity(this);">深圳市</li>
-						<li class="item" onclick="selectCity(this);">珠海市</li>
-						<li class="item" onclick="selectCity(this);">佛山市</li>
-						<li class="item" onclick="selectCity(this);">惠州市</li>
-						<li class="item" onclick="selectCity(this);">河源市</li>
-						<li class="item" onclick="selectCity(this);">东莞市</li>
-						<li class="item" onclick="selectCity(this);"s>中心市</li>
-					</ul>
-				</div>
-			</div>
-			<div class="nav-right">
-				<ul id="tph-nav">
-					 <li class="nav-item">
-						<a class="item-a" href="">首页</a>
-					</li>
-					<li class="nav-item">
-						<a class="item-a" href="">碳币兑换</a>
-					</li>
-					<li class="nav-item">
-						<a class="item-a" href="">低碳众筹</a>
-					</li>
-					<li class="nav-item">
-						<a href="" class="item-a">低碳活动</a>
-						<div class="wrap-sub-nav">
-							<ul>
-								<li class="sub-nav-item">
-									<i class="active1"></i>
-									<a href="">换物</a>
-								</li>
-								<li class="sub-nav-item">
-									<i class="active2"></i>
-									<a href="">顺风车</a>
-								</li>
-								<li class="sub-nav-item">
-									<i class="active3"></i>
-									<a href="">植物认领</a>
-								</li>
-								<li class="sub-nav-item">
-									<i class="active4"></i>
-									<a href="">低碳活动</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="item-a" href="">低碳资讯</a>
-					</li>
-					<li class="nav-item">
-						<a class="item-a" href="">减碳置换</a>
-						<div class="wrap-sub-nav">
-							<ul>
-								<li class="sub-nav-item">
-									<i class="active1"></i>
-									<a href="">换物1</a>
-								</li>
-								<li class="sub-nav-item">
-									<i class="active2"></i>
-									<a href="">顺风车1</a>
-								</li>
-								<li class="sub-nav-item">
-									<i class="active3"></i>
-									<a href="">植物认领1</a>
-								</li>
-								<li class="sub-nav-item">
-									<i class="active4"></i>
-									<a href="">低碳活动1</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="item-a" href="">低碳产品</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div> 
 </div>
 <!--头部结束-->
 <div class="wrap-main wrap-customer-main">
 	<div class="width960 customer-main">
-		  <div class="customer-left">
-		  	<div class="customer-left-title">
-			  	<div class="user-info">
-			  		<div class="wrap-pic">
-			  			<img class="pic" src="../../statics/image/pic126.png" />
-			  		</div>
-			  		<div class="user-info-right">
-			  			<h4>史女士</h4>
-			  			<span class="sex">性别：女</span>
-			  			<p class="user-carbon-number">400</p>
-			  			<span class="address">广东 深圳</span>
-			  		</div>
-			  	</div>
-			  	<div class="carbon-rank">
-			  		碳友排名：<span>4005</span>
-			  	</div>
-			  	<div class="carbon-expression">
-			  		<div class="expression-left">碳友印象：</div>
-			  		<div class="expression-right">
-			  			<span class="expression0">电脑高手</span>
-			  			<span class="expression1">宅男</span>
-			  			<span class="expression2">技术牛人</span>
-			  			<span class="expression0">阳光</span>
-			  		</div>
-			  	</div>
-			  	<div class="user-info-perfect">
-			  		<div class="info-perfect-title">
-			  			信息完整度：<span>80%</span>
-			  		</div>
-			  		<div class="perfect-bg">
-			  			<div class="info-perfected" style="width:50%"></div>
-			  		</div>
-			  		<a href="" class="go-perfect">去完善</a>
-			  	</div>
+		  <div class="customer-left" id="customerLeft">
+		  	<div class="customer-left-title" id="customerLeftTitle">
 		  	</div>
 		  	<div class="customer-left-list">
 		  		<h3 class="list-title">我的个人中心</h3>
 		  		<ul>
-		  			<li class="left-item"><a href="">我的碳币</a></li>
-		  			<li class="left-item"><a href="">我的钱包</a></li>
-		  			<li class="left-item"><a href="">我的活动</a></li>
-		  			<li class="left-item"><a href="">我的社区</a></li>
-		  			<li class="left-item"><a href="">我的景区</a></li>
-		  			<li class="left-item"><a href="">我的碳友</a></li>
-		  			<li class="left-item item-news"><a href=""><span class="tip">4</span>消息</a></li>
+		  			<li class="left-item"><a href="myCarbon.html">我的碳币</a></li>
+		  			<li class="left-item"><a href="myWallet.html">我的钱包</a></li>
+		  			<li class="left-item"><a href="myActivity.html">我的活动</a></li>
+		  			<li class="left-item"><a href="myCommunity.html">我的社区</a></li>
+		  			<li class="left-item"><a href="myScenicSpot.html">我的景区</a></li>
+		  			<li class="left-item"><a href="myFriend.html">我的碳友</a></li>
+		  			<li class="left-item item-news"><a href="myNotice.html"><span class="tip">4</span>消息</a></li>
 		  		</ul>
 		  	</div>
 		  	<div class="customer-left-list">
 		  		<h3 class="list-title">个人信息管理</h3>
-		  		<ul>
-		  			<li class="left-item"><a href="">编辑个人资料</a></li>
-		  			<li class="left-item"><a href="">低碳行为绑定项</a></li>
-		  			<li class="left-item"><a href="">实名认证</a></li>
+		  		<ul id="leftInfoManager">
+		  			<li class="left-item"><a href="infoManager.html?infoManagerid=infoManagerEdit">编辑个人资料</a></li>
+		  			<li class="left-item"><a href="infoManager.html?infoManagerid=infoManagerBingding">低碳行为绑定项</a></li>
+		  			<li class="left-item"><a href="infoManager.html?infoManagerid=infoManagerRealName">实名认证</a></li>
 		  		</ul>
 		  	</div>
+		  	<div class="showInfo" id="showInfo"></div>
 		  </div>
 		  <div class="customer-right">
 		  	<div class="customerTab">
@@ -231,18 +55,57 @@
 		  	</div>
 		  	<div id="carbonSolution">
 			  	<div class="wrap-list-content myCarbon-list-content">
+			  		<div class="data-chart">
+			  		  <div class="income">
+			  		  	 <div class="income-left">
+			  		  	 	  <div id="income" style="width:145px;height:145px;"></div>
+			  		  	 	  <h5>收入</h5>
+			  		  	 </div>
+			  		  	 <div class="income-right">
+			  		  	 	<div class="income-item system-item">
+			  		  	 		<i></i>
+			  		  	 		<span>系统发放</span>
+			  		  	 		<strong>5000</strong>
+			  		  	 	</div>
+			  		  	 	<div class="income-item other-item">
+			  		  	 		<i></i>
+			  		  	 		<span>他人赠送</span>
+			  		  	 		<strong>3400</strong>
+			  		  	 	</div>
+			  		  	 </div>
+			  		  </div>
+			  		  <div class="income" style="border:none;">
+			  		  	 <div class="income-left">
+			  		  	 	  <div id="payCarbon" style="width:145px;height:145px;"></div>
+			  		  	 	  <h5>支出</h5>
+			  		  	 </div>
+			  		  	 <div class="income-right">
+			  		  	 	<div class="income-item sale-item">
+			  		  	 		<i></i>
+			  		  	 		<span>消费</span>
+			  		  	 		<strong>10000</strong>
+			  		  	 	</div>
+			  		  	 	<div class="income-item send-item">
+			  		  	 		<i></i>
+			  		  	 		<span>赠送</span>
+			  		  	 		<strong>5000</strong>
+			  		  	 	</div>
+			  		  	 </div>
+			  		  </div>
+			  		</div>
 			  		<div class="now-month">
 			  			<div class="month-left">
+			  			  <p>当前余额：</p>
 			  				<strong class="number">400</strong>
-			  				<p>当前余额</p>
+			  				
 			  			</div>
-			  			<div class="month-right">
+			  			<!-- <div class="month-right">
 			  				<p class="month-name">本月</p>
 			  				<span class="month-item">系统发放：<b class="system-type">400</b></span>
 			  				<span class="month-item">他人赠送：<b class="other-type">20</b></span>
 			  				<span class="month-item">消费：<b class="sale-type">100</b></span>
 			  				<span class="month-item" style="margin-right:0;">赠送：<b class="send-type">50</b></span>
-			  			</div>
+			  			</div> -->
 			  		</div>
 			  	</div>
 			  	<div class="wrap-list-content myCarbon-list-content">
@@ -310,11 +173,11 @@
 			  		<div class="time-select">
 			  			时间：
 			  			<span class="time-item">
-			  				<input type="text" readonly class="start_date" value="2015-10-11">
+			  				<input type="text" readonly class="start_date" id="startDate" value="2015-10-11">
 			  				<i class="dropdown"></i>
 			  			</span> 至
 			  			<span class="time-item">
-			  			  <input type="text" readonly class="end_date" value="2016-10-11">
+			  			  <input type="text" readonly class="end_date" id="endDate" value="2016-10-11">
 			  			  <i class="dropdown"></i>
 			  			</span>
 			  			<a href="" class="time-query">查询</a>
@@ -413,5 +276,17 @@
 	</div>
 	
 </div>
+	<div class="pageFooter"></div>
+<script src="../../statics/script/plugins/chart/echarts-all.js"></script>
+<script src="script/myCarbon.js"></script>
+<script>
+    laydate.skin('molv');
+    laydate({
+        elem: '#startDate'
+    }); 
+    laydate({
+        elem: '#endDate'
+    }); 
+	</script>
 	</body>
 	</html>

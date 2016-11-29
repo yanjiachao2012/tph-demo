@@ -7,16 +7,11 @@
 <link rel="stylesheet" href="../../statics/css/base.css"/>
 <link rel="stylesheet" href="../../statics/css/newStyle.css"/>
 <link rel="stylesheet" href="../../statics/css/customer.css"/>
-<script src="../../statics/script/config/config.js"></script>
 <script src="../../statics/script/jquery-1.7.2.min.js"></script>
-<script>
-	function toggleTab(obj,obj0,obj1){
-		$(obj).addClass("active-item");
-		$(obj).siblings().removeClass("active-item");
-		$("#"+obj0).css("display","block");
-    $("#"+obj1).css("display","none");
-	}
-</script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/nav.js"></script>
+<script src="script/customer.js"></script>
+<script src="script/myScenicSpot.js"></script>
 </head>
 <body>
 <!--头部开始-->
@@ -137,266 +132,389 @@
 <!--头部结束-->
 <div class="wrap-main wrap-customer-main">
 	<div class="width960 customer-main">
-		  <div class="customer-left">
-		  	<div class="customer-left-title">
-			  	<div class="user-info">
-			  		<div class="wrap-pic">
-			  			<img class="pic" src="../../statics/image/pic126.png" />
-			  		</div>
-			  		<div class="user-info-right">
-			  			<h4>史女士</h4>
-			  			<span class="sex">性别：女</span>
-			  			<p class="user-carbon-number">400</p>
-			  			<span class="address">广东 深圳</span>
-			  		</div>
-			  	</div>
-			  	<div class="carbon-rank">
-			  		碳友排名：<span>4005</span>
-			  	</div>
-			  	<div class="carbon-expression">
-			  		<div class="expression-left">碳友印象：</div>
-			  		<div class="expression-right">
-			  			<span class="expression0">电脑高手</span>
-			  			<span class="expression1">宅男</span>
-			  			<span class="expression2">技术牛人</span>
-			  			<span class="expression0">阳光</span>
-			  		</div>
-			  	</div>
-			  	<div class="user-info-perfect">
-			  		<div class="info-perfect-title">
-			  			信息完整度：<span>80%</span>
-			  		</div>
-			  		<div class="perfect-bg">
-			  			<div class="info-perfected" style="width:50%"></div>
-			  		</div>
-			  		<a href="" class="go-perfect">去完善</a>
-			  	</div>
+		<div class="customer-left">
+		  <div class="customer-left-title">
+		  	<div class="user-info">
+		  		<div class="wrap-pic" onclick="showUserInfo(event);">
+		  			<img class="pic" src="../../statics/image/pic126.png" />		  
+		  		</div>
+		  		<div class="user-info-right">
+		  			<h4>史女士</h4>
+		  			<span class="sex">性别：女</span>
+		  			<p class="user-carbon-number">400</p>
+		  			<span class="address">广东 深圳</span>
+		  		</div>
 		  	</div>
-		  	<div class="customer-left-list">
-		  		<h3 class="list-title">我的个人中心</h3>
-		  		<ul>
-		  			<li class="left-item"><a href="">我的碳币</a></li>
-		  			<li class="left-item"><a href="">我的钱包</a></li>
-		  			<li class="left-item"><a href="">我的活动</a></li>
-		  			<li class="left-item"><a href="">我的社区</a></li>
-		  			<li class="left-item"><a href="">我的景区</a></li>
-		  			<li class="left-item"><a href="">我的碳友</a></li>
-		  			<li class="left-item item-news"><a href=""><span class="tip">4</span>消息</a></li>
-		  		</ul>
+		  	<div class="carbon-rank">
+		  		碳友排名：
+		  		<span>4005</span>
 		  	</div>
-		  	<div class="customer-left-list">
-		  		<h3 class="list-title">个人信息管理</h3>
-		  		<ul>
-		  			<li class="left-item"><a href="">编辑个人资料</a></li>
-		  			<li class="left-item"><a href="">低碳行为绑定项</a></li>
-		  			<li class="left-item"><a href="">实名认证</a></li>
-		  		</ul>
+		  	<div class="carbon-expression">
+		  		<div class="expression-left">碳友印象：</div>
+		  		<div class="expression-right">
+		  			<span class="expression0">电脑高手</span>
+		  			<span class="expression1">宅男</span>
+		  			<span class="expression2">技术牛人</span>
+		  			<span class="expression0">阳光</span>
+		  		</div>
+		  	</div>
+		  	<div class="user-info-perfect">
+		  		<div class="info-perfect-title">
+		  			信息完整度：
+		  			<span>80%</span>
+		  		</div>
+		  		<div class="perfect-bg">
+		  			<div class="info-perfected" style="width:50%"></div>
+		  		</div>
+		  		<a href="" class="go-perfect">去完善</a>
 		  	</div>
 		  </div>
-		  <div class="customer-right">
-		    <!--没有绑定社区提示-->
-		    <div class="no-content no-community-binding">
-		  	  <div class="no-spot-remind">
-		  	    <i class="no-content-icon"></i>您还没有绑定景区 
-		  	  </div>
-		  	  <a href="" class="go-binding">去绑定</a>
-			  </div>
-		  	<div class="wrap-list-content scenicSpot-list-content" style="display:none;">
-		  	   <div class="scenicSpot-title">
-		  	   	  万胡景区
-		  	   </div>
-		  	   <div class="scenicSpot-notice">
-		  	   	  <div class="scenicSpot-member">
-		  	   	  	<i class="icon-v"></i>
-		  	   	  	<div class="member-info">
-		  	   	  		<p class="info-up">已绑定用户</p>
-		  	   	  		<div class="member"><strong>1000+</strong>人</div>
-		  	   	  	</div>
-		  	   	  </div>
-		  	   	  <div class="scenicSpot-notice-content">
-		  	   	  <span class="notice-icon">公告：</span>
-		  	   	  <p class="notice-content">
-		  	   	  	2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
-		  	   	  </p>
-		  	   	  </div>
-		  	   </div>
-		  	   <div class="scenicSpot-list">
-		  	   	<div class="list-title">
-		  	   		景区周边的商家
-		  	   	</div>
-		  	   	<ul>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic131.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic133.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/user-example.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   	</ul>
-		  	   	<div class="more-store">
-		  	   		<a href="javascript:" class="toggle-more">更多商家</a>
-		  	   	</div>
-		  	   </div>
-		  	</div>
-		  	<div class="wrap-list-content scenicSpot-list-content" style="display:none;">
-		  	   <div class="scenicSpot-title">
-		  	   	  张家界景区
-		  	   </div>
-		  	   <div class="scenicSpot-notice">
-		  	   	  <div class="scenicSpot-member">
-		  	   	  	<i class="icon-v"></i>
-		  	   	  	<div class="member-info">
-		  	   	  		<p class="info-up">已绑定用户</p>
-		  	   	  		<div class="member"><strong>1000+</strong>人</div>
-		  	   	  	</div>
-		  	   	  </div>
-		  	   	  <div class="scenicSpot-notice-content">
-		  	   	  <span class="notice-icon">公告：</span>
-		  	   	  <p class="notice-content">
-		  	   	  	2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
-		  	   	  </p>
-		  	   	  </div>
-		  	   </div>
-		  	   <div class="scenicSpot-list">
-		  	   	<div class="list-title">
-		  	   		景区周边的商家
-		  	   	</div>
-		  	   	<ul>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic131.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic133.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/user-example.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic133.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/user-example.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   	</ul>
-		  	   	<div class="more-store">
-		  	   		<a href="javascript:" class="toggle-more">收起</a>
-		  	   	</div>
-		  	   </div>
-		  	</div>
-		  	<div class="wrap-list-content scenicSpot-list-content" style="display:none;">
-		  	   <div class="scenicSpot-title">
-		  	   	  张家界景区
-		  	   </div>
-		  	   <div class="scenicSpot-notice">
-		  	   	  <div class="scenicSpot-member">
-		  	   	  	<i class="icon-v"></i>
-		  	   	  	<div class="member-info">
-		  	   	  		<p class="info-up">已绑定用户</p>
-		  	   	  		<div class="member"><strong>1000+</strong>人</div>
-		  	   	  	</div>
-		  	   	  </div>
-		  	   	  <div class="scenicSpot-notice-content">
-		  	   	  <span class="notice-icon">公告：</span>
-		  	   	  <p class="notice-content">
-		  	   	  	2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
-		  	   	  </p>
-		  	   	  </div>
-		  	   </div>
-		  	   <div class="scenicSpot-list">
-		  	   	<div class="list-title">
-		  	   		景区周边的商家
-		  	   	</div>
-		  	   	<ul style="display:none;">
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic131.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/pic133.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   		<li class="scenicSpot-item">
-		  	   			<div class="wrap-pic">
-		  	   				<a href=""><img src="../../statics/image/user-example.png"></a> 
-		  	   			</div>
-		  	   			<div class="scenicSpot-intro">
-		  	   				<h5><a href="">深圳市立冰空调有限公司</a></h5>
-		  	   				<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
-		  	   			</div>
-		  	   		</li>
-		  	   	</ul>
-		  	   	<div class="more-store" style="display:none;">
-		  	   		<a href="javascript:" class="toggle-more">更多商家</a>
-		  	   	</div>
-		  	   	<div class="no-content">
-		  	   	<div class="no-spot-remind"><i class="no-content-icon"></i><div class="remind-tip">景区附近还没有低碳联盟商家信息，我们正在努力喔~ </div></div>
+			<div class="customer-left-title" id="customerLeftTitle" style="display:none;"></div>
+			<div class="customer-left-list">
+				<h3 class="list-title">我的个人中心</h3>
+				<ul>
+					<li class="left-item">
+						<a href="myCarbon.html">我的碳币</a>
+					</li>
+					<li class="left-item">
+						<a href="myWallet.html">我的钱包</a>
+					</li>
+					<li class="left-item">
+						<a href="myActivity.html">我的活动</a>
+					</li>
+					<li class="left-item">
+						<a href="myCommunity.html">我的社区</a>
+					</li>
+					<li class="left-item">
+						<a href="myScenicSpot.html">我的景区</a>
+					</li>
+					<li class="left-item">
+						<a href="">我的碳友</a>
+					</li>
+					<li class="left-item item-news">
+						<a href="">
+							<span class="tip">4</span>
+							消息
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="customer-left-list">
+				<h3 class="list-title">个人信息管理</h3>
+				<ul id="leftInfoManager">
+					<li class="left-item">
+						<a href="infoManager.html?infoManagerid=infoManagerEdit">编辑个人资料</a>
+					</li>
+					<li class="left-item">
+						<a href="infoManager.html?infoManagerid=infoManagerBingding">低碳行为绑定项</a>
+					</li>
+					<li class="left-item">
+						<a href="infoManager.html?infoManagerid=infoManagerRealName">实名认证</a>
+					</li>
+				</ul>
+			</div>
+			<div class="showInfo" id="showInfo">
+				<div class="showInfo-up">
+					<div class="up-right">
+						<img src="../../statics/image/atvatar.png" />
+					</div>
+					<div class="up-left">
+						<h5>史女士</h5>
+						<p class="up-provice">广州</p>
+						<p>初恋无限好，只是挂得早<a href="" class="iconEdit"></a></p>
+					</div>
+				</div>
+				<div class="showInfo-down">
+					<div class="down-item">
+						<span class="item-left">所在社区</span>
+						<div class="item-right"><span>电子五所社区</span></div>
+					</div>
+					<div class="down-item">
+						<span class="item-left">关注的景区</span>
+						<div class="item-right"><span>电子五所社区</span>,<span>电社区</span>,<span>电子五所</span></div>
+					</div>
+					<div class="down-item express-item">
+						<span class="item-left">碳友印象</span>
+						<div class="item-right"><span class="expression0">电脑高手</span><span class="expression1">宅男</span><span class="expression2">技术牛人</span><span class="expression3">技术大牛</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="customer-right">
+			
+			
+			<div id="wrapScenicSpotList">
+			  <!--没有绑定社区提示-->
+				<div class="no-content no-community-binding" style="display:none;"><div class="no-spot-remind"> 
+			<i class="no-content-icon"></i>您还没有绑定景区</div><a href="infoManager.html?infoManagerid=infoManagerEdit" class="go-binding">去绑定</a></div>
+				<div class="add-scenicSpot">
+					<a href="infoManager.html?infoManagerid=infoManagerEdit" class="addCare">关注更多景区</a>
+				</div>
+				<div class="wrap-list-content scenicSpot-list-content">
+					<div class="scenicSpot-title">万胡景区</div>
+					<div class="scenicSpot-notice">
+						<div class="scenicSpot-member"> <i class="icon-v"></i>
+							<div class="member-info">
+								<p class="info-up">已绑定用户</p>
+								<div class="member"> <strong>1000+</strong>
+									人
+								</div>
+							</div>
+						</div>
+						<div class="scenicSpot-notice-content">
+							<span class="notice-icon">公告：</span>
+							<p class="notice-content">
+								2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
+							</p>
+						</div>
+					</div>
+					<div class="scenicSpot-list">
+						<div class="list-title">
+							<span class="first active-item" onclick="toggleType(this,'0','spotId')">景区周边的商家</span>
+							<span data-id="1" onclick="toggleType(this,'1','spotId')">景区专属活动</span>
+						</div>
+						<div class="wrapScenicSpotItem" id="scenicSpot0">
+							<ul>
+								<li class="scenicSpot-item">
+									<div class="wrap-pic">
+										<a href="">
+											<img src="../../statics/image/pic131.png"></a>
+									</div>
+									<div class="scenicSpot-intro">
+										<h5>
+											<a href="">深圳市立冰空调有限公司</a>
+										</h5>
+										<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+									</div>
+								</li>
+								<li class="scenicSpot-item">
+									<div class="wrap-pic">
+										<a href="">
+											<img src="../../statics/image/pic133.png"></a>
+									</div>
+									<div class="scenicSpot-intro">
+										<h5>
+											<a href="">深圳市立冰空调有限公司</a>
+										</h5>
+										<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+									</div>
+								</li>
+								<li class="scenicSpot-item">
+									<div class="wrap-pic">
+										<a href="">
+											<img src="../../statics/image/user-example.png"></a>
+									</div>
+									<div class="scenicSpot-intro">
+										<h5>
+											<a href="">深圳市立冰空调有限公司</a>
+										</h5>
+										<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+									</div>
+								</li>
+							</ul>
+							<div class="more-store">
+								<a href="javascript:" class="toggle-more">更多商家</a>
+							</div>
+						</div>
+						<div class="wrap-list-content list-content-activity" id="scenicSpot1" style="display:none;">
 
-			  		</div>
-		  	   </div>
-		  	</div>
-		  </div>
+							<div class="list-activity">
+								<ul>
+									<li class="activity-item car-item">
+										<div class="activity-right">
+											<a href="">发私信</a>
+											<a href="">我要拼车</a>
+										</div>
+										<div class="activity-left">
+											<div class="wrap-pic"></div>
+											<div class="activity-info">
+												<h5>
+													<span>西木</span>
+													于今天16:20发布
+												</h5>
+												<div class="activity-common activity-time">出发日期:2016-11-02 09:22</div>
+												<div class="activity-common activity-details">线路:白云机场</div>
+											</div>
+										</div>
+									</li>
+									<li class="activity-item exchange-item">
+										<div class="activity-right">
+											<a href="">发私信</a>
+											<a href="">我要换购</a>
+										</div>
+										<div class="activity-left">
+											<div class="wrap-pic"></div>
+											<div class="activity-info">
+												<h5>
+													<span>西木</span>
+													于今天16:20发布
+												</h5>
+												<div class="activity-common activity-time">出发日期:2016-11-02 09:22</div>
+												<div class="activity-common activity-details">线路:白云机场</div>
+											</div>
+										</div>
+									</li>
+									<li class="activity-item join-item">
+										<div class="activity-right">
+											<a href="">发私信</a>
+											<a href="">我要参与</a>
+										</div>
+										<div class="activity-left">
+											<div class="wrap-pic"></div>
+											<div class="activity-info">
+												<h5>
+													<span>西木</span>
+													于今天16:20发布
+												</h5>
+												<div class="activity-common activity-time">出发日期:2016-11-02 09:22</div>
+												<div class="activity-common activity-details">线路:白云机场</div>
+											</div>
+										</div>
+									</li>
+									<li class="activity-item plant-item">
+										<div class="activity-right">
+											<a href="">发私信</a>
+											<a href="">植物认养</a>
+										</div>
+										<div class="activity-left">
+											<div class="wrap-pic"></div>
+											<div class="activity-info">
+												<h5>
+													<span>西木</span>
+													于今天16:20发布
+												</h5>
+												<div class="activity-common activity-time">出发日期:2016-11-02 09:22</div>
+												<div class="activity-common activity-details">线路:白云机场</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="click-more"><a href="" class="getMore">点击加载更多</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-list-content scenicSpot-list-content">
+					<div class="scenicSpot-title">张家界景区</div>
+					<div class="scenicSpot-notice">
+						<div class="scenicSpot-member">
+							<i class="icon-v"></i>
+							<div class="member-info">
+								<p class="info-up">已绑定用户</p>
+								<div class="member"> <strong>1000+</strong>
+									人
+								</div>
+							</div>
+						</div>
+						<div class="scenicSpot-notice-content">
+							<span class="notice-icon">公告：</span>
+							<p class="notice-content">
+								2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
+							</p>
+						</div>
+					</div>
+					<div class="scenicSpot-list">
+						<div class="list-title">
+							<span class="first active-item">景区周边的商家</span>
+							<span>景区专属活动</span>
+						</div>
+						<ul>
+							<li class="scenicSpot-item">
+								<div class="wrap-pic">
+									<a href="">
+										<img src="../../statics/image/user-example.png"></a>
+								</div>
+								<div class="scenicSpot-intro">
+									<h5>
+										<a href="">深圳市立冰空调有限公司</a>
+									</h5>
+									<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+								</div>
+							</li>
+						</ul>
+						<div class="more-store">
+							<a href="javascript:" class="toggle-more">收起</a>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-list-content scenicSpot-list-content">
+					<div class="scenicSpot-title">张家界景区</div>
+					<div class="scenicSpot-notice">
+						<div class="scenicSpot-member">
+							<i class="icon-v"></i>
+							<div class="member-info">
+								<p class="info-up">已绑定用户</p>
+								<div class="member">
+									<strong>1000+</strong>
+									人
+								</div>
+							</div>
+						</div>
+						<div class="scenicSpot-notice-content">
+							<span class="notice-icon">公告：</span>
+							<p class="notice-content">
+								2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动，2016年11月22日碳普惠发展中心即将举办一场爬山捡垃圾的公益活动，该活动...
+							</p>
+						</div>
+					</div>
+					<div class="scenicSpot-list">
+						<div class="list-title">
+							<span class="first active-item">景区周边的商家</span>
+							<span>景区专属活动</span>
+						</div>
+						<ul style="display:none;">
+							<li class="scenicSpot-item">
+								<div class="wrap-pic">
+									<a href="">
+										<img src="../../statics/image/pic131.png"></a>
+								</div>
+								<div class="scenicSpot-intro">
+									<h5>
+										<a href="">深圳市立冰空调有限公司</a>
+									</h5>
+									<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+								</div>
+							</li>
+							<li class="scenicSpot-item">
+								<div class="wrap-pic">
+									<a href="">
+										<img src="../../statics/image/pic133.png"></a>
+								</div>
+								<div class="scenicSpot-intro">
+									<h5>
+										<a href="">深圳市立冰空调有限公司</a>
+									</h5>
+									<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+								</div>
+							</li>
+							<li class="scenicSpot-item">
+								<div class="wrap-pic">
+									<a href="">
+										<img src="../../statics/image/user-example.png"></a>
+								</div>
+								<div class="scenicSpot-intro">
+									<h5>
+										<a href="">深圳市立冰空调有限公司</a>
+									</h5>
+									<p>深圳市立冰空调有限公司是一家以独创技术为核心理念的国家级······</p>
+								</div>
+							</li>
+						</ul>
+						<div class="more-store" style="display:none;">
+							<a href="javascript:" class="toggle-more">更多商家</a>
+						</div>
+						<div class="no-content">
+							<div class="no-spot-remind">
+								<i class="no-content-icon"></i>
+								<div class="remind-tip">景区附近还没有低碳联盟商家信息，我们正在努力喔~</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	
 </div>
 	</body>
 	</html>

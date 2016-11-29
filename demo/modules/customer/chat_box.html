@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/font-awesome.min.css" />
+<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="../../statics/css/base.css" />
+<link rel="stylesheet" href="../../statics/css/newStyle.css" />
+<link rel="stylesheet" href="../../statics/css/customer.css" />
+<link rel="stylesheet" href="../../statics/css/my_friend.css" />
+<link rel="stylesheet" href="../../statics/css/chat_box.css" />
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/nav.js"></script>
+<script src="script/customer.js"></script>
+<script src="script/chaxBox.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph"></div>
+<!--头部结束-->
+<div class="wrap-main wrap-customer-main">
+    <div class="width960 customer-main">
+     <div class="chat-box">
+       <!-- chat-left -->
+         <div class="chat-box-left">
+            <div class="chat-search">
+                <input type="text" placeholder="请输入昵称" id="chat-seach-inp">
+                <a class="rid-btn">
+                <div class="rid-box">
+                <span class="arrow"></span>
+                    <ul>
+                        <li>忽略全部</li>
+                        <li>清除联系人列表</li>
+                        <li>清空消息记录</li>
+                    </ul>
+                </div>
+                </a>
+            </div>
+            <div class="chat-list">
+                <ul class="avatar-feeds">
+                    <li>
+                        <img src="../../statics/image/atvatar_0.png">
+                        <p class="name">耳朵难眠</p>
+                        <span>4</span>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar_1.png">
+                        <p class="name">阳光boy</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar.png">
+                        <p class="name">阴天man</p>
+                    </li>
+                    <li class="selected">
+                        <img src="../../statics/image/atvatar_2.png">
+                        <p class="name">追风筝的人</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar_3.png">
+                        <p class="name">骑自行车的man</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar.png">
+                        <p class="name">开轿车的boy</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar_0.png">
+                        <p class="name">走路的boy</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar_1.png">
+                        <p class="name">阳光boy</p>
+                    </li>
+                                            <li>
+                        <img src="../../statics/image/atvatar.png">
+                        <p class="name">阴天man</p>
+                    </li>
+                    <li class="selected">
+                        <img src="../../statics/image/atvatar_2.png">
+                        <p class="name">追风筝的人</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar_3.png">
+                        <p class="name">骑自行车的man</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar.png">
+                        <p class="name">开轿车的boy</p>
+                    </li>
+                    <li>
+                        <img src="../../statics/image/atvatar_0.png">
+                        <p class="name">走路的boy</p>
+                    </li>
+                 </ul>
+            </div>
+         </div>
+        <!-- chat-right -->
+         <div class="chat-box-right">
+             <div class="chat-box-header">
+                 <div class="chat-name">
+                   <h5>追风筝的人</h5>
+                    <p class="motto">你是孤独的岛，而我却是上不了岸的潮</p>
+                 </div>
+                 <div class="header-btn">
+                     <a class="impress">
+                     印象
+                      <div class="impress-box">
+                          <span class="arrow"></span>
+                          <input type="text">
+                          <button>添加印象</button>
+                      </div>
+                     </a>
+                     <a class="send-coins">
+                      送碳币
+                      <div class="send-coin-box" style="display: none;">
+                            <span class="arrow"></span>
+                          <div class="input-coin" >
+                              <p>赠送<input type="text" maxlength="3">碳币</p>
+                              <span class="now-coin">你当前碳币余额：20</span>
+                              <button id="send-coins">确认</button>
+                              <button>取消</button>
+                          </div>
+                          <div class="send-success" style="display: none;">
+                              <p><i class="fa fa-check-circle"></i>赠送成功！</p>
+                               <span class="tip"><i>3</i>秒后自动关闭</span>
+                          </div>
+                      </div>
+                      </a>
+                 </div>
+             </div>
+             <div class="chat-box-con">
+                 <ul id="chatBoxContent">
+                     <li class="date-show">2016-11-06 00:30:32</li>
+                     <li class="fren-say">
+                              <img src="../../statics/image/atvatar_2.png">
+                               <div class="say-box">
+                                   在吗？
+                               <i></i>
+                               </div>
+                     </li>
+                     <li class="fren-say">
+                          <img src="../../statics/image/atvatar_2.png">
+                           <div class="say-box">
+                            看到你回复狗狗托运的问题
+                           <i></i>
+                            </div>
+                     </li>
+                     <li class="fren-say">
+                          <img src="../../statics/image/atvatar_2.png">
+                           <div class="say-box">
+                            我的也是哈士奇，但是已经很大了，需要准备什么 东西么？
+                           <i></i>
+                            </div>
+                     </li>
+                     <li class="date-show">2016-11-06 00:42:12</li>
+                      <li class="me-say">
+                          <img src="../../statics/image/atvatar.png">
+                           <div class="say-box">
+                           手续是一样的，区别就是你的航空箱要大些，哈哈 我刚看见私信，不好意思。
+                           <i></i>
+                            </div>
+                     </li>
+                      <li class="me-say">
+                          <img src="../../statics/image/atvatar.png">
+                           <div class="say-box">
+                           哈士奇
+                           <i></i>
+                            </div>
+                     </li>
+                   </ul>
+             </div>
+             <div class="chat-box-inpt">
+                 <textarea name="" id="send-chat-msg" ></textarea>
+                 <button onclick="sendContent();">发送</button>
+             </div>
+         </div>
+     </div>
+    </div>
+</div>
+<!--尾部开始-->
+<div class="pageFooter">
+</div>
+<!--尾部结束-->
+
+</body>
+
+</html>

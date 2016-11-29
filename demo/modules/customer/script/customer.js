@@ -4,8 +4,25 @@ function toggleTab(obj, obj0, obj1, obj2) {
 	$("#" + obj0).css("display", "block");
 	$("#" + obj1).css("display", "none");
 	$("#" + obj2).css("display", "none");
-}
+};
 
+function showUserInfo(event) {
+	stopPropagation(event);
+	if ($("#showInfo").css("display") == "none") {
+		$("#showInfo").fadeIn();
+	} else {
+		$("#showInfo").fadeOut();
+	}
+
+};
+$(function() {
+	$("#showInfo").on("click", function(e) {
+		e.stopPropagation();
+	})
+	$(document).on("click", function() {
+		$("#showInfo").fadeOut();
+	})
+});
 /**个人信息加载**/
 /*$.ajax({
 	type: "post",

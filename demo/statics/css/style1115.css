@@ -65,7 +65,6 @@
 }
 .fold-list-box{
 	padding-bottom: 20px;
-	border-top: 1px solid #eee;
 }
 /*
 	由于该列表有展示和编辑两种状态，
@@ -106,7 +105,7 @@
 	line-height: 20px;
 }
 .fold-list.edit-state li.active .fold-detail{
-	display: none;
+	display: block;
 }
 .fold-list.edit-state li.active .fold-handle{
 	background: url(../../statics/image/icons/icon-dropdown.png) no-repeat right center;
@@ -141,6 +140,12 @@
 }
 .form-box{
 	padding-bottom: 20px;
+}
+.form-box .myModal-main ul{
+	padding-left: 10px;
+}
+.form-box .myModal-main ul label{
+	width: 145px;
 }
 .mailTo{
 	margin:20px 0 ;
@@ -182,6 +187,7 @@
 	display: inline-block;
 	font-size: 12px;
 	width: 300px;
+	color: #666;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -191,7 +197,41 @@
 	text-align: center;
 	color: #a9a9a9;
 }
+.customer-right .list-content-activity .friendList{
+	padding-bottom: 20px;
+}
+.customer-right .list-content-activity .friendList .activity-item{
+	padding: 20px 0 20px 10px;
+	border-bottom: 1px dotted #e5e5e5;
+}
+.customer-right .list-content-activity .friendList .apply-item .wrap-pic{
+  width: 70px;
+  height: 70px;
+}
+.customer-right .list-content-activity .friendList .personal-item .wrap-pic{
+  width: 55px;
+  height: 55px;
+}
 
+.customer-right .list-content-activity .friendList .personal-item h5{
+	margin-top: 10px;
+}
+.customer-right .list-content-activity .friendList .read-item h5,.customer-right .list-content-activity .friendList .read-item .autograph{
+  color: #a9a9a9;
+}
+.customer-right .list-content-activity .friendList .read-item .time{
+	color: #a9a9a9;
+	font-size: 12px;float: right;
+}
+.customer-right .list-content-activity .friendList .activity-right .friendOperate{
+	padding-left: 8px;
+	padding-right: 8px;
+	width:auto;
+	border: none;
+	color: #666;
+	font-size: 12px;
+	background-color: #f3f3f3;
+}
 
 
 

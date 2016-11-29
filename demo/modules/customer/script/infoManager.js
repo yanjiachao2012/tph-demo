@@ -4,31 +4,31 @@ $(function() {
     funPlaceholder(document.getElementById("realSign"));
     ArrayIndexOf();
     /**获取社区**/
-   /* $.ajax({
-        url: path() + '/communityController/queryCommunity.do',
-        type: "post",
-        dataType: "json",
-        success: function(res) {
-            var html = "";
-            for (var i = 0, len = res.length; i < len; i++) {
-                html += '<li onclick="infoManager.selectItem(this)" id="' + res[i].id + '">' + res[i].areaName + '</li>';
-            }
-            $("#communityDropdown").append(html);
-        }
-    });*/
+    /* $.ajax({
+         url: path() + '/communityController/queryCommunity.do',
+         type: "post",
+         dataType: "json",
+         success: function(res) {
+             var html = "";
+             for (var i = 0, len = res.length; i < len; i++) {
+                 html += '<li onclick="infoManager.selectItem(this)" id="' + res[i].id + '">' + res[i].areaName + '</li>';
+             }
+             $("#communityDropdown").append(html);
+         }
+     });*/
     /**获取景区**/
-   /* $.ajax({
-        url: path() + '/scenicController/queryScenic.do',
-        type: "post",
-        dataType: "json",
-        success: function(res) {
-            var html = "";
-            for (var i = 0, len = res.length; i < len; i++) {
-                html += '<li onclick="infoManager.selectItem2(this)" id="' + res[i].id + '">' + res[i].areaName + '</li>';
-            }
-            $("#spotDropdown").append(html);
-        }
-    });*/
+    /* $.ajax({
+         url: path() + '/scenicController/queryScenic.do',
+         type: "post",
+         dataType: "json",
+         success: function(res) {
+             var html = "";
+             for (var i = 0, len = res.length; i < len; i++) {
+                 html += '<li onclick="infoManager.selectItem2(this)" id="' + res[i].id + '">' + res[i].areaName + '</li>';
+             }
+             $("#spotDropdown").append(html);
+         }
+     });*/
     /**获取绑定项**/
     /* $.ajax({
          url: path() + '/cardNew/queryAreaCardCategory.do',
@@ -412,6 +412,7 @@ function realSave() {
         _realId = $("#realId").val(),
         _picId1 = $("#picId1").val(),
         _picId2 = $("#picId2").val();
+    var resNum = /^\d*$/g;
     if (_realName == "") {
         alert("姓名不能为空");
         return;
@@ -421,6 +422,9 @@ function realSave() {
         return;
     } else if (_realId.length != 18) {
         alert("身份证号码长度不对")
+        return;
+    } else if (!resNum.test(_realId)) {
+        alert("身份证号码格式不对")
         return;
     }
     if (_picId1 == "") {

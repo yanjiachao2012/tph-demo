@@ -145,11 +145,11 @@ body{
 			}
 			.icon-dropdown{
           display:inline-block;
-          width:10px;
-          height:7px;
+          width:9px;
+          height:5px;
           vertical-align:middle;
-          background:url(../image/icon-dropdown.png) center center;
-          background-size:9px 6px;
+          background:url(../image/icons/icon-dropdown9.png) center center;
+          background-size:9px 5px;
 			}
 			.address-list{
 				display:none;
@@ -1397,9 +1397,6 @@ body{
 			.input-item{
 				height:28px;
 				padding-top:15px;
-				.selectpick_div_box{
-					margin:0;
-				}
 				label{
 					float:left;
 					margin-right:3px;
@@ -1419,9 +1416,12 @@ body{
 				.modalInput{
 					padding:5px;
 					outline:none;
+					line-height:16px;
 					border:1px solid #e6e5e5;
 					color:#a9a9a9;
 					font-size:12px;
+					overflow:hidden;
+					resize:none;
 				}
 				.input1{
 					width:140px;
@@ -1940,11 +1940,11 @@ body{
 			font-size:16px;
 			border:1px solid #e5e5e5;
 			input{
-				padding:0px 10px;
-				border:none;
-				outline:none;
 				height:100%;
 				width:100%;
+				padding:10px;
+				border:none;
+				outline:none;
 				-webkit-box-sizing:border-box;
 				-moz-box-sizing:border-box;
 				box-sizing:border-box;
@@ -2186,6 +2186,7 @@ body{
 			text-align:right;
 		}
 		.input-item{
+			position:relative;
 			display:inline-block;
 			margin-bottom:20px;
 			height:36px;
@@ -2194,9 +2195,10 @@ body{
 			border:1px solid #e5e5e5;
 			input{
 				width:100%;
+				height:100%;
 				border:none;
 				outline:none;
-				padding:3px 10px;
+				padding:8px 10px;
 				-webkit-box-sizing:border-box;
 				-moz-box-sizing:border-box;
 				box-sizing:border-box;
@@ -2265,16 +2267,19 @@ body{
 	}
 	.reset-item{
 		.label{
-			vertical-align:30px;
+			vertical-align:0px;
 		}
 		.input-item{
 			margin-bottom:32px;
 		}
 		.pw-rank{
+			position:absolute;
+			width:100%;
+			height:36px;
 			text-align:left;
 	  	margin-top:-5px;
 	  	span{
-	  		display:inline-block;
+	  		display:none;
 	  		margin-right:3px;
 	  		width:40px;
 	  		height:18px;

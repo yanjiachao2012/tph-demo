@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/font-awesome.min.css" />
+<link rel="stylesheet" href="../../statics/script/plugins/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="../../statics/css/base.css" />
+<link rel="stylesheet" href="../../statics/css/newStyle.css" />
+<link rel="stylesheet" href="../../statics/css/customer.css" />
+<link rel="stylesheet" href="../../statics/css/my_friend.css" />
+<link rel="stylesheet" href="../../statics/css/style1115.css"/>
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>  
+</head>
+
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+    <div class="wrap-nav-top">
+        <div class="nav-top">
+            <div class="nav-user" style="display:none;">
+                <a href="" class="user-info">
+                    <img src="../../statics/image/pic-user-example.png" alt="" />
+                    <span>张女士</span>
+                </a>
+                <a href="" class="user-loginOut">退出</a>
+                <a href="" class="user-news"> <i class="icon-tip">93</i>
+                </a>
+            </div>
+            <div class="nav-user">
+                <a href="" class="user-loginOut">登录</a>
+            </div>
+            <div class="nav-time">
+                <span class="left">2016-10-12</span>
+                <span class="right">星期四</span>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-nav-content">
+        <div class="nav-tph">
+            <div class="nav-left">
+                <div class="wrap-logo">
+                    <a href="">
+                        <img src="../../statics/image/logo.png"></a>
+                </div>
+                <div class="wrap-address">
+                    <div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+                        <span class="address" id="selectCity">广州</span>
+                        <span class="icon-dropdown"></span>
+                    </div>
+                    <ul class="address-list" id="addressList">
+                        <li class="item" onclick="selectCity(this);">韶关市</li>
+                        <li class="item" onclick="selectCity(this);">深圳市</li>
+                        <li class="item" onclick="selectCity(this);">珠海市</li>
+                        <li class="item" onclick="selectCity(this);">佛山市</li>
+                        <li class="item" onclick="selectCity(this);">惠州市</li>
+                        <li class="item" onclick="selectCity(this);">河源市</li>
+                        <li class="item" onclick="selectCity(this);">东莞市</li>
+                        <li class="item" onclick="selectCity(this);" s>中心市</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul id="tph-nav">
+                    <li class="nav-item">
+                        <a class="item-a" href="">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item-a" href="">碳币兑换</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item-a" href="">低碳众筹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="item-a">低碳活动</a>
+                        <div class="wrap-sub-nav">
+                            <ul>
+                                <li class="sub-nav-item">
+                                    <i class="active1"></i>
+                                    <a href="">换物</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <i class="active2"></i>
+                                    <a href="">顺风车</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <i class="active3"></i>
+                                    <a href="">植物认领</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <i class="active4"></i>
+                                    <a href="">低碳活动</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item-a" href="">低碳资讯</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item-a" href="">减碳置换</a>
+                        <div class="wrap-sub-nav">
+                            <ul>
+                                <li class="sub-nav-item">
+                                    <i class="active1"></i>
+                                    <a href="">换物1</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <i class="active2"></i>
+                                    <a href="">顺风车1</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <i class="active3"></i>
+                                    <a href="">植物认领1</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <i class="active4"></i>
+                                    <a href="">低碳活动1</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="item-a" href="">低碳产品</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--头部结束-->
+<div class="wrap-main wrap-customer-main">
+    <div class="width960 customer-main">
+        <div class="customer-left">
+            <div class="customer-left-title" id="customerLeftTitle"></div>
+            <div class="customer-left-list">
+                <h3 class="list-title">我的个人中心</h3>
+                <ul>
+                    <li class="left-item">
+                        <a href="myCarbon.html">我的碳币</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="myWallet.html">我的钱包</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="myActivity.html">我的活动</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="myCommunity.html">我的社区</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="myScenicSpot.html">我的景区</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="">我的碳友</a>
+                    </li>
+                    <li class="left-item item-news">
+                        <a href="">
+                            <span class="tip">4</span>
+                            消息
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="customer-left-list">
+                <h3 class="list-title">个人信息管理</h3>
+                <ul id="leftInfoManager">
+                    <li class="left-item">
+                        <a href="infoManager.html?infoManagerid=infoManagerEdit">编辑个人资料</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="infoManager.html?infoManagerid=infoManagerBingding">低碳行为绑定项</a>
+                    </li>
+                    <li class="left-item">
+                        <a href="infoManager.html?infoManagerid=infoManagerRealName">实名认证</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="showInfo" id="showInfo"></div>
+        </div>
+        <div class="customer-right">
+            <div class="customerTab">
+                <ul class="tab">
+                    <li class="tab-item active-item">碳友排行</li>
+                    <li class="tab-item">碳友通讯录</li>
+                    <li class="tab-item">邀请新碳友</li>
+                </ul>
+            </div>
+
+            <div class="tab-con-box carbon-rank" style="display:block;">
+                <div class="rank-header">
+                    <ul>
+                        <li>
+                            <a class="avatar-link">
+                                <img src="../../statics/image/pic126.png"></a>
+                            <p class="head-txt">
+                                史女士 <i class="icon-women"></i>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="head-txt">
+                                碳币：
+                                <span>
+                                    5000 <em>个</em>
+                                </span>
+                            </p>
+                            <p>
+                                第 <em>5</em>
+                                名
+                            </p>
+                        </li>
+                        <li>
+                            <p class="head-txt">
+                                累计减碳量：
+                                <span>
+                                    500
+                                    <em>吨</em>
+                                </span>
+                            </p>
+                            <p>
+                                第
+                                <em>20</em>
+                                名
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <dl class="carbon-coin-rank">
+                        <dt>
+                            <ul>
+                                <li class="active-item first">碳币排行</li>
+                                <li>减碳量排行</li>
+                            </ul>
+                        </dt>
+                        <dd class="rank-con tab-con-box" style="display: block">
+                            <ul class="rank-list">
+                                <li class="rank-first">
+                                    <div class="rank-num">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/pic126.png" />
+                                        <p>
+                                            耳朵难眠 <i class="icon-women"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        5000
+                                        <i>个</i>
+                                    </div>
+                                    <div class="medal">
+                                        <img src="../../statics/image/medal_one.png"></div>
+                                </li>
+
+                                <li class="rank-second">
+                                    <div class="rank-num">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_0.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-women"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4800
+                                        <i>个</i>
+                                    </div>
+                                    <div class="medal">
+                                        <img src="../../statics/image/medal_two.png"></div>
+                                </li>
+
+                                <li class="rank-third">
+                                    <div class="rank-num">
+                                        <p>3</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_1.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                    <div class="medal">
+                                        <img src="../../statics/image/medal_three.png"></div>
+                                </li>
+
+                                <li>
+                                    <div class="rank-num">
+                                        <p>4</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_2.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="rank-num">
+                                        <p>5</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>6</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_0.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>7</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_1.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>8</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_2.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>9</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>10</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_0.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="my-pagination">
+                                <ul>
+                                    <li class="prev">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_prev.png" alt=""></a>
+                                    </li>
+                                    <li class="prev prev-step">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_prev_step.png" alt=""></a>
+                                    </li>
+                                    <li class="actived">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5</a>
+                                    </li>
+                                    <li class="next next-step">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_next_step.png" alt=""></a>
+                                    </li>
+                                    <li class="next">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_next.png" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                        <dd  class="rank-con tab-con-box">
+                            <ul class="rank-list">
+                                <li class="rank-first">
+                                    <div class="rank-num">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/pic126.png" />
+                                        <p>
+                                            耳朵可以眠
+                                            <i class="icon-women"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        10000
+                                        <i>个</i>
+                                    </div>
+                                    <div class="medal">
+                                        <img src="../../statics/image/medal_one.png"></div>
+                                </li>
+                                <li class="rank-second">
+                                    <div class="rank-num">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_1.png" />
+                                        <p>
+                                            耳
+                                            <i class="icon-women"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        40
+                                        <i>个</i>
+                                    </div>
+                                    <div class="medal">
+                                        <img src="../../statics/image/medal_two.png"></div>
+                                </li>
+                                <li class="rank-third">
+                                    <div class="rank-num">
+                                        <p>3</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_0.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                    <div class="medal">
+                                        <img src="../../statics/image/medal_three.png"></div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>4</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>5</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>6</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>7</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>8</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>9</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="rank-num">
+                                        <p>10</p>
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="../../statics/image/atvatar_3.png" />
+                                        <p>
+                                            耳朵难眠
+                                            <i class="icon-man"></i>
+                                        </p>
+                                    </div>
+                                    <div class="carbon-num">
+                                        4700
+                                        <i>个</i>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="my-pagination">
+                                <ul>
+                                    <li class="prev">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_prev.png" alt=""></a>
+                                    </li>
+                                    <li class="prev prev-step">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_prev_step.png" alt=""></a>
+                                    </li>
+                                    <li class="actived">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5</a>
+                                    </li>
+                                    <li class="next next-step">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_next_step.png" alt=""></a>
+                                    </li>
+                                    <li class="next">
+                                        <a href="#">
+                                            <img src="../../statics/image/page_next.png" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="tab-con-box carbon-contact">
+                <div class="contact-select-box">
+                    <ul>
+                        <li class="select-btn selected">全部</li>
+                        <li class="select-btn">最近联系</li>
+                        <li class="select-btn">A-Z联系</li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="请输入碳友昵称">
+                    <button id="managerFren">好友管理</button>
+                    <button id="addFren">添加好友</button>
+                </div>
+                <div class="carbon-cantact-con">
+                    <ul class="friends-list">
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_1.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_3.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_2.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_2.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_3.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_2.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_3.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_1.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_3.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_2.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_0.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_1.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_2.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_3.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="../../statics/image/atvatar_1.png" alt="">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="my-pagination">
+                        <ul>
+                            <li class="prev">
+                                <a href="#">
+                                    <img src="../../statics/image/page_prev.png" alt=""></a>
+                            </li>
+                            <li class="prev prev-step">
+                                <a href="#">
+                                    <img src="../../statics/image/page_prev_step.png" alt=""></a>
+                            </li>
+                            <li class="actived">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li class="next next-step">
+                                <a href="#">
+                                    <img src="../../statics/image/page_next_step.png" alt=""></a>
+                            </li>
+                            <li class="next">
+                                <a href="#">
+                                    <img src="../../statics/image/page_next.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="carbon-cantact-con" style="display: none;">
+                    <div class="addfren-box">
+                        <input type="text" placeholder="昵称/手机号">
+                        <button class="add-search-btn" ></button>
+                    </div>
+                    <div class="search-result">
+                        <ul style="display: none;">
+                            <li>
+                                <div class="result-msg">
+                                    <img src="../../statics/image/atvatar_3.png" alt="">
+                                    <p>追风de少年</p>
+                                </div>
+                                <a class="apply-btn">
+                                    申请添加
+                                    <div class="apply-box">
+                                        <span class="arrow"></span>
+                                        <p>请填写好友验证信息</p>
+                                        <textarea name="apply-msg" id="" value='耳朵难眠'></textarea>
+                                        <p class="tip">
+                                            你还可以输入
+                                            <span>16</span>
+                                            字
+                                        </p>
+                                        <button>发送</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="result-msg">
+                                    <img src="../../statics/image/atvatar_0.png" alt="">
+                                    <p>追风的少年</p>
+                                </div>
+                                <a class="apply-btn">
+                                    申请添加
+                                    <div class="apply-box">
+                                        <span class="arrow"></span>
+                                        <p>请填写好友验证信息</p>
+                                        <textarea name="apply-msg" id="" value='耳朵难眠'></textarea>
+                                        <p class="tip">
+                                            你还可以输入
+                                            <span>16</span>
+                                            字
+                                        </p>
+                                        <button>发送</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="may-konw">
+                    <h3>你可能认识</h3>
+                    <div class="contact-select-box">
+                        <ul>
+                            <li class="select-btn selected">全部</li>
+                            <li class="select-btn">同社区</li>
+                            <li class="select-btn">同景区</li>
+                        </ul>
+                    </div>
+                    <ul class="may-know-list">
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_0.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_1.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_2.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_women"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_3.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_0.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_1.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_2.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_man"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                        <li>
+                            <div class="list-msg">
+                                <img src="../../statics/image/atvatar_3.png">
+                                <p>
+                                    耳朵难眠
+                                    <i class="icon_momen"></i>
+                                    <span>电子五所社区</span>
+                                </p>
+                            </div>
+                            <button class="add-friend">加好友</button>
+                        </li>
+                    </ul>
+                    <div class="my-pagination">
+                        <ul>
+                            <li class="prev">
+                                <a href="#">
+                                    <img src="../../statics/image/page_prev.png" alt=""></a>
+                            </li>
+                            <li class="prev prev-step">
+                                <a href="#">
+                                    <img src="../../statics/image/page_prev_step.png" alt=""></a>
+                            </li>
+                            <li class="actived">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li class="next next-step">
+                                <a href="#">
+                                    <img src="../../statics/image/page_next_step.png" alt=""></a>
+                            </li>
+                            <li class="next">
+                                <a href="#">
+                                    <img src="../../statics/image/page_next.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 邀请新碳友 -->
+            <div class="tab-con-box">
+                <div class="wrap-list-content list-content-activity">
+                    <div class="list-activity">
+                        <div class="sort-parts">
+                            <span class="sort-item active-item">短信邀请</span>
+                            <span class="sort-item">邮箱邀请</span>
+                        </div>
+                        <div class="myModal-main">
+                            <ul>
+                                <li class="input-item">
+                                    <label>
+                                        <span>*</span>
+                                        手机号码：
+                                    </label>
+                                    <div class="input-right">
+                                        <input type="text" id="findTitle" class="input1 modalInput"></div>
+                                </li>
+                                <li class="input-item">
+                                    <label>被邀请者昵称：</label>
+                                    <div class="input-right">
+                                        <input type="text" placeholder="" id="userName" class="input1 modalInput"></div>
+                                </li>
+                            </ul>
+                            <div class="tips-box">
+                                <p>
+                                    hi，追风筝的人，13924259488邀请您加入碳普惠，通过低碳行为积累碳币并换取优惠，一起地摊吧！现在注册并绑定微信号可以获得400碳币喔！
+                                </p>
+                                <p>
+                                    注册链接：
+                                    <a href="javascript:">http://www.tanph.cn/index.html</a>
+                                </p>
+                            </div>
+                            <div class="myModal-foot bg-wihte">
+                                <a href="javascript:" id="applyBtn" class="apply-btn">发送</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <script src="http://127.0.0.1/_/js/reloader.js"></script>
+-->
+<script type="text/javascript">
+        
+        
+        window.onload=function(){
+             /******* 新增于2016/11/15 *********/
+      
+      //页面tab切换 
+      var tab_nav = $('ul.tab li.tab-item'),
+          rank_tab_nav=$('.carbon-coin-rank dt ul li');
+          tab_nav.bind('click', tabHandler);
+          rank_tab_nav.bind('click',tabHandler);
+
+
+
+      var manager_btn=$('#managerFren'),
+          addFren_btn=$('#addFren'),
+          manager_list=$('ul.friends-list li a'),
+          cantact_con=$('.carbon-cantact-con'),
+          search_inp=$('.addfren-box input');
+      
+      //好友管理
+        manager_btn.bind('click',function(e){
+             e.stopPropagation();
+             if ($(this).hasClass('actived')) {
+                $(this).removeClass('actived');
+             }else{
+                $(this).addClass('actived');
+                addFren_btn.removeClass('actived');
+                cantact_con.eq(0).show();
+                cantact_con.eq(1).hide();
+             }
+             if (manager_list.hasClass('delete')) {
+                manager_list.removeClass('delete');
+             }else{
+                manager_list.addClass('delete');
+             }
+        });
+
+      //添加好友
+      addFren_btn.bind('click', function(e) {
+             e.stopPropagation();
+             if ($(this).hasClass('actived')) {
+                $(this).removeClass('actived');
+             }else{
+                $(this).addClass('actived');
+                manager_btn.removeClass('actived');
+                cantact_con.eq(1).show();
+                cantact_con.eq(0).hide();
+                manager_list.removeClass('delete');
+             }
+      });
+
+     //点击屏幕取消
+     $('.carbon-contact .contact-select-box,.carbon-contact .search-box').bind('click',function (e) {
+        addFren_btn.removeClass('actived');
+        manager_btn.removeClass('actived');
+         manager_list.removeClass('delete');
+         cantact_con.eq(0).fadeIn('fast');
+         cantact_con.eq(1).fadeOut('fast');
+      });
+      
+     // 删除好友
+      manager_list.each(function(i,item){
+         $(this).bind('click',deleteFred)
+      });
+
+      search_inp.bind('keyup',function () {
+        var inp=$('.addfren-box button');
+        var relt=$('.search-result ul');
+        
+        relt.parent().css('background-position-y',"0");
+
+         if ($(this).val().length>0) {
+            inp.css({
+                "background-image":"url(../../statics/image/icon_delete.png)"
+             });
+             if ($(this).val().length>2&&$(this).val().length<4) {
+                relt.fadeIn();
+                relt.parent().css('background-position-y',"-100px");
+             }else{
+              relt.fadeOut();
+             }
+         }else{
+            inp.css({
+                "background-image":"url(../../statics/image/icon_search.png)"
+            });
+            relt.fadeOut().parent().css('background-position-y',"-100px");;
+         };
+      })
+     $('.addfren-box button').on('click',function(){
+             search_inp.val("");
+             $(this).css("background-image","url(../../statics/image/icon_search.png)");
+             $('.search-result ul').fadeOut();
+             $('.search-result').css('background-position-y',"-100px");
+         })
+
+
+        }
+
+
+    function tabHandler(e) {
+            var index = $(this).index();
+            var tab_con=$(this).parent().parent().parent().children('.tab-con-box');
+            $(this).addClass("active-item").siblings().removeClass("active-item");
+            tab_con.hide().eq(index).show();
+        };
+    function deleteFred (e) {
+        e.stopPropagation();
+       var isDel_status=$(this).hasClass('delete')
+       if(isDel_status){
+        $(this).animate({
+           "width": 0,
+           "height": 0},
+           100, function() {
+            $(this).remove();
+       });
+       }
+    }
+
+
+    </script></body>
+
+</html>

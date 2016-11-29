@@ -3,7 +3,7 @@ var timer = null,
 	flag = false;
 var register = {
 	toggleDropdown: function(event, obj) {
-		event.stopPropagation();
+		stopPropagation(event);
 		$(obj).children('.dropdown-list').slideToggle(300);
 		$(obj).siblings().find('.dropdown-list').css("display", "none");
 	},

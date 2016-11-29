@@ -104,6 +104,16 @@ function selectCity(obj) {
 	$(".wrap-up").removeClass("selectStatus")
 	$("#addressList").fadeOut();
 }
+/**阻止冒泡**/
+function stopPropagation(event) {
+	if (event.stopPropagation) {
+
+		event.stopPropagation();
+	} else if (window.event) {
+
+		window.event.cancelBubble = true;
+	}
+}
 $(function() {
 	/**选择城市**/
 	$("#wrapSelectAddress").on("click", function() {

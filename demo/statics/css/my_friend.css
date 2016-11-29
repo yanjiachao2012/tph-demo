@@ -1,3 +1,6 @@
+.carbon-rank{
+    background-color: #fff;
+}
 .tab-con-box{
 		display: none;
 	}
@@ -10,7 +13,9 @@
 .tab-con-box  input{
     color: #999;
 }
-
+.carbon-rank .carbon-coin-rank{
+    padding: 0 15px;
+}
 .carbon-rank i.icon-women,
 .carbon-rank i.icon-man{
 	background: url(../image/icon_women.png) no-repeat center center;
@@ -24,15 +29,16 @@
 }
 
 .carbon-rank .rank-header{
+    padding: 23px 10px 10px 17px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
-    padding: 23px 10px;
+    border-bottom: 20px solid #f8f8f8;
 }
 
 .carbon-rank .rank-header li{
-    margin-right: 73px;
+    margin-right: 65px;
     height: 100px;
     line-height: 100px;
     float: left;
@@ -96,8 +102,7 @@
 }
 
 .carbon-rank dl dt{
-    padding:10px 0;
-    padding-top: 5px;
+    padding:15px 0;
     border-bottom: 1px solid #eee;
 }
 
@@ -109,7 +114,7 @@
 .carbon-rank dl dt ul li{
 	cursor: pointer;
 	color: #666;
-	padding: 0 18px;
+	padding:0 18px ;
 	font-weight: 400;
     font-size: 15px;
     float: left;
@@ -119,7 +124,8 @@
 	color: #24b026;
 }
 
-.carbon-rank dl dt ul li:first-child{
+.carbon-rank dl dt ul li.first{
+    padding-left: 0;
 	border-right: 1px solid #ccc;
 }
 
@@ -128,8 +134,8 @@
 }
 
 .carbon-rank dl dd.rank-con ul.rank-list{
+    padding-top: 8px;
 	overflow: hidden;
-    height: 700px;
     margin-bottom: 35px;
 }
 /*contain*/
@@ -142,7 +148,7 @@
 
 .carbon-rank dl dd.rank-con ul.rank-list li div.rank-num{
     display: inline-block;
-    width: 130px;
+    width: 90px;
     text-align: center;
 }
 
@@ -217,11 +223,15 @@
 }
 
 .contact-select-box{
-    padding:25px 0;
+    padding: 25px 0;
+    margin:0 18px;
 }
 
-
+.carbon-contact{
+  background-color: #fff;
+}
 .carbon-contact .search-box{
+    padding: 0 18px;
     overflow: hidden;
 }
 
@@ -234,7 +244,7 @@
 
 .carbon-contact .search-box input{
       height: 23px;
-      width: 450px;
+      width: 432px;
       border: 1px solid #ddd;
       outline: none;
       font-size: 15px;
@@ -248,7 +258,7 @@
 
 .carbon-contact .search-box button{
   float: left;
-    margin-left: 14px;
+    margin-left: 10px;
     width: 89px;
     height: 33px;
     line-height: 33px;
@@ -268,6 +278,8 @@
 
 
 .carbon-contact .carbon-cantact-con{
+    border-bottom: 20px solid #f8f8f8;
+    padding: 0 17px;
     height: 840px;
 }
 
@@ -287,7 +299,7 @@
 .carbon-contact ul.friends-list li a{
     display: block;
     float: left;
-    width: 137px;
+    width: 130px;
     height: 150px;
     text-align: center;
     padding: 20px 0;
@@ -341,6 +353,7 @@
 }
 
 .carbon-contact .may-konw h3{
+    padding-left: 17px;
     font-size: 20px;
     color: #333;
     text-shadow: 1px 0 1px #999;
@@ -512,13 +525,15 @@
 
 
 .may-konw ul.may-know-list{
+    padding-left: 17px;
+    padding-right: 5px;
     overflow: hidden;
     margin-bottom: 30px;
 }
 
 .may-konw ul.may-know-list li{
     float: left;
-    margin: 0 27px;
+    margin: 0 40px 0 5px;
     height: 150px;
     text-align: center;
     padding: 20px 0;
@@ -632,7 +647,7 @@ ul li.select-btn.selected{
 
 /*分页按钮样式*/
 div.my-pagination{
-    margin-bottom: 50px;
+    padding-bottom: 35px;
 }
 
 div.my-pagination ul{

@@ -19,6 +19,7 @@
 	}
 }
 .customer-main{
+	position:relative;
 	padding-bottom:20px;
 	.customer-left{
 		float:left;
@@ -41,7 +42,6 @@
 		.wrap-pic{
 			float:left;
 			margin-right:15px;
-			padding:2px;
 			width:92px;
 			height:92px;
 			border:1px solid #e6e5e5;
@@ -206,6 +206,123 @@
 			}
 		}
 	}
+	.showInfo{
+		display:none;
+		position:absolute;
+		left:120px;
+		top:20px;
+		z-index:98;
+		width:460px;
+		border:1px solid rgb(201,201,201);
+		background:#fff;
+		-webkit-box-shadow: 0 0 13px 0px #707070;
+    -moz-box-shadow: 0 0 13px 0px #707070;
+    box-shadow: 0 0 13px 0px #707070;
+		.showInfo-up{
+			padding:20px 20px 25px;
+			color:#fff;
+			overflow:hidden;
+			background:url(../../statics/image/icons/icon-info-bg.png) no-repeat center center;
+			.up-right{
+         float:right;
+					width:92px;
+					height:92px;
+					border:2px solid #fff;
+					-webkit-border-radius:50%;
+					-moz-border-radius:50%;
+					border-radius:50%;
+					overflow:hidden;
+					text-align:center;
+					-webkit-box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					box-sizing:border-box;
+         img{
+         	width:100%;
+         	height:100%;
+         	vertical-align:middle;
+         }
+			}
+			.up-left{
+      	overflow:hidden;
+      	i{
+      		display:inline-block;
+      		margin-left:15px;
+      		width:18px;
+      		height:18px;
+      		vertical-align:0px;
+      	}
+      	.sex-woman{
+      		background:url(../../statics/image/icon_women.png) no-repeat left center ;
+      	}
+      	.sex-man{
+      		background:url(../../statics/image/icon_men.png) no-repeat left center ;
+      	}
+      }
+			.iconEdit{
+				margin-left:10px;
+				display:inline-block;
+				width:18px;
+				height:18px;
+				vertical-align:-2px;
+				background:url(../../statics/image/icons/icon-edit18.png) no-repeat center center;
+			}
+			.up-provice{
+				padding-top:10px;
+				padding-bottom:20px;
+				font-size:12px;
+			}
+			h5{
+
+				font-size:24px;
+			}
+		}
+		.showInfo-down{
+			padding:20px 25px;
+			.down-item{
+				padding-bottom:20px;
+			}
+			.item-left{
+				display:inline-block;
+				margin-right:10px;
+				width:80px;
+				text-align:right;
+				color:#a9a9a9;
+				float:left;
+			}
+			.item-right{
+				overflow:hidden;
+			}
+			.express-item{
+				padding-top:15px;
+				border-top:1px dotted #ededed;
+				.item-right span{
+					    display: inline-block;
+					    padding: 1px 11px;
+					    margin-right: 6px;
+					    margin-bottom: 6px;
+					    font-size: 12px;
+					    border: 1px solid;
+					    border-radius: 10px;
+				}
+				.expression0{
+					border-color: #15cec3;
+          color: #15cec3;
+				}
+					.expression1{
+					    border-color: #ff7200;
+              color: #ff7200;
+				}
+					.expression2{
+				   border-color: #6dca6e;
+           color: #6dca6e;
+				}
+					.expression3{
+					border-color: #15cec3;
+          color: #15cec3;
+				}
+			}
+		}
+	}
 }
 .customer-right{
 	.customerTab{
@@ -310,6 +427,10 @@
 			h5{
 				padding:15px 0 12px;
 				font-size:18px;
+				.coupon-name{
+					margin-left:5px;
+					font-size:12px;
+				}
 				
 			}
 			.icon-out{
@@ -455,7 +576,7 @@
 			}
 		}
 		.click-more{
-			padding:40px 0 55px 0;
+			padding:15px 0 30px 0;
 			text-align:center;
 			.getMore{
 				display:inline-block;
@@ -558,6 +679,9 @@
 					margin-right:15px;
 					width:64px;
 					height:64px;
+					img{
+						max-width:100%;
+					}
 				}
 				.activity-info{
 					overflow:hidden;
@@ -706,6 +830,19 @@
 		}
 	}
 	/**景区*/
+	.add-scenicSpot{
+		margin-bottom:20px;
+		padding:12px 0;
+		text-align:center;
+		background-color:#fff;
+		.addCare{
+			display:inline-block;
+			padding-left:40px;
+			color:#24b026;
+			font-size:18px;
+			background:url(../../statics/image/icons/icon-care.png) no-repeat left center;
+			}
+	}
 	.scenicSpot-list-content{
 		padding-left:20px;
 		padding-bottom:20px;
@@ -772,6 +909,25 @@
     	.list-title{
     		padding:20px 0;
     		line-height:1;
+    		.first{
+    			position:relative;
+    			&:after{
+    				content:'';
+    				position:absolute;
+    				right:15px;
+    				top:2px;
+    				height:16px;
+    				width:1px;
+    				background-color:#b6b6b6;
+    			}
+    		}
+    		span{
+    			cursor:pointer;
+    			padding-right:30px;
+    		}
+    		.active-item{
+    			color:#24b026;
+    		}
     	}
     	ul{
     		overflow:hidden;
@@ -820,6 +976,12 @@
     			@include borderRadius;
 
     		}
+    	}
+    	.list-content-activity{
+         margin-bottom:0;
+    	}
+    	.list-activity{
+    		padding-left:0;
     	}
     }
 	}
@@ -1098,6 +1260,7 @@
 					padding:0 15px 0 5px;
 					width:100%;
 					height:100%;
+					line-height:22px;
 					color:#666;
 					font-size:12px;
 					background-color:#fff;
@@ -1172,19 +1335,108 @@
 				}
 			}
 		}
+		.data-chart{
+			padding-top:10px;
+			padding-bottom:15px;
+			border-bottom:1px solid #e5e5e5;
+			overflow:hidden;
+			.income{
+				float:left;
+				width:300px;
+				padding-left:20px;
+				padding-bottom:10px;
+				border-right:1px solid #e5e5e5;
+				.income-left{
+					float:left;
+					h5{
+						margin-top:10px;
+						text-align:center;
+					 font-size:16px;
+					}
+				}
+				.income-right{
+					padding-top:50px;
+					padding-left:12px;
+					overflow:hidden;
+					.income-item{
+						i{
+							display:inline-block;
+							margin-right:5px;
+							width:15px;
+							height:15px;
+							vertical-align:-3px;
+						}
+						span{
+							color:#a9a9a9;
+							font-size:12px;
+						}
+						strong{
+							margin-left:10px;
+							font-size:16px;
+							vertical-align:-2px;
+						}
+					}
+					.system-item{
+						margin-bottom:10px;
+						i{
+							background-color:#22c6b8;
+						}
+						strong{
+							
+              color:#22c6b8;
+
+						}
+					}
+					.other-item{
+						i{
+							background-color:#9eda49;
+						}
+						strong{
+							
+              color:#9eda49;
+
+						}
+					}
+					.sale-item{
+						margin-bottom:10px;
+						i{
+							background-color:#f5843d;
+						}
+						strong{
+							
+              color:#f5843d;
+
+						}
+					}
+					.send-item{
+						i{
+							background-color:#46c848;
+						}
+						strong{
+							
+              color:#46c848;
+
+						}
+					}
+				}
+			}
+		}
 		.now-month{
 			padding:25px 0;
 			overflow:hidden;
 			.month-left{
 				padding:0 50px 0 30px;
 				float:left;
-				border-right:1px dashed #e5e5e5;
+/* 				border-right:1px dashed #e5e5e5; */
 				.number{
 					font-size:34px;
 					color:#24b026;
 				}
 				p{
+					display:inline-block;
+					margin-right:10px;
 					color:#a9a9a9;
+					vertical-align:8px;
 				}
 			}
 			.month-right{
@@ -1346,8 +1598,7 @@
 				height:28px;
 				border:1px solid #e5e5e5;
 				input{
-					padding-right:12px;
-					padding-left:10px;
+					padding:5px 10px;
 					margin:0;
 					height:100%;
 					width:100%;
@@ -1528,7 +1779,7 @@
 				width:158px;
 				border:1px solid #e5e5e5;
 				input{
-					padding:0 10px;
+					padding:5px 10px;
 					width:158px;
 					margin-bottom:0;
 					height:100%;
@@ -1638,7 +1889,7 @@
 			border:none;
 			margin:0;
 			color:#333;
-			padding:2px 10px;
+			padding:5px 10px;
 			background-color:#fff;
 			@include boxSizing;
 		}
@@ -1705,7 +1956,7 @@
 	}
 	.realName-save{
 		padding-top:50px;
-		padding-bottom:179px;
+		padding-bottom:30px;
 		text-align:center;
 		a{
 			display:inline-block;
@@ -1718,4 +1969,34 @@
 			@include borderRadius
 		}
 	}
+	.finished-step{
+		padding-top:100px;
+		padding-bottom:100px;
+		text-align:center;
+		.finished-tip{
+			padding-bottom:10px;
+			span{
+				display:inline-block;
+				padding:12px 0 12px 55px;
+				font-size:18px;
+				background:url(../../statics/image/icons/icon-success.png) no-repeat left center;
+			}
+		}
+		.finished-notice{
+			color:#999;
+			font-size:12px;
+		}
+	}
+}
+.loading{
+	display:block;
+	padding:50px 0;
+	text-align:center;
+  i{
+  	display:inline-block;
+  	width:35px;
+  	height:35px;
+  	vertical-align:-12px;
+  	background:url(../../statics/image/icons/icon-loading.gif) no-repeat;
+  }
 }
