@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/css/base.css"/>
+<link rel="stylesheet" href="../../statics/css/newStyle.css"/>
+<link rel="stylesheet" type="text/css" href="../../statics/css/carbonExchange.css"/>
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/nav.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+</div>
+<!--头部结束-->
+<div class="wrap-main carbonExchange-main">
+	<div class="search-input">
+    <div class="width960">
+			<div class="input-wrap clearfix">
+				<input type="text" id="carbonCouponSearch" value="" placeholder="搜索全部" />
+				<a href="javascript:carbonExchange.carbonCouponSearch()" class="btn-search"></a>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="citySort" value=''/>
+	<input type="hidden" id="categorySort" value=''/>
+	<input type="hidden" id="typeSort" value=''/>
+	<input type="hidden" id="orderSort" value=''/>
+	<div class="search-wrap clearfix" id="searchSort">
+
+	</div>
+	<div class="funding-detail-coupon">
+			<div class="container" id="couponList">
+			</div>
+		</div>
+</div>
+		
+
+<!--尾部开始-->
+<div class="pageFooter"></div>
+<!--尾部结束-->
+
+<script src="js/carbonExchange.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠-步骤</title>
+<link rel="stylesheet" href="../../statics/css/base.css"/>
+<link rel="stylesheet" href="../../statics/css/newStyle.css"/>
+<link rel="stylesheet" type="text/css" href="../../statics/css/carbonActivityVice.css"/>
+<script src="../..//statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="../../statics/script/login.js"></script>
+
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+  <div class="wrap-nav-top">
+    <div class="nav-top">
+      <div class="nav-user" style="display:none;">
+        <a href="" class="user-info">
+          <img src="../statics/image/pic-user-example.png" alt=""/>
+          <span>张女士</span>
+        </a>
+        <a href="" class="user-loginOut">退出</a>
+        <a href="" class="user-news"> <i class="icon-tip">93</i>
+        </a>
+      </div>
+      <div class="nav-user">
+        <a href="" class="user-loginOut">登录</a>
+      </div>
+      <div class="nav-time">
+        <span class="left">2016-10-12</span>
+        <span class="right">星期四</span>
+      </div>
+  
+    </div>
+  </div>
+  <div class="wrap-nav-content">
+    <div class="nav-tph">
+      <div class="nav-left">
+        <div class="wrap-logo">
+          <a href="">
+            <img src="../statics/image/logo.png"></a>
+        </div>
+        <div class="wrap-address">
+          <div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+            <span class="address" id="selectCity">广州</span>
+            <span class="icon-dropdown"></span>
+          </div>
+          <ul class="address-list" id="addressList">
+            <li class="item" onclick="selectCity(this);">韶关市</li>
+            <li class="item" onclick="selectCity(this);">深圳市</li>
+            <li class="item" onclick="selectCity(this);">珠海市</li>
+            <li class="item" onclick="selectCity(this);">佛山市</li>
+            <li class="item" onclick="selectCity(this);">惠州市</li>
+            <li class="item" onclick="selectCity(this);">河源市</li>
+            <li class="item" onclick="selectCity(this);">东莞市</li>
+            <li class="item" onclick="selectCity(this);"s>中心市</li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul id="tph-nav">
+           <li class="nav-item">
+            <a class="item-a" href="">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="item-a" href="">碳币兑换</a>
+          </li>
+          <li class="nav-item">
+            <a class="item-a" href="">低碳众筹</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="item-a">低碳活动</a>
+            <div class="wrap-sub-nav">
+              <ul>
+                <li class="sub-nav-item">
+                  <i class="active1"></i>
+                  <a href="">换物</a>
+                </li>
+                <li class="sub-nav-item">
+                  <i class="active2"></i>
+                  <a href="">顺风车</a>
+                </li>
+                <li class="sub-nav-item">
+                  <i class="active3"></i>
+                  <a href="">植物认领</a>
+                </li>
+                <li class="sub-nav-item">
+                  <i class="active4"></i>
+                  <a href="">低碳活动</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="item-a" href="">低碳资讯</a>
+          </li>
+          <li class="nav-item">
+            <a class="item-a" href="">减碳置换</a>
+            <div class="wrap-sub-nav">
+              <ul>
+                <li class="sub-nav-item">
+                  <i class="active1"></i>
+                  <a href="">换物1</a>
+                </li>
+                <li class="sub-nav-item">
+                  <i class="active2"></i>
+                  <a href="">顺风车1</a>
+                </li>
+                <li class="sub-nav-item">
+                  <i class="active3"></i>
+                  <a href="">植物认领1</a>
+                </li>
+                <li class="sub-nav-item">
+                  <i class="active4"></i>
+                  <a href="">低碳活动1</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="item-a" href="">低碳产品</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+</div>
+<div class="wrap-main carbon-activity">
+  <div class=" wrap-register activity-plan">
+    <div class="wrap-process">
+      <div class="process-line">
+        <div class="process-part part-finished">
+          <span class="process-number">1</span>
+          <div class="part-line"></div>
+          <span class="part-tip">方案选择</span>
+        </div>
+        <div class="process-part part-finished">
+          <span class="process-number">2</span>
+          <div class="part-line"></div>
+          <span class="part-tip">我要缴费</span>
+        </div>
+        <div class="process-part part-finished">
+          <span class="process-number none-bg">
+            <!-- <img src="../../statics/image/icons/img-success0.png" alt=""> -->
+            <img src="../../statics/image/icons/icon-success.png" alt="">
+          </span>
+          <div class="part-line"></div>
+          <span class="part-tip">完成</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 步骤一 -->
+    <div class="process-detail-box" >
+      <div class="process-title">选择参与方案</div>
+      
+      <div class="select-plan-box" >
+        <div class="select-plan-item">
+          <div class="plan-money-box">
+             <span class="big-num">20</span>碳币 + &yen;<span class="big-num">40.00</span>
+          </div>
+          <div class="plan-implement-box">
+            <div class="kind-name">捐赠一本书</div>
+            <p class="plan-get">选择此方案，预计可以获取到<span class="money">50</span>碳币</p>
+            <div class="coupon-box" style="display: visbility">
+              <div class="coupon-item">
+                <div class="coupon-kind exchange">兑换券</div>
+                <div class="coupon-detail">
+                    <div class="coupon-name">优惠观影券 1张</div>
+                    <div class="coupon-money-box">
+                      <i class="icon-money"></i>
+                      2<span class="calculate-sign">+</span>&yen;85.00
+                    </div>
+                    <div class="coupon-shop">广州宾馆得云宫酒楼</div>
+                </div>
+              </div>
+              <div class="coupon-item">
+                <div class="coupon-kind goal">代金券</div>
+                <div class="coupon-detail">
+                    <div class="coupon-name">优惠观影券 1张</div>
+                    <div class="coupon-money-box">
+                      <i class="icon-money"></i>
+                      2<span class="calculate-sign">+</span>&yen;85.00
+                    </div>
+                    <div class="coupon-shop">广州宾馆得云宫酒楼</div>
+                </div>
+              </div>
+            </div>
+            <p class="thanks-word">感谢您的参与!</p>
+          </div>
+        </div>
+        <div class="select-plan-item active">
+          <div class="plan-money-box">
+             <span class="big-num">20</span>碳币 + &yen;<span class="big-num">40.00</span>
+          </div>
+          <div class="plan-implement-box ative">
+            <div class="kind-name">捐赠一本书</div>
+            <p class="plan-get">选择此方案，预计可以获取到<span class="money">50</span>碳币</p>
+            <div class="coupon-box hide">
+
+            </div>
+            <p class="thanks-word">感谢您的参与!</p>
+          </div>
+        </div>
+      </div> 
+
+      <div class="process-next">
+         <div class="next-button">下一步</div>
+      </div>
+    </div>
+    
+    <!-- 步骤二 -->
+    <div class="process-detail-box" style="display: none">
+      <div class="process-title">我要缴费</div>
+      <ul class="process-activity-list">
+        <li class="pay-li">
+          <div class="pay-li-title">活动名称：</div>
+          <div class="pay-title-text">绿色骑行活动</div>
+        </li>
+        <li class="pay-li">
+          <div class="pay-li-title">参与人数：</div>
+          <div class="pay-people">
+            <div class="pay-people-num">
+              <span class="num-minus">-</span>
+              <span class="num-text">
+                <input type="text" value="6"></input>
+              </span>
+              <span class="num-plus">+</span>
+            </div>
+            <div class="pay-people-note">
+              最多可以叫<span class="people-max">10</span>个人费用
+            </div>
+          </div>
+        </li>
+        <li class="pay-li">
+          <div class="pay-li-title">缴费金额：</div> 
+          <div class="pay-input">
+              <input type="text" value="40.00"></input>
+          </div>
+        </li>
+        <li class="pay-li">
+          <div class="pay-li-title" value="20">碳币数：</div> 
+          <div class="pay-input">
+              <input type="text"></input>
+          </div>
+        </li>
+      </ul>
+      <div class="detail-account-box">
+        <div class="detail-account-item">
+           本次扣除碳币：
+           <div class="account-money">
+              <i class="icon-money"></i> <span class="carbon-coin-num">20</span>
+            </div> 
+        </div>
+        <div class="detail-account-item">
+           本次扣除碳币：
+          <div class="account-money">
+             &yen;40.00      
+          </div> 
+        </div>
+      </div>
+
+      <div class="pay-method-box">
+        使用：
+        <div class="method-item active" data-name="支付宝">
+          <i class="icon-bao"></i>
+        </div>
+        <div class="method-item " data-name="微信">
+          <i class="icon-wechat"></i>
+          微信
+        </div>
+      </div>
+      <div class="pay-method-button">
+        立即前往<span class="pay-method-name">支付宝</span>
+      </div>
+    </div>
+    
+    <!-- 完成步骤 -->
+    <div class="finished-step" style="display: none">
+      <div  class="finish-note">
+          <i class="finish-icon"></i><span class="finish-note-word">报名成功！</span>
+      </div>
+      <div class="finished-tip">您可以返回"个人中心-我的活动"进行查看~</div>
+        <span class="back-tip"><strong>9</strong>秒后自动关闭</span>
+    </div>
+
+  </div>
+</div>
+<!--尾部开始-->
+  <div class="pageFooter">
+    <div class="width1220">
+         <div class="wrap-partner-list">
+          <span class="partner-title">合作伙伴：</span>
+          <ul class="partner-list">
+            <li><a href="">张家界景区</a></li>
+            <li><a href="">万绿湖景区</a></li>
+            <li><a href="">上海路路通</a></li>
+            <li><a href="">汉能</a></li>
+            <li><a href="">广州快速公交</a></li>
+            <li><a href="">深圳立冰空调</a></li>
+          </ul>
+         </div>  
+    </div>
+    <div class="width960">
+      <div class="company-info">
+        <ul>
+          <li class="item">
+            <img src="statics/image/logo-footer.png"/>
+            <h6>广东省碳普惠创新发展中心</h6>
+          </li>
+          <li class="item item-second">
+            <p><a href="modules/aboutUs/aboutUs.html">关于我们</a></p>
+            <p><a href="">企业联盟</a></p>
+            <p><a href="">网站协议</a></p>
+          </li>
+          <li class="item item-third">
+            <i class="icon-send"></i><span class="email">tanph@ceprei.org</span>
+            <div class="fackback"><a href="">投诉建议</a></div>
+          </li>
+          <li class="item-four">
+            <a href=""><img class="pic-left" src="statics/image/pic-weibo.png" /></a>
+            <a href=""><img class="pic-left" src="statics/image/pic-weixin.png" /></a>
+            <a href="" class="download-link"><img src="statics/image/pic-download.png" class="download-pic" />
+            <span class="link-text">下载app</span>
+            </a> 
+          </li>
+        </ul>
+      </div>
+      <div class="company-copyright">
+        <p>由赛宝认证中心提供技术支持 Tel:020-87236606 Email: tanph@ceprei.org </p>
+        <p>Copyright@2014-2018 广州赛宝认证中心服务有限公司 All Rights Reserved 粤ICP备05096650号-3</p>
+        <p id="str2">asgasgasgasgasfasfasf</p>
+      </div>
+    </div>
+  </div>
+<!--尾部结束-->
+<div class="pageFoot"></div>
+  <script>
+ 
+   funPlaceholder(document.getElementById("loginName"));
+   funPlaceholder(document.getElementById("obtainCode"));
+  </script>
+  <script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/carousel.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../statics/script/tabs.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../statics/script/dialog.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="script/carbonActivity.js"></script>
+</body>
+</html>

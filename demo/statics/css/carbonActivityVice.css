@@ -1,0 +1,893 @@
+@charset "UTF-8";
+.carbon-activity {
+  /* 表单填写 */
+  /* 下拉选项 */
+  /* 上传图片 */
+  /* 发起成功 */
+  /* ---------------------详情页面 ----------------*/
+  /* 详情头部 */
+  /* 步骤部分 */ }
+  .carbon-activity .activity-header-box {
+    height: 60px;
+    background: #f9f9f9;
+    line-height: 60px; }
+    .carbon-activity .activity-header-box .activity-header {
+      position: relative;
+      font-size: 24px;
+      color: #333333;
+      width: 1220px;
+      padding-left: 70px;
+      margin: 0 auto; }
+    .carbon-activity .activity-header-box .cancel-button {
+      position: absolute;
+      right: 280px;
+      top: 14px;
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+      padding: 0 15px;
+      color: #ffffff;
+      background-color: #ff0000;
+      font-size: 14px; }
+  .carbon-activity .fill-box {
+    padding-top: 40px;
+    width: 625px;
+    margin: 0 auto;
+    padding-bottom: 30px; }
+    .carbon-activity .fill-box.car {
+      width: 625px; }
+    .carbon-activity .fill-box input {
+      border: none; }
+      .carbon-activity .fill-box input:focus {
+        outline: none; }
+      .carbon-activity .fill-box input:disabled {
+        background-color: #ffffff; }
+    .carbon-activity .fill-box textarea:disabled {
+      background-color: #ffffff; }
+    .fill-list .fill-li {
+      margin-bottom: 30px;
+      position: relative; }
+      .fill-list .fill-li textarea {
+        border: none;
+        display: inline-block;
+        padding: 15px;
+        height: 170px;
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        /* Firefox */
+        -webkit-box-sizing: border-box; }
+        .fill-list .fill-li textarea:focus {
+          outline: none; }
+      .fill-list .fill-li:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0; }
+      .fill-list .fill-li .fill-title {
+        position: absolute;
+        left: -260px;
+        top: 0;
+        height: 52px;
+        line-height: 52px;
+        text-align: right;
+        font-size: 16px;
+        color: #333333;
+        width: 250px; }
+        .fill-list .fill-li .fill-title .important-sign {
+          color: #ff0000;
+          display: inline-block;
+          padding-right: 2px; }
+        .fill-list .fill-li .fill-title .title-note {
+          color: #a9a9a9; }
+      .fill-list .fill-li .input-unit {
+        position: absolute;
+        height: 50px;
+        line-height: 50px;
+        right: 0;
+        padding: 0 15px;
+        z-index: 10;
+        top: 0;
+        background: #ffffff;
+        color: #a9a9a9; }
+    .fill-list .two-input-item {
+      position: relative;
+      float: left;
+      width: 205px;
+      border: 1px solid #e5e5e5;
+      height: 50px;
+      line-height: 50px;
+      margin-left: 25px; }
+      .fill-list .two-input-item input {
+        width: 160px; }
+      .fill-list .two-input-item.none-icon input {
+        display: inline-block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        /* Firefox */
+        -webkit-box-sizing: border-box;
+        /* Safari */
+        width: 100%;
+        padding: 0 15px; }
+      .fill-list .two-input-item:first-child {
+        margin-left: 0; }
+    .fill-list .one-input-item {
+      position: relative;
+      float: left;
+      width: 438px;
+      border: 1px solid #e5e5e5;
+      height: 50px;
+      line-height: 50px; }
+      .fill-list .one-input-item.none-icon input {
+        display: inline-block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        /* Firefox */
+        -webkit-box-sizing: border-box;
+        /* Safari */
+        width: 100%;
+        padding: 0 15px; }
+        .fill-list .one-input-item.none-icon input.time-input {
+          width: 400px; }
+      .input-note {
+        position: absolute;
+        top: 0;
+        left: 450px;
+        height: 50px;
+        line-height: 50px;
+        color: #ff0000;
+        font-size: 14px;
+        white-space: nowrap; }
+        .input-note .icon-inputnote {
+          height: 20px;
+          width: 20px;
+          display: inline-block;
+          background: url("../image/icons/icon-inputnote.png") no-repeat center center;
+          padding: 0 5px;
+          vertical-align: middle; }
+    .fill-list .one-area-item {
+      position: relative;
+      float: left;
+      width: 626px;
+      border: 1px solid #e5e5e5; }
+    .fill-list.only-show .one-area-item {
+      border: none; }
+      .fill-list.only-show .one-area-item input {
+        padding-left: 0; }
+      .fill-list.only-show .one-area-item textarea {
+        padding-left: 0;
+        text-align: justify;
+        text-justify: inter-word; }
+    .fill-list.only-show .two-input-item {
+      border: none; }
+      .fill-list.only-show .two-input-item input {
+        padding-left: 0;
+        width: 160px; }
+    .fill-list.only-show .fill-title {
+      color: #a9a9a9; }
+  .carbon-activity .icon-spot {
+    display: inline-block;
+    background: url("../image/source.png") no-repeat center center;
+    height: 20px;
+    width: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle; }
+    .carbon-activity .icon-spot.end {
+      background-image: url("../image/destination.png"); }
+  .carbon-activity .icon-time {
+    display: inline-block;
+    background: url("../image/icons/icon-canlendar.png") no-repeat center center;
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    vertical-align: middle; }
+  .carbon-activity .dropdown-list {
+    z-index: 10;
+    display: none;
+    position: absolute;
+    left: -1px;
+    width: 128px;
+    overflow-y: auto;
+    max-height: 200px;
+    text-indent: 10px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    width: 205px; }
+  .carbon-activity .input-item {
+    margin: 0; }
+  .carbon-activity .address-item {
+    margin: 0;
+    margin-left: 25px;
+    width: 205px; }
+    .carbon-activity .address-item:first-child {
+      margin-left: 0; }
+  .carbon-activity .submit-button {
+    height: 60px;
+    line-height: 60px;
+    color: #ffffff;
+    background: #24af26;
+    text-align: center;
+    width: 210px;
+    font-size: 24px; }
+  .carbon-activity .img-box {
+    overflow: hidden;
+    width: 639px; }
+    .carbon-activity .img-box .img-default {
+      position: relative;
+      float: left;
+      width: 200px;
+      margin-right: 13px;
+      height: 130px;
+      margin-bottom: 15px;
+      background: url("../image/bg-default.png") no-repeat center center;
+      background-color: #ebebeb; }
+      .carbon-activity .img-box .img-default img {
+        width: 100%;
+        height: 100%; }
+      .carbon-activity .img-box .img-default .default-note {
+        position: absolute;
+        width: 180px;
+        left: 10px;
+        top: 42px;
+        color: #a9a9a9;
+        font-size: 16px;
+        text-align: center; }
+  .carbon-activity .img-note {
+    font-size: 16px;
+    color: #ff0000; }
+  .carbon-activity .wrap-register {
+    padding-top: 130px; }
+  .carbon-activity .finish-note {
+    text-align: center;
+    height: 85px;
+    line-height: 85px; }
+    .carbon-activity .finish-note .finish-note-word {
+      font-size: 36px;
+      display: inline-block;
+      padding-left: 20px; }
+  .carbon-activity .finish-icon {
+    vertical-align: top;
+    display: inline-block;
+    height: 85px;
+    width: 85px;
+    background: url("../image/bg-success.png") no-repeat center center;
+    margin: 0 auto; }
+  .carbon-activity .finished-tip {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  .carbon-activity .wrap-register .finished-step .back-login a {
+    width: 175px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px; }
+  .carbon-activity .part-title {
+    font-size: 24px;
+    color: #333333;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5; }
+  .carbon-activity .goods-detail-box {
+    width: 960px;
+    padding-top: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 40px; }
+    .carbon-activity .goods-detail-box .goods-detail-img {
+      float: left;
+      width: 355px;
+      height: 265px; }
+      .carbon-activity .goods-detail-box .goods-detail-img img {
+        width: 100%;
+        height: 100%; }
+    .carbon-activity .goods-detail-box .goods-detail-ticket {
+      background: #f4f5f7;
+      float: left;
+      width: 355px;
+      height: 225px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      /* Firefox */
+      -webkit-box-sizing: border-box;
+      /* Safari */ }
+      .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-destination {
+        padding: 35px 0;
+        overflow: hidden;
+        font-size: 14px;
+        color: #a9a9a9; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-destination .ticket-start {
+          float: left; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-destination .ticket-end {
+          float: right; }
+      .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot {
+        margin-bottom: 35px; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .spot-name {
+          display: inline-block;
+          color: #24b026;
+          font-size: 19px;
+          width: 96px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box {
+          display: inline-block;
+          position: relative;
+          width: 114px;
+          height: 16px;
+          margin: 0 10px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          /* Firefox */
+          -webkit-box-sizing: border-box;
+          /* Safari */
+          background: url("../image/img-station-line.png") no-repeat center top; }
+          .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box.two-station {
+            background: url("../image/img-station-line2.png") no-repeat center center; }
+            .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box.two-station .up {
+              width: 90px;
+              left: 0;
+              top: -15px; }
+            .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box.two-station .down {
+              width: 90px;
+              right: 28px;
+              bottom: -15px;
+              text-align: right; }
+          .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box.one-station {
+            background: url("../image/img-station-line1.png") no-repeat center center; }
+            .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box.one-station .up {
+              width: 100px;
+              text-align: center;
+              left: 0;
+              top: -15px; }
+          .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-spot .station-box .station-spot {
+            font-size: 12px;
+            color: #666666;
+            position: absolute;
+            display: inline-block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+      .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-mess {
+        height: 70px;
+        line-height: 70px;
+        border-top: 1px dashed #e5e5e5;
+        position: relative;
+        font-size: 18px;
+        color: #333333; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-mess:after {
+          position: absolute;
+          top: -9.5px;
+          right: -19px;
+          content: "";
+          width: 19px;
+          height: 19px;
+          background: url("../image/icons/icon-border-round.png") no-repeat center center; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-mess:before {
+          position: absolute;
+          top: -9.5px;
+          left: -19px;
+          content: "";
+          width: 19px;
+          height: 19px;
+          background: url("../image/icons/icon-border-round.png") no-repeat center center; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-mess .ticket-date {
+          float: left; }
+          .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-mess .ticket-date .ticket-date-time {
+            display: inline-block;
+            padding-left: 10px; }
+        .carbon-activity .goods-detail-box .goods-detail-ticket .ticket-mess .car-licence {
+          float: right; }
+    .carbon-activity .goods-detail-box .replace-function-box {
+      float: left;
+      margin-left: 25px;
+      width: 580px; }
+      .carbon-activity .goods-detail-box .replace-function-box .replace-goods {
+        padding: 0;
+        margin: 0;
+        font-size: 24px;
+        color: #333333; }
+      .carbon-activity .goods-detail-box .replace-function-box .replace-text-box {
+        padding: 20px 0 5px;
+        border-bottom: 1px solid #e5e5e5; }
+        .carbon-activity .goods-detail-box .replace-function-box .replace-text-box .replace-text-item {
+          color: #a9a9a9;
+          font-size: 14px;
+          margin-bottom: 10px; }
+          .carbon-activity .goods-detail-box .replace-function-box .replace-text-box .replace-text-item .replace-text-mess {
+            color: #333333; }
+          .carbon-activity .goods-detail-box .replace-function-box .replace-text-box .replace-text-item.key .replace-text-mess {
+            font-size: 16px;
+            color: #24b026; }
+    .carbon-activity .goods-detail-box .goods-function {
+      padding-top: 25px;
+      overflow: hidden; }
+      .carbon-activity .goods-detail-box .goods-function .goods-function-btn {
+        cursor: pointer;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        width: 90px;
+        text-align: center;
+        font-size: 14px;
+        color: #ffffff;
+        background: #24b026;
+        margin-left: 15px; }
+        .carbon-activity .goods-detail-box .goods-function .goods-function-btn:first-child {
+          margin-left: 0; }
+  .carbon-activity .treasure-intro {
+    width: 960px;
+    margin: 0 auto; }
+    .carbon-activity .treasure-intro .treasure-box {
+      padding: 25px;
+      overflow: hidden; }
+      .carbon-activity .treasure-intro .treasure-box.car-detail {
+        padding-left: 0;
+        padding-right: 0; }
+    .carbon-activity .treasure-intro .treasure-title {
+      color: #666666;
+      color: 14px;
+      margin-bottom: 25px; }
+    .carbon-activity .treasure-intro .treasure-img-box {
+      overflow: hidden; }
+      .carbon-activity .treasure-intro .treasure-img-box .treasure-img-item {
+        float: left;
+        width: 290px;
+        height: 210px;
+        margin-right: 20px;
+        margin-bottom: 20px; }
+        .carbon-activity .treasure-intro .treasure-img-box .treasure-img-item img {
+          width: 100%;
+          height: 100%; }
+  .carbon-activity .car-detail-box {
+    float: left;
+    width: 395px;
+    font-size: 16px; }
+    .carbon-activity .car-detail-box .car-detail-item {
+      position: relative;
+      color: #333333;
+      margin-bottom: 30px; }
+      .carbon-activity .car-detail-box .car-detail-item .car-detail-title {
+        display: inline-block;
+        color: #a9a9a9; }
+  .carbon-activity .car-map {
+    float: right;
+    width: 515px;
+    height: 365px; }
+    .carbon-activity .car-map img {
+      width: 100%;
+      height: 100%; }
+  .carbon-activity .icon-exchange {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url("../image/icons/icon-exchange.png") no-repeat center center; }
+    .carbon-activity .icon-exchange.people {
+      background-image: url("../image/icons/icon-people.png"); }
+    .carbon-activity .icon-exchange.tel {
+      background-image: url("../image/icons/tel.png"); }
+    .carbon-activity .icon-exchange.clock {
+      background-image: url("../image/icons/icon-clock.png"); }
+    .carbon-activity .icon-exchange.spot {
+      background-image: url("../image/address.png"); }
+  .carbon-activity .btn {
+    position: relative; }
+    .carbon-activity .btn .add-fri-box {
+      position: absolute;
+      width: 200px;
+      bottom: -82px;
+      left: 0;
+      padding: 15px 20px;
+      text-align: center;
+      border: 1px solid #24b026; }
+      .carbon-activity .btn .add-fri-box:after {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 11px;
+        left: 40px;
+        top: -10px;
+        background: url("../image/icon_arrow.jpg") no-repeat center center; }
+      .carbon-activity .btn .add-fri-box .fri-text {
+        font-size: 14px;
+        color: #333333;
+        margin-bottom: 5px;
+        line-height: 1.2; }
+        .carbon-activity .btn .add-fri-box .fri-text .icon-warn-little {
+          display: inline-block;
+          background: url("../image/icons/icon-inputnote.png") no-repeat center center;
+          height: 20px;
+          width: 20px;
+          margin-right: 5px;
+          vertical-align: middle; }
+      .carbon-activity .btn .add-fri-box .fri-note {
+        line-height: 1.2;
+        text-align: center;
+        font-size: 12px;
+        color: #a9a9a9; }
+        .carbon-activity .btn .add-fri-box .fri-note .add-fri-note {
+          color: #24b026; }
+  .carbon-activity .wrap-register.activity-plan {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 50px; }
+    .carbon-activity .wrap-register.activity-plan .wrap-process {
+      width: 100%; }
+      .carbon-activity .wrap-register.activity-plan .wrap-process .process-part {
+        width: 320px; }
+        .carbon-activity .wrap-register.activity-plan .wrap-process .process-part .process-number {
+          left: 50%;
+          margin-left: -22.5px;
+          height: 45px;
+          width: 45px;
+          line-height: 45px;
+          top: -22px;
+          background: url("../image/icons/icon-round45.png") no-repeat center center; }
+          .carbon-activity .wrap-register.activity-plan .wrap-process .process-part .process-number img {
+            background: #ffffff; }
+        .carbon-activity .wrap-register.activity-plan .wrap-process .process-part.part-finished .process-number {
+          background-image: url("../image/icons/icon-round45-active.png"); }
+          .carbon-activity .wrap-register.activity-plan .wrap-process .process-part.part-finished .process-number.none-bg {
+            background: none; }
+  .carbon-activity .process-detail-box {
+    width: 960px;
+    margin: 0 auto;
+    /* 步骤一 */
+    /* 步骤二 */ }
+    .carbon-activity .process-detail-box .process-title {
+      font-size: 18px;
+      color: #333333;
+      padding-bottom: 20px; }
+    .carbon-activity .process-detail-box .process-next {
+      margin-top: 160px;
+      margin-bottom: 30px;
+      background-color: #fafafa;
+      overflow: hidden;
+      padding: 18px 15px; }
+      .carbon-activity .process-detail-box .process-next .next-button {
+        float: right;
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px 15px;
+        background-color: #24af26;
+        cursor: pointer; }
+    .carbon-activity .process-detail-box .select-plan-box {
+      overflow: hidden;
+      padding-top: 20px; }
+    .carbon-activity .process-detail-box .select-plan-item {
+      border: 2px solid #eeeeee;
+      float: left;
+      width: 466px; }
+      .carbon-activity .process-detail-box .select-plan-item.active {
+        border-color: #24b026;
+        position: relative; }
+        .carbon-activity .process-detail-box .select-plan-item.active:after {
+          content: "";
+          position: absolute;
+          height: 38px;
+          width: 38px;
+          background: url("../image/icons/icon-pass.png") no-repeat center center;
+          bottom: 0;
+          right: 0; }
+      .carbon-activity .process-detail-box .select-plan-item:first-child {
+        margin-right: 20px; }
+      .carbon-activity .process-detail-box .select-plan-item .plan-money-box {
+        background-color: #fafafa;
+        padding: 15px 20px;
+        color: #ff0000;
+        font-size: 14px; }
+        .carbon-activity .process-detail-box .select-plan-item .plan-money-box .big-num {
+          font-size: 24px; }
+      .carbon-activity .process-detail-box .select-plan-item .plan-implement-box {
+        padding: 15px 20px; }
+        .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .kind-name {
+          font-size: 18px;
+          color: #333333;
+          margin-bottom: 15px; }
+        .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .plan-get {
+          color: #666666;
+          font-size: 14px;
+          margin-bottom: 15px; }
+          .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .plan-get .money {
+            color: #24b026; }
+        .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box {
+          overflow: hidden;
+          padding-bottom: 15px;
+          border-bottom: 1px solid #e5e5e5;
+          margin-bottom: 15px;
+          height: 113px; }
+          .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box.hide {
+            visibility: hidden; }
+          .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item {
+            overflow: hidden;
+            width: 201px;
+            float: left;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px; }
+            .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item:first-child {
+              margin-right: 20px; }
+            .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-kind {
+              height: 110px;
+              float: left;
+              color: #ffffff;
+              padding: 0 2px;
+              padding-top: 28px;
+              box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              /* Firefox */
+              -webkit-box-sizing: border-box;
+              /* Safari */
+              position: relative;
+              width: 30px;
+              float: left;
+              text-align: center;
+              background-color: #24b026; }
+              .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-kind:after {
+                content: "";
+                position: absolute;
+                right: -4.5px;
+                width: 9px;
+                height: 100%;
+                top: 0px;
+                background: url("../image/img-border1.png") repeat center center; }
+              .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-kind.goal {
+                background-color: #ff9600; }
+                .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-kind.goal:after {
+                  background-image: url("../image/img-border2.png"); }
+            .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-detail {
+              float: left;
+              padding: 15px;
+              padding-right: 0; }
+              .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-detail .coupon-name {
+                font-size: 16px;
+                color: #333333;
+                margin-bottom: 5px; }
+              .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-detail .coupon-money-box {
+                margin-bottom: 5px;
+                color: #ff0000;
+                font-size: 22px; }
+                .icon-money {
+                  width: 20px;
+                  height: 20px;
+                  display: inline-block;
+                  margin-right: 5px;
+                  background: url("../image/icons/icon-user-tanbi.png") no-repeat center center;
+                  vertical-align: middle; }
+                .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-detail .coupon-money-box .calculate-sign {
+                  color: #a9a9a9; }
+              .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .coupon-box .coupon-item .coupon-detail .coupon-shop {
+                font-size: 12px;
+                color: #a9a9a9; }
+        .carbon-activity .process-detail-box .select-plan-item .plan-implement-box .thanks-word {
+          color: #a9a9a9;
+          font-size: 14px; }
+    .carbon-activity .process-detail-box .process-activity-list {
+      padding-top: 30px;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5; }
+      .carbon-activity .process-detail-box .process-activity-list .pay-li {
+        height: 32px;
+        line-height: 32px;
+        overflow: hidden;
+        font-size: 14px;
+        margin-bottom: 22px; }
+        .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-li-title {
+          color: #333333;
+          float: left;
+          width: 195px;
+          text-align: right;
+          margin-right: 5px; }
+        .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-title-text {
+          float: left;
+          color: #24af26; }
+        .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people {
+          float: left;
+          overflow: hidden; }
+          .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #e5e5e5; }
+            .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span {
+              display: inline-block;
+              text-align: center; }
+              .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span.num-minus {
+                cursor: pointer;
+                width: 30px;
+                border-right: 1px solid #e5e5e5; }
+                .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span.num-minus.useless {
+                  color: #cccccc; }
+              .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span.num-plus {
+                cursor: pointer;
+                width: 30px;
+                border-left: 1px solid #e5e5e5; }
+                .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span.num-plus.useless {
+                  color: #cccccc; }
+              .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span.num-text {
+                width: 50px; }
+                .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-num span.num-text input {
+                  width: 100%;
+                  text-align: center; }
+          .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-note {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 12px;
+            color: #a9a9a9;
+            height: 30px;
+            line-height: 30px; }
+            .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-people .pay-people-note .people-max {
+              color: #ff0000; }
+        .carbon-activity .process-detail-box .process-activity-list .pay-li .pay-input {
+          float: left;
+          height: 30px;
+          line-height: 30px;
+          width: 130px;
+          padding: 0 10px;
+          border: 1px solid #e5e5e5; }
+          input {
+            width: 100%;
+            border: none; }
+            input:focus {
+              outline: none; }
+    .carbon-activity .process-detail-box .detail-account-box {
+      padding: 30px 0;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 14px;
+      color: #333333; }
+      .carbon-activity .process-detail-box .detail-account-box .detail-account-item {
+        text-align: right;
+        margin-top: 15px; }
+        .carbon-activity .process-detail-box .detail-account-box .detail-account-item:first-child {
+          margin-top: 0; }
+        .carbon-activity .process-detail-box .detail-account-box .detail-account-item .account-money {
+          width: 60px;
+          text-align: right;
+          display: inline-block;
+          color: #ff0000; }
+          .carbon-activity .process-detail-box .detail-account-box .detail-account-item .account-money .carbon-coin-num {
+            color: #24af26; }
+    .carbon-activity .process-detail-box .pay-method-box {
+      padding: 30px 15px;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 18px;
+      color: #333333; }
+      .carbon-activity .process-detail-box .pay-method-box .method-item {
+        display: inline-block;
+        margin-left: 20px;
+        text-align: center;
+        line-height: 55px;
+        width: 175px;
+        height: 55px;
+        border: 1px solid #e5e5e5; }
+        .carbon-activity .process-detail-box .pay-method-box .method-item.active {
+          border: 2px solid #24af26;
+          position: relative; }
+          .carbon-activity .process-detail-box .pay-method-box .method-item.active:after {
+            content: "";
+            position: absolute;
+            height: 22px;
+            width: 27px;
+            bottom: -1px;
+            right: 0;
+            background: url("../image/img-little-pass.png") no-repeat center center; }
+        .carbon-activity .process-detail-box .pay-method-box .method-item:first-child {
+          margin-left: 0; }
+        .carbon-activity .process-detail-box .pay-method-box .method-item .icon-bao {
+          vertical-align: middle;
+          height: 41px;
+          width: 127px;
+          display: inline-block;
+          background: url("../image/img-bao.png") no-repeat center center; }
+        .carbon-activity .process-detail-box .pay-method-box .method-item .icon-wechat {
+          vertical-align: middle;
+          width: 56px;
+          height: 40px;
+          display: inline-block;
+          background: url("../image/img-wechat.png") no-repeat center center; }
+    .carbon-activity .process-detail-box .pay-method-button {
+      width: 245px;
+      height: 55px;
+      line-height: 55px;
+      color: #ffffff;
+      text-align: center;
+      font-size: 22px;
+      margin: 0 auto;
+      margin-top: 45px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      background: #24af26; }
+
+.activity-tabs.describe .menus {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5; }
+  .activity-tabs.describe .menus li {
+    border-top: none;
+    border-left: 3px solid #c2c2c2;
+    padding: 0 25px;
+    font-size: 24px; }
+    .activity-tabs.describe .menus li:first-child {
+      padding-left: 0;
+      border-left: none; }
+.activity-tabs.describe .menus li.active, .activity-tabs.describe .activity-tabs .menus li:hover {
+  border-top: none; }
+.activity-tabs.describe .activity-intro-box {
+  padding: 25px; }
+  .activity-tabs.describe .activity-intro-box .activity-time-bar {
+    background: #f8f8f8;
+    color: #a9a9a9;
+    font-size: 14px;
+    margin-bottom: 15px;
+    height: 38px;
+    line-height: 38px; }
+    .activity-tabs.describe .activity-intro-box .activity-time-bar .icon-exchange {
+      padding: 5px;
+      margin: 0;
+      margin-top: -5px; }
+  .activity-tabs.describe .activity-intro-box .activity-intro-text {
+    text-indent: 2em;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 30px; }
+  .activity-tabs.describe .activity-intro-box .activity-img-box {
+    overflow: hidden; }
+    .activity-tabs.describe .activity-intro-box .activity-img-box .intro-img-item {
+      margin-bottom: 20px;
+      width: 290px;
+      float: left;
+      margin-left: 20px;
+      height: 210px; }
+      .activity-tabs.describe .activity-intro-box .activity-img-box .intro-img-item:first-child {
+        margin-left: 0; }
+      .activity-tabs.describe .activity-intro-box .activity-img-box .intro-img-item img {
+        width: 100%;
+        height: 100%; }
+
+.pageFooter.fix-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+/* 撤销弹出框 */
+.cancal-text {
+  text-align: center;
+  font-size: 22px;
+  height: 250px;
+  line-height: 250px; }
+  .cancal-text .ico-warn {
+    display: inline-block;
+    background: url("../image/icons/icon-warn.png") no-repeat center center;
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+    vertical-align: middle; }
+  .cancal-text .ico-success {
+    display: inline-block;
+    background: url("../image/icons/icon-big-success.png") no-repeat center center;
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+    vertical-align: middle; }
+
+/* 交换弹出框 */
+.change-text {
+  text-align: center;
+  font-size: 22px;
+  font-size: 16px;
+  color: #333333; }
+  .change-text .change-select {
+    height: 46px;
+    padding: 102px 0; }
+  .change-text .input-item {
+    display: inline-block;
+    margin: 0;
+    margin-left: 20px;
+    float: none;
+    position: relative; }

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠-活动撤销</title>
+<link rel="stylesheet" type="text/css" href="../../statics/css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../../statics/css/newStyle.css"/>
+<link rel="stylesheet" type="text/css" href="../../statics/css/carbonActivity.css"/>
+<link rel="stylesheet" type="text/css" href="../../statics/css/carbonActivityVice.css"/>
+
+
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user">
+				<a href="" class="user-info">
+					<img src="statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					<li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳活动</a>
+					</li>
+					<li class="nav-item noActive-item" attr-href="modules/carbonInfo/carbonInfoList.html">
+						<a class="item-a" href="">低碳资讯</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item" attr-href="modules/carbonTrading/carbonTradeCompany.html">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--头部结束-->
+
+<div class="wrap-main carbon-activity">
+    
+    <div class="activity-header-box">
+	   <div class="activity-header">
+	      低碳活动-发起活动
+           <div class="cancel-button" >撤销活动</div>
+	   </div>
+
+    </div>
+
+    <div class="fill-box car">
+    	<ul class="fill-list only-show">
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="图书" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				物品名称：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="碳币" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				希望交换：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="2016-12-01" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				有效期至：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="广州" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				所属城市：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="耳朵难眠" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				发起人：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="陈先生" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				联系人：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="two-input-item none-icon">
+    				<input type="text" placeholder="" value="13800138000" disabled="disabled">  
+    				</input>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				联系方式：
+    			</div>
+    		</li>
+    		<li class="fill-li">
+    			<div class="one-area-item none-icon">
+    				<textarea disabled="disabled">  白云山为南粤名山之一，位于广州市白云区，是广州市风景行业的第一家5A级旅游景区。临近中秋佳节，很多市民会选择上山赏月，甚至在山上过夜。由于游客的猛增，可能一些游客随手扔垃圾的不文明行为既影响了游客的游玩心情，又加重了白云山保洁人员的负担，特别是在一些小道上的垃圾多日无人清理。由此组织了这次志愿活动，在爬山领略大好风光的同时，清理道路上的垃圾，保护环境。</textarea>
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				物品详情：
+    			</div>
+    		</li>
+
+    		<li class="fill-li">
+    			<div class="img-box">
+    				<div class="img-default">
+    				    <img src="../../statics/image/pic-129.png">
+    				</div>
+    				<div class="img-default">
+    					<img src="../../statics/image/pic-129.png">
+    				</div>
+    				<div class="img-default">
+    					<img src="../../statics/image/pic-129.png">
+    				</div>
+
+    			</div>
+
+    			<!-- 标题 -->
+    			<div class="fill-title">
+    				物品图片：
+    			</div>
+    		</li>
+
+
+
+    	</ul>
+
+    </div>
+</div>
+
+
+
+
+<!--尾部开始-->
+	<div class="pageFooter">
+		<div class="width1220">
+		     <div class="wrap-partner-list">
+		     	<span class="partner-title">合作伙伴：</span>
+		     	<ul class="partner-list">
+		     		<li><a href="">张家界景区</a></li>
+		     		<li><a href="">万绿湖景区</a></li>
+		     		<li><a href="">上海路路通</a></li>
+		     		<li><a href="">汉能</a></li>
+		     		<li><a href="">广州快速公交</a></li>
+		     		<li><a href="">深圳立冰空调</a></li>
+		     	</ul>
+		     </div>  
+		</div>
+		<div class="width960">
+			<div class="company-info">
+				<ul>
+					<li class="item">
+						<img src="statics/image/logo-footer.png"/>
+						<h6>广东省碳普惠创新发展中心</h6>
+					</li>
+					<li class="item item-second">
+						<p><a href="modules/aboutUs/aboutUs.html">关于我们</a></p>
+						<p><a href="">企业联盟</a></p>
+						<p><a href="">网站协议</a></p>
+					</li>
+					<li class="item item-third">
+						<i class="icon-send"></i><span class="email">tanph@ceprei.org</span>
+						<div class="fackback"><a href="">投诉建议</a></div>
+					</li>
+					<li class="item-four">
+						<a href=""><img class="pic-left" src="statics/image/pic-weibo.png" /></a>
+						<a href=""><img class="pic-left" src="statics/image/pic-weixin.png" /></a>
+						<a href="" class="download-link"><img src="statics/image/pic-download.png" class="download-pic" />
+						<span class="link-text">下载app</span>
+						</a> 
+					</li>
+				</ul>
+			</div>
+			<div class="company-copyright">
+				<p>由赛宝认证中心提供技术支持 Tel:020-87236606 Email: tanph@ceprei.org </p>
+				<p>Copyright@2014-2018 广州赛宝认证中心服务有限公司 All Rights Reserved 粤ICP备05096650号-3</p>
+				<p id="str2">asgasgasgasgasfasfasf</p>
+			</div>
+		</div>
+	</div>
+<!--尾部结束-->
+<!--实名认证弹框-->
+<div id="authentication-dialog"></div>
+<!--活动类型弹框-->
+<div id="activity-type-dialog"></div>
+<!--撤销弹框-->
+<div id="activity-cancel-dialog"></div>
+
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/carousel.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../statics/script/tabs.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../statics/script/dialog.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../statics/script/config/config.js"></script>
+<script src="script/carbonActivity.js"></script>
+
+
+</body>
+</html>
