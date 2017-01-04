@@ -117,6 +117,7 @@ body{
 				position:relative;
 				z-index:11;
 				border:1px solid #fff;
+				cursor:pointer;
 				border-bottom:none;
 				
 			}
@@ -132,7 +133,7 @@ body{
 				}
 			}
 			.address{
-				cursor:pointer;
+				
 				margin:0 5px 0 3px;
 			}
 			.icon-address{
@@ -1186,43 +1187,6 @@ body{
 				}
 		}
 	}
-	/**分页**/
-	.list-page{
-		padding:35px 0;
-		text-align:center;
-		a{
-			color:#8492a3;
-			height:38px;
-			width:38px;
-			line-height:38px;
-			vertical-align:middle;
-		}
-		.pageBtnWrap {
-			.curr{
-				line-height:40px;
-			}
-			a[title="首页"]{
-				margin-right:15px;
-				border:1px solid #24b026;
-				background:url(../image/icons/icon-page-left1.png) no-repeat center center;
-			}
-			a[title="上一页"]{
-				margin-right:15px;
-				border:1px solid #24b026;
-				background:url(../image/icons/icon-page-left.png) no-repeat center center;
-			}
-			a[title="下一页"]{
-				margin-right:15px;
-				border:1px solid #24b026;
-				background:url(../image/icons/icon-page-right.png) no-repeat center center;
-			}
-			a[title="尾页"]{
-				margin-right:15px;
-				border:1px solid #24b026;
-				background:url(../image/icons/icon-page-right1.png) no-repeat center center;
-			}
-		}
-	}
 }
 /**减碳置换详情**/
 .carbonTradeDetail-body{
@@ -1340,10 +1304,7 @@ body{
 		}
 	}
 }
-/**弹框**/
-.myModal-mask{
 
-}
 .wrap-myModal{
 	display:none;
 	position:fixed;
@@ -1712,6 +1673,93 @@ body{
     }
 	}
 }
+	/**分页**/
+	.pagination{
+		padding:20px 20px 30px 20px;
+		margin:0;
+		text-align:center;
+		font-size:18px;
+		li{
+			display:inline-block;
+			margin:0 8px;
+			height: 38px;
+			width: 38px;
+			line-height: 38px;
+			vertical-align: middle;
+			a{
+				display:inline-block;
+			   color: #8492a3;
+			    
+			}
+		}
+		.quick-item{
+			border:1px solid #24b026;
+		}
+		.first{
+			background:url(../image/icons/icon-page-left1.png) no-repeat center center;
+		}
+		.prev{
+			background:url(../image/icons/icon-page-left.png) no-repeat center center;
+		}
+		.next{
+			background:url(../image/icons/icon-page-right.png) no-repeat center center;
+		}
+		.last{
+			background:url(../image/icons/icon-page-right1.png) no-repeat center center;
+		}
+		.active{
+			color:#fff;
+			background-color:#24b026;
+			a{
+				color:#fff;
+			}
+		}
+	}
+	.list-page{
+		padding:35px 0;
+		text-align:center;
+		a{
+			color:#8492a3;
+			height:38px;
+			width:38px;
+			line-height:38px;
+			vertical-align:middle;
+		}
+		.pageBtnWrap {
+			.curr{
+				padding:0;
+				margin-right:8px;
+				width:38px;
+				height:38px;
+				line-height:40px;
+			}
+			a[title="首页"]{
+				margin-right:15px;
+				border:1px solid #24b026;
+				background:url(../image/icons/icon-page-left1.png) no-repeat center center;
+			}
+			a[title="上一页"]{
+				margin-right:15px;
+				border:1px solid #24b026;
+				background:url(../image/icons/icon-page-left.png) no-repeat center center;
+			}
+			a[title="下一页"]{
+				margin-right:15px;
+				border:1px solid #24b026;
+				background:url(../image/icons/icon-page-right.png) no-repeat center center;
+			}
+			a[title="尾页"]{
+				margin-right:15px;
+				border:1px solid #24b026;
+				background:url(../image/icons/icon-page-right1.png) no-repeat center center;
+			}
+		}
+		.spanDot{
+			float:none;
+			margin-left:0;
+			margin-right:15px;
+		}
+	}
 /**关于我们***/
 .aboutUs-main{
 	.wrapTab .tab .tab-item a{
@@ -1803,6 +1851,38 @@ body{
 	.wrap-sort{
 		border-bottom:1px solid #ddd;
 	}
+	.product-search{
+		position:relative;
+		margin-top:30px;
+		float:right;
+		width:240px;
+		height:28px;
+		border:1px solid #e5e5e5;
+		background-color:#fff;
+		-webkit-border-radius:30px;
+		-moz-border-radius:30px;
+		border-radius:30px;
+		input{
+			padding:5px 5px 5px 15px;
+			width:200px;
+			font-size:12px;
+			border:none;
+			outline:none;
+			color:#a9a9a9;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+			background:none;
+		}
+
+		.icon-search{
+			display:inline-block;
+			width:25px;
+			height:28px;
+			vertical-align:-9px;
+			background:url(../../statics/image/icon_search.png) no-repeat center center;
+		}
+	}
 }
 .product-list{
 	.list-ul{
@@ -1821,14 +1901,18 @@ body{
 		margin-top:20px;
 		height:390px;
 		width:245px;
+		cursor:pointer;
 		.wrap-item{
 			padding:10px;
 		  width:225px;
       .wrap-pic{
       	height:257px;
       	line-height:250px;
+      	overflow:hidden;
+      	/* background-color:rgb(245,245,245); */
+      	border:1px solid rgb(245,245,245);
       	img{
-      		max-width:100%;
+      		width:100%;
       		max-height:100%;
       		vertical-align:middle;
       	}
@@ -1836,8 +1920,8 @@ body{
       .product-info{
       	font-size:12px;
       	.product-name{
-      		padding:10px 0 5px;
-      		
+      		padding:10px 0 0px;
+      		height:32px;
       		color:#666666;
       		.name{
       			padding-right:20px;
@@ -1851,7 +1935,7 @@ body{
           color:#666;
       	}
       	.product-watch{
-      		padding:15px 0 13px 0;
+      		padding:5px 0 13px 0;
       		color:#a9a9a9;
           span{
           	padding:0 2px;
@@ -1879,20 +1963,31 @@ body{
       background-color:#fff;
 		}
 	}
-	.loading-more{
-		padding:30px 0 30px;
+}
+//加载更多
+.load-click{
+		padding:20px 0 30px;
 		text-align:center;
 		color:#666;
 		.icon-loading{
 			 display:inline-block;
 			 margin-right:5px;
 			 width:35px ;height:35px;
-			 background:url(../image/icons/icon-loading.gif) no-repeat center center;
-			 background-size:30px 30px;
+			 background:url(../image/icons/icon-refresh.png) no-repeat center center;
+			 background-size:17px 18px;
 			 vertical-align:-11px;
+
 		}
+		a{
+			 	color:#666;
+			 }
 	}
-}
+	.loading-more{
+     .icon-loading{
+     	background:url(../image/icons/icon-loading.gif) no-repeat center center;
+			 background-size:30px 30px;
+     }
+	}
 /*注册登录模块**/
 .width1024{
 	margin:0 auto;
@@ -2329,6 +2424,56 @@ body{
 			}
 		}
 	}
+}
+/**没有内容提示**/
+.no-content{
+		padding-bottom:80px;
+		text-align:center;
+		.no-content-remind{
+			padding:55px 0 60px;
+			font-size:24px;
+			color:#a9a9a9;
+			.no-content-icon{
+				display:inline-block;
+				margin-right:25px;
+				width:58px;
+				height:53px;
+				vertical-align:middle;
+				background:url(../../statics/image/icons/icon-smile.png) no-repeat center center;
+			}
+		}
+		.no-content-link{
+			font-size:18px;
+			a{
+				display:inline-block;
+				padding:0 25px;
+				margin:0 12px;
+				height:40px;
+				line-height:40px;
+				border:1px solid #24b026;
+				@include borderRadius;
+			}
+			.link-left{
+				background-color:#24b026;
+				color:#fff;
+			}
+			.link-right{
+				color:#24b026;
+			}
+		}
+	}
+	/**加载中提示**/
+	.loading{
+	display:block;
+	padding:50px 0;
+	text-align:center;
+  i{
+  	display:inline-block;
+  	width:35px;
+  	height:35px;
+  	vertical-align:-12px;
+  	background:url(../../statics/image/icons/icon-loading.gif) no-repeat;
+  }
 }
 /***尾部**/
 .pageFooter{

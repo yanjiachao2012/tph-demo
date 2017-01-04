@@ -7,42 +7,425 @@
 <link rel="stylesheet" href="../../statics/css/base.css"/>
 <link rel="stylesheet" href="../../statics/css/newStyle.css"/>
 <link rel="stylesheet" type="text/css" href="../../statics/css/carbonExchange.css"/>
-<script src="../../statics/script/jquery-1.7.2.min.js"></script>
-<script src="../../statics/script/config/config.js"></script>
-<script src="../../statics/script/nav.js"></script>
 </head>
 <body>
 <!--头部开始-->
 <div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user">
+				<a href="" class="user-info">
+					<img src="statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					<li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳活动</a>
+					</li>
+					<li class="nav-item noActive-item" attr-href="modules/carbonInfo/carbonInfoList.html">
+						<a class="item-a" href="">低碳资讯</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonInfo/carbonInfoList.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item" attr-href="modules/carbonTrading/carbonTradeCompany.html">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="modules/carbonTrading/carbonTradeCompany.html">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
 <!--头部结束-->
 <div class="wrap-main carbonExchange-main">
 	<div class="search-input">
     <div class="width960">
 			<div class="input-wrap clearfix">
-				<input type="text" id="carbonCouponSearch" value="" placeholder="搜索全部" />
-				<a href="javascript:carbonExchange.carbonCouponSearch()" class="btn-search"></a>
+				<input type="text" id="carbonStoreSearch" value="" placeholder="搜索全部" />
+				<a href="javascript:carbonFunding.carbonStoreSearch()" class="btn-search"></a>
 			</div>
 		</div>
 	</div>
-	<input type="hidden" id="citySort" value=''/>
-	<input type="hidden" id="categorySort" value=''/>
-	<input type="hidden" id="typeSort" value=''/>
-	<input type="hidden" id="orderSort" value=''/>
 	<div class="search-wrap clearfix" id="searchSort">
-
-	</div>
-	<div class="funding-detail-coupon">
-			<div class="container" id="couponList">
+	  <div class="search-head search-area clearfix" style="border-bottom:none;">
+			<div class="label ellipsis">行政区域筛选：</div>
+			  <div class="wrap-list">
+			  	<ul class="list">
+						<li class="active">天河区</li>
+						<li>越秀区</li>
+						<li>白云区</li>
+						<li>荔湾区</li>
+						<li>番禺区</li>
+						<li>南沙区</li>
+						<li>萝岗区</li>
+						<li>增城区</li>
+					</ul>
+				  <div class="fold" data-collapse="false">收起</div>
+			  </div>	
+		</div>
+		<div class="search-head search-area clearfix" style="border-bottom:none;">
+			<div class="label ellipsis">分类：</div>
+			<div class="wrap-list">
+					<ul class="list">
+							<li class="active">全部分类(230)</li>
+							<li>电影(15)</li>
+							<li>美食(12)</li>
+							<li>酒店(12)</li>
+							<li>休闲娱乐(12)</li>
+							<li>其他(12)</li>
+					</ul>
+				<div class="fold" data-collapse="false">收起</div>
 			</div>
 		</div>
+		<div class="search-head search-area clearfix collapses">
+			<div class="label ellipsis">更多筛选：</div>
+			<div class="wrap-list">
+					<ul class="list">
+							<li class="active">优惠券</li>
+							<li>会员卡</li>
+							<li>碳币</li>
+					</ul>
+			</div>
+		</div>
+	</div>
 </div>
-		
+		<div class="funding-detail-coupon">
+			<div class="container">
+				<ul class="clearfix">
+					<li class="coupon-item exchange-coupon">
+						<div class="coupon-left">
+							兑换券
+						</div>
+						<div class="coupon-center clearfix">
+							<h4 class="ellipsis">优惠观影券1张</h4>
+							<h5 class="ellipsis">飞影电影国际城</h5>
+							<div class="open-hours ellipsis">
+								营业时间：<span>09：00-22:00</span>
+							</div>
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item cash-coupon">
+						<div class="coupon-left">
+							代金券
+						</div>
+						<div class="coupon-center clearfix">
+							<h4 class="ellipsis">优惠观影券1张</h4>
+							<h5 class="ellipsis">飞影电影国际城</h5>
+							<div class="open-hours ellipsis">
+								营业时间：<span>09：00-22:00</span>
+							</div>
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item goods-coupon">
+						<div class="coupon-left">
+							提货券
+						</div>
+						<div class="coupon-center clearfix">
+							<h4 class="ellipsis">优惠观影券1张</h4>
+							<h5 class="ellipsis">飞影电影国际城</h5>
+							<div class="open-hours ellipsis">
+								营业时间：<span>09：00-22:00</span>
+							</div>
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item gold-coupon">
+						<div class="coupon-center clearfix">
+							<div class="inner clearfix">
+								<i class="gold"></i>
+								<div class="text-wrap">
+									<h4 class="ellipsis">优惠观影券1张</h4>
+									<h5 class="ellipsis"><b>8.0</b>折</h5>
+									<div class="open-hours ellipsis">
+										营业时间：<span>09：00-22:00</span>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item silver-coupon">
+						<div class="coupon-center clearfix">
+							<div class="inner clearfix">
+								<i class="gold"></i>
+								<div class="text-wrap">
+									<h4 class="ellipsis">优惠观影券1张</h4>
+									<h5 class="ellipsis"><b>8.0</b>折</h5>
+									<div class="open-hours ellipsis">
+										营业时间：<span>09：00-22:00</span>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item goods-coupon">
+						<div class="coupon-left">
+							提货券
+						</div>
+						<div class="coupon-center clearfix">
+							<h4 class="ellipsis">优惠观影券1张</h4>
+							<h5 class="ellipsis">飞影电影国际城</h5>
+							<div class="open-hours ellipsis">
+								营业时间：<span>09：00-22:00</span>
+							</div>
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item exchange-coupon">
+						<div class="coupon-left">
+							兑换券
+						</div>
+						<div class="coupon-center clearfix">
+							<h4 class="ellipsis">优惠观影券1张</h4>
+							<h5 class="ellipsis">飞影电影国际城</h5>
+							<div class="open-hours ellipsis">
+								营业时间：<span>09：00-22:00</span>
+							</div>
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+					<li class="coupon-item cash-coupon">
+						<div class="coupon-left">
+							代金券
+						</div>
+						<div class="coupon-center clearfix">
+							<h4 class="ellipsis">优惠观影券1张</h4>
+							<h5 class="ellipsis">飞影电影国际城</h5>
+							<div class="open-hours ellipsis">
+								营业时间：<span>09：00-22:00</span>
+							</div>
+							<div class="expiry ellipsis">
+								有效期：<span>2016-01-01至2017-12-31</span>
+							</div>
+						</div>
+						<div class="coupon-right">
+							<div class="tanbi ellipsis">
+								<i></i>
+								5<span>+</span>￥35.00
+							</div>
+							<div class="btn btn-success">立即兑换</div>
+							<p>已兑300张</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<div class="load-more">点击加载更多</div>
 
 <!--尾部开始-->
-<div class="pageFooter"></div>
+	<div class="pageFooter">
+		<div class="width1220">
+		     <div class="wrap-partner-list">
+		     	<span class="partner-title">合作伙伴：</span>
+		     	<ul class="partner-list">
+		     		<li><a href="">张家界景区</a></li>
+		     		<li><a href="">万绿湖景区</a></li>
+		     		<li><a href="">上海路路通</a></li>
+		     		<li><a href="">汉能</a></li>
+		     		<li><a href="">广州快速公交</a></li>
+		     		<li><a href="">深圳立冰空调</a></li>
+		     	</ul>
+		     </div>  
+		</div>
+		<div class="width960">
+			<div class="company-info">
+				<ul>
+					<li class="item">
+						<img src="statics/image/logo-footer.png"/>
+						<h6>广东省碳普惠创新发展中心</h6>
+					</li>
+					<li class="item item-second">
+						<p><a href="modules/aboutUs/aboutUs.html">关于我们</a></p>
+						<p><a href="">企业联盟</a></p>
+						<p><a href="">网站协议</a></p>
+					</li>
+					<li class="item item-third">
+						<i class="icon-send"></i><span class="email">tanph@ceprei.org</span>
+						<div class="fackback"><a href="">投诉建议</a></div>
+					</li>
+					<li class="item-four">
+						<a href=""><img class="pic-left" src="statics/image/pic-weibo.png" /></a>
+						<a href=""><img class="pic-left" src="statics/image/pic-weixin.png" /></a>
+						<a href="" class="download-link"><img src="statics/image/pic-download.png" class="download-pic" />
+						<span class="link-text">下载app</span>
+						</a> 
+					</li>
+				</ul>
+			</div>
+			<div class="company-copyright">
+				<p>由赛宝认证中心提供技术支持 Tel:020-87236606 Email: tanph@ceprei.org </p>
+				<p>Copyright@2014-2018 广州赛宝认证中心服务有限公司 All Rights Reserved 粤ICP备05096650号-3</p>
+				<p id="str2">asgasgasgasgasfasfasf</p>
+			</div>
+		</div>
+	</div>
 <!--尾部结束-->
-
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
 <script src="js/carbonExchange.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

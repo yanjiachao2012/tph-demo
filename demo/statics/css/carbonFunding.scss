@@ -1,0 +1,233 @@
+$green:#24b026;
+$eee:#eeeeee;
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.ellipsis {
+    width: 27em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+.funding-banner{
+    padding: 15px 0;
+    background-color: $eee;
+    border-bottom: 1px solid darken($eee,10%);
+}
+.picScroll-left{
+    width:1220px;
+    margin: 0 auto;
+    overflow:hidden; 
+    position:relative;
+    .prev,.next{
+        position: absolute;
+        top: 35px;
+        width:61px; 
+        height:61px;
+        cursor: pointer;
+    }
+    .prev{
+        left: 0px;
+        background: url(../image/icon-banner-prev.png) no-repeat center center;
+    }
+    .next{
+        right: 0px;
+        background: url(../image/icon-banner-next.png) no-repeat center center;
+    }
+    .bd{ 
+        width:960px;
+        margin: 0 auto;
+        ul{
+           overflow:hidden; zoom:1;
+           li{
+               margin:0 8px;
+                float:left; 
+                _display:inline;
+                overflow:hidden; 
+                text-align:center;
+                .pic{ 
+                    text-align:center;
+                    border:3px solid transparent;
+                    &:hover{
+                        border:3px solid $green;
+                    }
+                    img{
+                         width:226px; 
+                         height:130px; 
+                         display:block;
+                    }
+                }
+           } 
+        }
+    }
+}
+.carbonFunding-main{
+    .search-input{
+        margin-bottom:20px;
+        padding: 15px 0;
+        background-color:#f8f8f8;
+        .input-wrap{
+            border:1px solid #e6e5e5;
+            border-radius: 10px;
+            float: right;
+            background-color:#fff;
+            input{
+                float: left;
+                height: 28px;
+                border: none;
+                text-indent: 10px;
+                width: 300px;
+                font-size: 12px;  
+                border-radius: 10px;
+                outline: none;
+            }
+            .btn-search{
+                float: right;
+                width: 38px;
+                height: 28px;
+                background: url(../image/icon_search.png) no-repeat center center;
+                
+            }
+        }
+    }
+    .search-con{
+        
+        padding-top:15px;
+        position: relative;
+        ul{
+            width:980px;
+            padding:10px ;
+            margin:0 auto;
+            position: relative;
+        }
+        .item{
+            float: left;
+            width: 245px;
+            height: 268px;
+            position: relative;  
+            .wrap-item{
+                padding:10px;
+                width:225px;
+            }  
+            .hover-item {
+                position: absolute;
+                left: -10px;
+                top: -10px;
+                z-index: 9;
+                padding: 19px 19px 10px 19px;
+                border: 1px solid #eeeeee;
+                -webkit-box-shadow: 0 0 4px 3px #ddd;
+                -moz-box-shadow: 0 0 3px #ddd;
+                box-shadow: 0 0 3px #ddd;
+                background-color: #fff;
+            }            
+            a{
+                .thumbnail{                   
+                    height: 160px;   
+                }
+                img{                   
+                    width: 100%;
+                    height: 100%;
+                }
+                 h3{
+                    width:auto;
+                    font-size: 16px;
+                    color: #000;
+                    padding:12px 0;
+                    background-color: #fff;       
+                }
+                p{
+                    width: 224px;
+                    font-size: 12px;
+                    color:#a9a9a9;
+                    padding-bottom: 10px;
+                    background-color: #fff;       
+                }
+            }
+           
+        }
+    }
+}
+
+
+.search-wrap{
+    width:960px;
+    margin: 0 auto;
+    .search-head{
+        font-size: 16px;
+        background-color:#f8f8f8;
+        border:1px solid #eee;
+        &.collapse{
+            .fold{
+                background: url(../image/icon_arrow_down.png) no-repeat center right;
+            }
+            .list{
+                height: 55px;
+            }
+        }
+        .wrap-list{
+            padding:5px 0;
+            overflow:hidden;
+            background-color:#fff;
+        }
+        .label{
+            float: left;
+            padding-top:15px;
+            padding-right:5px;
+            width: 135px;
+            text-align: right;
+
+        }
+        .list{
+            width: 740px;
+            float: left;
+            margin-left: 12px;
+            overflow: hidden;        
+            li{
+                float:left;
+                vertical-align: middle;
+                padding: 5px 25px;
+                border-radius: 5px;
+                margin: 10px 2px 5px;
+                border: 1px solid transparent;
+                cursor: pointer;               
+                &.active,&:hover{
+                    border: 1px solid $green;
+                    background-color: lighten($green,55%);
+                    color:darken($green,10%);
+                }
+            }
+        }
+        .fold{   
+            margin-top:20px; 
+            margin-right:15px;       
+            float: right;
+            padding-right: 15px;
+            background: url(../image/icon_arrow_up.png) no-repeat center right;
+            cursor: pointer;
+            font-size: 12px;
+            color: darken($eee,30%);
+        }
+    }
+}
+.load-more{
+    width: 100px;
+    margin: 10px auto 30px;
+    min-height: 22px;
+    padding-left: 30px;
+    cursor: pointer;
+    background: url(../image/get-more.png) no-repeat 0px center;
+}
+.loading-more{
+    background: url(../image/icons/icon-loading.gif) no-repeat 0px center;
+}

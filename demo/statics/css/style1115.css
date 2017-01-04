@@ -63,9 +63,9 @@
 	font-size: 12px;
 	background: url(../../statics/image/icons/icon-news.png) no-repeat center center;
 }
-.fold-list-box{
+/* .fold-list-box{
 	padding-bottom: 20px;
-}
+} */
 /*
 	由于该列表有展示和编辑两种状态，
 	edit-state类为该列表是否编辑状态的区分类
@@ -98,6 +98,9 @@
 .fold-list li.active .fold-detail{
 	display: block;
 }
+.fold-list li.active .fold-detail .link{
+	color: #333;
+}
 .fold-list .vice{
 	margin-top: 10px;
 	font-size: 11px;
@@ -108,12 +111,12 @@
 	display: block;
 }
 .fold-list.edit-state li.active .fold-handle{
-	background: url(../../statics/image/icons/icon-dropdown.png) no-repeat right center;
+	background: url(../../statics/image/icons/icon-dropup.png) no-repeat right center;
 }
 .fold-list.edit-state .checkbox{
 	display: block;
 }
-.fold-list.edit-state li.active .checkbox{
+.fold-list.edit-state .active-checkbox{
 	background: url(../../statics/image/icons/icon-checkbox.png) no-repeat;
 }
 .complaint-tap{
@@ -174,17 +177,18 @@
 .customer-right .list-content-activity .list-activity .activity-left h5.sex-boy{
 	display: inline-block;
 	padding:0 20px 0 0;
-	line-height: 32px;
+	line-height: 20px;
 	background: url(../../statics/image/icon-boy.png) no-repeat right center;
 }
 .customer-right .list-content-activity .list-activity .activity-left h5.sex-girl{
 	display: inline-block;
 	padding:0 20px 0 0;
-	line-height: 28px;
+	line-height: 22px;
 	background: url(../../statics/image/icon-girl.png) no-repeat right center;
 }
 .activity-info .autograph{
 	display: inline-block;
+	padding-top: 5px;
 	font-size: 12px;
 	width: 300px;
 	color: #666;
@@ -200,13 +204,30 @@
 .customer-right .list-content-activity .friendList{
 	padding-bottom: 20px;
 }
+.list-content-activity .friendList .icon-clear{
+	display: inline-block;
+	float: right;
+	margin-top: 8px;
+	width: 20px;
+	height: 20px;
+	background: url(../../statics/image/icons/icon-clear1.png) no-repeat;
+}
 .customer-right .list-content-activity .friendList .activity-item{
 	padding: 20px 0 20px 10px;
 	border-bottom: 1px dotted #e5e5e5;
 }
-.customer-right .list-content-activity .friendList .apply-item .wrap-pic{
-  width: 70px;
-  height: 70px;
+.list-content-activity .friendList .apply-item .wrap-pic img,.list-content-activity .friendList .personal-item .wrap-pic img{
+ padding: 2px;
+ border: 1px solid #e5e5e5;
+ width: 100%;
+ height: 100%;
+ -webkit-border-radius:50% ;
+ -moz-border-radius:50% ;
+  border-radius:50% ;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
 }
 .customer-right .list-content-activity .friendList .personal-item .wrap-pic{
   width: 55px;
@@ -219,7 +240,7 @@
 .customer-right .list-content-activity .friendList .read-item h5,.customer-right .list-content-activity .friendList .read-item .autograph{
   color: #a9a9a9;
 }
-.customer-right .list-content-activity .friendList .read-item .time{
+.customer-right .list-content-activity .friendList .personal-item .time{
 	color: #a9a9a9;
 	font-size: 12px;float: right;
 }
@@ -231,6 +252,49 @@
 	color: #666;
 	font-size: 12px;
 	background-color: #f3f3f3;
+}
+.wrap-notice-table{
+	margin-top: -20px;
+}
+.wrap-notice-table table{
+	width: 100%;
+}
+.wrap-notice-table tbody tr{
+	border-bottom: 1px dotted #e5e5e5;
+}
+.wrap-notice-table tbody tr td{
+	padding: 18px 0;
+}
+.wrap-notice-table tbody .type{
+	width: 80px;
+}
+.checkbox-notice-table tbody .type .no-checkbox{
+	  display: inline-block;
+    width: 22px ;
+    height: 22px;
+    margin: 0px 10px 0 0;
+    vertical-align: -6px;
+    background: url(../../statics/image/icons/icon-checkbox-no.png) no-repeat;
+}
+.checkbox-notice-table tbody .type .active-checkbox{
+	  background: url(../../statics/image/icons/icon-checkbox.png) no-repeat;
+}
+.wrap-notice-table table .system-notice{
+	color: #4dcdc2;
+}
+.wrap-notice-table table .sale-notice{
+	color: #f38445;
+}
+.wrap-notice-table table .send-notice{
+	color: #4cc64f;
+}
+.wrap-notice-table table .time{
+	color:#a9a9a9;
+	font-size: 12px;
+}
+
+.wrap-notice-table table .readed td{
+	color: #a9a9a9;
 }
 
 

@@ -19,6 +19,7 @@
 /*旋转木马必要样式*/
 .poster-main {
   position: relative;
+  margin: 0 auto;
   width: 1220px;
   height: 270px; }
 
@@ -106,8 +107,11 @@
     -ms-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s; }
-    .activity-tabs .menus li.active, .activity-tabs .menus li:hover {
+    .activity-tabs .menus li.active {
       border-top: 3px solid #24b026;
+      color: #24b026;
+      background-color: #fff; }
+    .activity-tabs .menus li:hover {
       color: #24b026; }
   .activity-tabs .container {
     display: none; }
@@ -119,7 +123,8 @@
       position: relative;
       float: left;
       width: 230px;
-      height: 180px; }
+      height: 180px;
+      background-color: #f8f8f8; }
       .activity-tabs .container .thumbnail img {
         width: 100%;
         height: 100%; }
@@ -187,18 +192,64 @@
           background: url(../image/icons/icon-time.png) no-repeat center center; }
       .activity-tabs .container .operation .btn-group .btn {
         display: inline-block;
-        margin: 0 10px; }
+        margin-left: 20px; }
+
+.add-activity-tabs {
+  width: 100%; }
+  .add-activity-tabs .menus {
+    position: relative;
+    padding-top: 25px;
+    background-color: #f8f8f8; }
+    .add-activity-tabs .menus ul {
+      margin: 0 auto;
+      width: 960px; }
+    .add-activity-tabs .menus .wrap-launch-activity {
+      position: absolute;
+      left: 50%;
+      margin-left: 340px;
+      top: 0;
+      height: 100%;
+      padding-left: 20px;
+      border-left: 1px solid #e5e5e5; }
+      .add-activity-tabs .menus .wrap-launch-activity .launch-activity {
+        display: inline-block;
+        margin-top: 25px;
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid #24b026;
+        color: #24b026;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px; }
+        .add-activity-tabs .menus .wrap-launch-activity .launch-activity span {
+          font-size: 30px;
+          vertical-align: -4px; }
+  .add-activity-tabs .content {
+    margin: 0 auto;
+    width: 960px; }
 
 .authentication {
   color: #a9a9a9;
   text-align: center;
-  margin: 100px auto; }
+  margin: 100px auto;
+  font-size: 20px; }
   .authentication .icon-cry {
     display: inline-block;
     vertical-align: middle;
     width: 90px;
     height: 53px;
     background: url(../image/icons/icon-cry.png) no-repeat center center; }
+  .authentication .icon-smile {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90px;
+    height: 53px;
+    background: url(../image/icons/icon-smile.png) no-repeat center center; }
+  .authentication a {
+    color: #24b026; }
 
 .activity-type-list {
   text-align: center; }
@@ -222,18 +273,16 @@
       z-index: -1;
       opacity: 0;
       filter: alpha(opacity=0); }
-    .activity-type-list label input:checked + i {
-      display: block; }
-    .activity-type-list label input + i {
-      display: none; }
     .activity-type-list label i {
       position: absolute;
       right: -17px;
       top: -17px;
-      display: block;
+      display: none;
       width: 37px;
       height: 37px;
       background: url(../image/icons/checked.png) no-repeat center center; }
+  .activity-type-list .selected i {
+    display: block; }
 
 .dialog-mask {
   display: none;
@@ -277,3 +326,45 @@
       .dialog-mask .dialog .dialog-foot .btn-success {
         background-color: #24b026;
         color: #fff; }
+        .dialog-mask .dialog .dialog-foot .btn-success a {
+          color: #fff; }
+
+.activity-tabs .btn {
+  position: relative; }
+  .add-fri-box {
+    position: absolute;
+    width: 200px;
+    bottom: -82px;
+    left: 0;
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px solid #86db87; }
+    .add-fri-box:after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 11px;
+      left: 40px;
+      top: -10px;
+      background: url("../image/icons/icon-tip-up.png") no-repeat center center; }
+    .add-fri-box .fri-text {
+      font-size: 14px;
+      color: #333333;
+      margin-bottom: 5px;
+      line-height: 1.2; }
+      .add-fri-box .fri-text .icon-warn-little {
+        display: inline-block;
+        background: url("../image/icons/icon-inputnote.png") no-repeat center center;
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+        vertical-align: middle; }
+    .add-fri-box .fri-note {
+      line-height: 1.2;
+      text-align: center;
+      font-size: 12px;
+      color: #a9a9a9; }
+      .add-fri-box .fri-note .add-fri-note {
+        color: #24b026; }
+
+/*# sourceMappingURL=carbonActivity.css.map */

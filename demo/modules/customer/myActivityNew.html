@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>碳普惠</title>
+<link rel="stylesheet" href="../../statics/css/base.css"/>
+<link rel="stylesheet" href="../../statics/css/newStyle.css"/>
+<link rel="stylesheet" href="../../statics/css/customer.css"/>
+<script src="../../statics/script/jquery-1.7.2.min.js"></script>
+<script src="../../statics/script/config/config.js"></script>
+
+<script>
+	function toggleTab(obj,obj0,obj1){
+		$(obj).addClass("active-item");
+		$(obj).siblings().removeClass("active-item");
+		$("#"+obj0).css("display","block");
+    $("#"+obj1).css("display","none");
+	}
+</script>
+</head>
+<body>
+<!--头部开始-->
+<div class="wrap-nav-tph">
+	<div class="wrap-nav-top">
+		<div class="nav-top">
+			<div class="nav-user" style="display:none;">
+				<a href="" class="user-info">
+					<img src="../../statics/image/pic-user-example.png" alt=""/>
+					<span>张女士</span>
+				</a>
+				<a href="" class="user-loginOut">退出</a>
+				<a href="" class="user-news"> <i class="icon-tip">93</i>
+				</a>
+			</div>
+			<div class="nav-user">
+				<a href="" class="user-loginOut">登录</a>
+			</div>
+			<div class="nav-time">
+				<span class="left">2016-10-12</span>
+				<span class="right">星期四</span>
+			</div>
+	
+		</div>
+	</div>
+	<div class="wrap-nav-content">
+		<div class="nav-tph">
+			<div class="nav-left">
+				<div class="wrap-logo">
+					<a href="">
+						<img src="../../statics/image/logo.png"></a>
+				</div>
+				<div class="wrap-address">
+					<div class="wrap-up" id="wrapSelectAddress"> <i class="icon-address"></i>
+						<span class="address" id="selectCity">广州</span>
+						<span class="icon-dropdown"></span>
+					</div>
+					<ul class="address-list" id="addressList">
+						<li class="item" onclick="selectCity(this);">韶关市</li>
+						<li class="item" onclick="selectCity(this);">深圳市</li>
+						<li class="item" onclick="selectCity(this);">珠海市</li>
+						<li class="item" onclick="selectCity(this);">佛山市</li>
+						<li class="item" onclick="selectCity(this);">惠州市</li>
+						<li class="item" onclick="selectCity(this);">河源市</li>
+						<li class="item" onclick="selectCity(this);">东莞市</li>
+						<li class="item" onclick="selectCity(this);"s>中心市</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-right">
+				<ul id="tph-nav">
+					 <li class="nav-item">
+						<a class="item-a" href="">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">碳币兑换</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳众筹</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="item-a">低碳活动</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳资讯</a>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">减碳置换</a>
+						<div class="wrap-sub-nav">
+							<ul>
+								<li class="sub-nav-item">
+									<i class="active1"></i>
+									<a href="">换物1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active2"></i>
+									<a href="">顺风车1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active3"></i>
+									<a href="">植物认领1</a>
+								</li>
+								<li class="sub-nav-item">
+									<i class="active4"></i>
+									<a href="">低碳活动1</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="item-a" href="">低碳产品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+</div>
+<!--头部结束-->
+<div class="wrap-main wrap-customer-main">
+	<div class="width960 customer-main">
+		  <div class="customer-left">
+		  	<div class="customer-left-title">
+			  	<div class="user-info">
+			  		<div class="wrap-pic">
+			  			<img class="pic" src="../../statics/image/pic126.png" />
+			  		</div>
+			  		<div class="user-info-right">
+			  			<h4>史女士</h4>
+			  			<span class="sex">性别：女</span>
+			  			<p class="user-carbon-number">400</p>
+			  			<span class="address">广东 深圳</span>
+			  		</div>
+			  	</div>
+			  	<div class="carbon-rank">
+			  		碳友排名：<span>4005</span>
+			  	</div>
+			  	<div class="carbon-expression">
+			  		<div class="expression-left">碳友印象：</div>
+			  		<div class="expression-right">
+			  			<span class="expression0">电脑高手</span>
+			  			<span class="expression1">宅男</span>
+			  			<span class="expression2">技术牛人</span>
+			  			<span class="expression0">阳光</span>
+			  		</div>
+			  	</div>
+			  	<div class="user-info-perfect">
+			  		<div class="info-perfect-title">
+			  			信息完整度：<span>80%</span>
+			  		</div>
+			  		<div class="perfect-bg">
+			  			<div class="info-perfected" style="width:50%"></div>
+			  		</div>
+			  		<a href="" class="go-perfect">去完善</a>
+			  	</div>
+		  	</div>
+		  	<div class="customer-left-list">
+		  		<h3 class="list-title">我的个人中心</h3>
+		  		<ul>
+		  			<li class="left-item"><a href="">我的碳币</a></li>
+		  			<li class="left-item"><a href="">我的钱包</a></li>
+		  			<li class="left-item"><a href="">我的活动</a></li>
+		  			<li class="left-item"><a href="">我的社区</a></li>
+		  			<li class="left-item"><a href="">我的景区</a></li>
+		  			<li class="left-item"><a href="">我的碳友</a></li>
+		  			<li class="left-item item-news"><a href=""><span class="tip">4</span>消息</a></li>
+		  		</ul>
+		  	</div>
+		  	<div class="customer-left-list">
+		  		<h3 class="list-title">个人信息管理</h3>
+		  		<ul>
+		  			<li class="left-item"><a href="">编辑个人资料</a></li>
+		  			<li class="left-item"><a href="">低碳行为绑定项</a></li>
+		  			<li class="left-item"><a href="">实名认证</a></li>
+		  		</ul>
+		  	</div>
+		  	<div class="showInfo" id="showInfo">
+			  	<div class="showInfo-up">
+						<div class="up-right">
+							<img src="../../statics/image/atvatar.png" />
+						</div>
+						<div class="up-left">
+							<h5>史女士<i class="sex-man"></i></h5>
+							<p class="up-provice">广州</p>
+							<p>初恋无限好，只是挂得早<a href="" class="iconEdit"></a></p>
+						</div>
+					</div>
+					<div class="showInfo-down">
+						<div class="down-item">
+							<span class="item-left">所在社区</span>
+							<div class="item-right"><span>电子五所社区</span></div>
+						</div>
+						<div class="down-item">
+							<span class="item-left">关注的景区</span>
+							<div class="item-right"><span>电子五所社区</span>,<span>电社区</span>,<span>电子五所</span></div>
+						</div>
+						<div class="down-item express-item">
+							<span class="item-left">碳友印象</span>
+							<div class="item-right"><span class="expression0">电脑高手</span><span class="expression1">宅男</span><span class="expression2">技术牛人</span><span class="expression3">技术大牛</span></div>
+						</div>
+					</div>
+				</div>
+		  </div>
+		  <div class="customer-right">
+		  	<div class="customerTab">
+		  		<ul class="tab">
+						<li class="tab-item active-item" onclick="toggleTab(this,'myLaunch','myJoin')">我发起的活动</li>
+						<li class="tab-item" onclick="toggleTab(this,'myJoin','myLaunch')">我参与的活动</li>
+					</ul>
+		  	</div>
+		  	<div class="wrap-list-content list-content-activity">
+		  	  <!--我发起的活动-->
+		  		<div class="list-activity myLaunch-list" id="myLaunch">
+		  			<div class="sort-parts">
+		  				<span class="sort-item active-item">全部</span>
+		  				<span class="sort-item">进行中</span>
+		  				<span class="sort-item">已结束</span>
+		  			</div>
+		  			<ul>
+		  				<li class="activity-item car-item">
+		  					<div class="activity-right">
+		  						<span class="rank-time">16:20发布</span>
+		  						<a href="" class="doing">
+		  							进行中
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item exchange-item">
+		  					<div class="activity-right">
+		  					<span class="rank-time">16:20发布</span>
+		  						<a href="" class="begin">
+		  							即将开始
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item join-item">
+		  					<div class="activity-right">
+		  					  <span class="rank-time">16:20发布</span>
+		  						<a href="" class="ended">
+		  							已结束
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item plant-item">
+		  					<div class="activity-right">
+		  					  <span class="rank-time">2天前发布</span>
+		  						<a href="" class="ended">
+		  							已结束
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item car-item">
+		  					<div class="activity-right">
+		  						<a href="">
+		  							即将开始
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item exchange-item">
+		  					<div class="activity-right">
+		  						<a href="" class="doing">
+		  						  进行中
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item join-item">
+		  					<div class="activity-right">
+		  						<a href="" class="doing">
+		  							进行中
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item plant-item">
+		  					<div class="activity-right">
+		  						<a href="">
+		  							即将开始
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  			</ul>
+		  			<div class="click-more"><a href="" class="getMore">点击加载更多</a></div>
+		  		</div>
+		  		<!--我参与的活动-->
+		  		<div class="list-activity myJoin-list" style="display:none;" id="myJoin">
+		  			<div class="sort-parts">
+		  				<span class="sort-item active-item">全部</span>
+		  				<span class="sort-item">换物</span>
+		  				<span class="sort-item">拼车</span>
+		  				<span class="sort-item">植物认养</span>
+		  				<span class="sort-item">众筹</span>
+		  				<span class="sort-item">其他</span>
+		  			</div>
+		  			<ul>
+		  				<li class="activity-item car-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="" class="doing">
+		  							进行中
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item exchange-item">
+		  					<div class="activity-right">
+		  						<div class="wrap-rank-time"><span class="rank-time">2天前发布</span></div>
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="" class="begin">
+		  							即将开始
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item join-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="" class="ended">
+		  							已结束
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item plant-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="" class="ended">
+		  							已结束
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item car-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="">
+		  							即将开始
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item exchange-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="" class="doing">
+		  						  进行中
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item join-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="" class="doing">
+		  							进行中
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  				<li class="activity-item plant-item">
+		  					<div class="activity-right">
+		  					  <a href="">
+		  							发私信
+		  						</a>
+		  						<a href="">
+		  							即将开始
+		  						</a>
+		  					</div>
+		  					<div class="activity-left">
+			  					<div class="wrap-pic">
+			  					</div>
+			  					<div class="activity-info">
+			  						<h5><span>西木</span>于今天16:20发布</h5>
+			  						<div class="activity-common activity-time">
+			  							出发日期:2016-11-02 09:22
+			  						</div>
+			  						<div class="activity-common activity-details">
+			  							线路:白云机场
+			  						</div>
+			  					</div>
+		  					</div>
+		  				</li>
+		  			</ul>
+		  			<div class="click-more" style="display:none;"><a href="" class="getMore">点击加载更多</a></div>
+		  			<div class="clickimg-more click-more"><a href="" class="getMore">正在加载，请稍后~</a></div>
+		  		</div>
+		  	</div>
+		  </div>
+	</div>
+	
+</div>
+	</body>
+	</html>
